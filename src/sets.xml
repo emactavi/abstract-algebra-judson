@@ -959,11 +959,11 @@
         If <m>S</m> is any set, we will use <m>id_S</m> or <m>id</m> to denote the
         <term>identity mapping</term><idx><h>Function</h><h>identity</h></idx>
         from <m>S</m> to itself.
-        Define this map by <m>id(s) = s</m> for all <m>s \in S</m>.
+        Define this map by <m>\identity(s) = s</m> for all <m>s \in S</m>.
         A map <m>g: B \rightarrow A</m> is an
         <term>inverse mapping</term>
         of <m>f: A \rightarrow B</m> if
-        <m>g \circ f = id_A</m> and <m>f \circ g = id_B</m>;
+        <m>g \circ f = \identity_A</m> and <m>f \circ g = \identity_B</m>;
         in other words, the inverse function of a function simply
         <q>undoes</q> the function.
         A map is said to be <term>invertible</term><idx><h>Function</h><h>invertible</h></idx> if it has an inverse.
