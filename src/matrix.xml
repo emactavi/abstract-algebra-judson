@@ -3,8 +3,8 @@
 <!--                                                  -->
 <!-- Abstract Algebra: Theory and Applications        -->
 <!--                                                  -->
-<!-- Text: Copyright (C) 1997-2024  Thomas W. Judson  -->
-<!-- Sage: Copyright (C) 2010-2024  Robert A. Beezer  -->
+<!-- Text: Copyright (C) 1997-2025  Thomas W. Judson  -->
+<!-- Sage: Copyright (C) 2010-2025  Robert A. Beezer  -->
 <!-- See the file COPYING for copying conditions.     -->
 <!-- This file is part of the book                    -->
 <!--                                                  -->
@@ -1447,8 +1447,8 @@
         proved that crystallographic groups are finite in every dimension.
         Finding out how many of these groups there are in each dimension is another matter.
         In <m>{\mathbb R}^3</m> there are 230 different space groups;
-        in <m>{\mathbb R}^4</m> there are 4783.
-        No one has been able to compute the number of space groups for <m>{\mathbb R}^5</m> and beyond.
+        in <m>{\mathbb R}^4</m> there are 4894; in <m>{\mathbb R}^5</m> there are 222097.
+        No one has been able to compute the number of space groups for <m>{\mathbb R}^6</m> and beyond (<url href="https://oeis.org/A006227" visual="oeis.org/A006227"><c>oeis.org/A006227</c></url>).
         It is interesting to note that the crystallographic groups were found mathematically for
         <m>{\mathbb R}^3</m> before the 230 different types of crystals were actually discovered in nature.
       </p>
