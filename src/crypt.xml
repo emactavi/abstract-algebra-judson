@@ -93,7 +93,7 @@
         <me>
           f^{-1}(p) = p - 3 \bmod 26 = p + 23 \bmod 26
         </me>.
-        Suppose we receive the encoded message DOJHEUD. To decode this message,
+        Suppose we receive the encoded message <c>DOJHEUD</c>. To decode this message,
         we first digitize it:
         <me>
           3, 14, 9, 7, 4, 20, 3
@@ -102,7 +102,7 @@
         <me>
           0, 11, 6, 4, 1, 17, 0
         </me>,
-        or ALGEBRA. Notice here that there is nothing special about either of the numbers <m>3</m> or <m>26</m>.
+        or <c>ALGEBRA</c>. Notice here that there is nothing special about either of the numbers <m>3</m> or <m>26</m>.
         We could have used a larger alphabet or a different shift.
       </p>
     </example>
@@ -178,8 +178,8 @@
         we will let <m>a = 5</m> since <m>\gcd(5, 26) = 1</m>.
         It is easy to see that <m>a^{-1} = 21</m>.
         Therefore, we can take our encryption function to be <m>f(p) = 5p + 3 \bmod 26</m>.
-        Thus, ALGEBRA is encoded as <m>3, 6, 7, 23, 8, 10, 3</m>,
-        or DGHXIKD. The decryption function will be
+        Thus, <c>ALGEBRA</c> is encoded as <m>3, 6, 7, 23, 8, 10, 3</m>,
+        or <c>DGHXIKD</c>. The decryption function will be
         <me>
           f^{-1}(p) = 21 p - 21 \cdot 3 \bmod 26 = 21 p + 15 \bmod 26
         </me>.

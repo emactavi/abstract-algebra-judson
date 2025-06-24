@@ -48,7 +48,7 @@
         if every element in <m>G</m> has as its order a power of <m>p</m>,
         where <m>p</m> is a prime number.
         A subgroup of a group <m>G</m> is a
-        <term><m>p</m>-subgroup</term><idx><h>Subgroup!<m>p</m>-subgroup</h></idx> if it is a <m>p</m>-group.
+        <term><m>p</m>-subgroup</term><idx><h>Subgroup<m>p</m>-subgroup</h></idx> if it is a <m>p</m>-group.
       </p>
 
       <theorem xml:id="sylow-theorem-cauchy">
@@ -172,7 +172,7 @@
       </theorem>
 
       <p>
-        A <term>Sylow <m>p</m>-subgroup</term><idx><h>Subgroup</h><h>Sylow<m>p</m>-subgroup</h></idx><idx><h>Sylow <m>p</m>-subgroup</h></idx>
+        A <term>Sylow <m>p</m>-subgroup</term><idx><h>Subgroup</h><h>Sylow <m>p</m>-subgroup</h></idx><idx><h>Sylow <m>p</m>-subgroup</h></idx>
         <m>P</m> of a group <m>G</m> is a maximal <m>p</m>-subgroup of <m>G</m>.
         To prove the other two Sylow Theorems,
         we need to consider conjugate subgroups as opposed to conjugate elements in a group.
