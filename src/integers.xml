@@ -701,7 +701,7 @@
 
     <reading-questions>
 
-    <exercise>
+    <exercise label="rq-integers-factor">
       <statement>
         <p>
           Use Sage to express <m>123456792</m> as a product of prime numbers.
@@ -710,7 +710,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-integers-gcd">
       <statement>
         <p>
           Find the greatest common divisor of <m>84</m> and <m>52</m>.
@@ -719,7 +719,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-integers-euclid">
       <statement>
         <p>
           Find integers <m>r</m> and <m>s</m> so that <m>r(84)+s(52)=\gcd(84,52)</m>.
@@ -728,7 +728,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-integers-induction">
       <statement>
         <p>
           Explain the use of the term <q>induction hypothesis.</q>
@@ -737,7 +737,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-integers-goldbach">
       <statement>
         <p>
           What is Goldbach's Conjecture?

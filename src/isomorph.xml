@@ -863,7 +863,7 @@
 
     <reading-questions>
 
-    <exercise>
+    <exercise label="rq-isomorph-order">
       <statement>
         <p>
           Determine the order of <m>(1,2)</m> in <m>{\mathbb Z_4}\times{\mathbb Z_8}</m>.
@@ -872,7 +872,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-isomorph-properties">
       <statement>
         <p>
           List three properties of a group that are preserved by an isomorphism.
@@ -881,7 +881,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-isomorph-external-direct-product">
       <statement>
         <p>
           Find a group isomorphic to
@@ -891,7 +891,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-isomorph-infinite-cyclic">
       <statement>
         <p>
           Explain why we can now say <q><em>the</em>
@@ -901,7 +901,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-isomorph-external-internal">
       <statement>
         <p>
           Compare and contrast external direct products and internal direct products.

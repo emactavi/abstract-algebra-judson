@@ -577,7 +577,7 @@
   
   <reading-questions>
 
-    <exercise>
+    <exercise label="rq-homomorph-Z10">
       <statement>
         <p>
           Consider the function <m>\phi:\mathbb Z_{10}\rightarrow\mathbb Z_{10}</m> defined by <m>\phi(x)=x+x</m>.
@@ -587,7 +587,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-homomorph-phi">
       <statement>
         <p>
           For <m>\phi</m> defined in the previous question,
@@ -597,7 +597,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-homomorph-isomorph">
       <statement>
         <p>
           Compare and contrast isomorphisms and homomorphisms.
@@ -606,7 +606,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-homomorph-first-iso-ther">
       <statement>
         <p>
           Paraphrase the First Isomorphism Theorem using <em>only words</em>.
@@ -616,7 +616,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-homomorph-normal">
       <statement>
         <p>
           <q>For every normal subgroup there is a homomorphism,
