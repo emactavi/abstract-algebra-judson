@@ -564,7 +564,7 @@
 
     <reading-questions>
 
-    <exercise>
+    <exercise label="rq-cosets-lagrange">
       <statement>
         <p>
           State Lagrange's Theorem in your own words.
@@ -573,7 +573,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-cosets-Z9">
       <statement>
         <p>
           Determine the left cosets of
@@ -583,7 +583,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-cosets-S4">
       <statement>
         <p>
           The set <m>\{(), (1\,2)(3\,4), (1\,3)(2\,4), (1\,4)(2\,3)\}</m> is a subgroup of <m>S_4</m>.
@@ -593,7 +593,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-cosets-order-29">
       <statement>
         <p>
           Suppose <m>G</m> is a group of order 29.
@@ -603,7 +603,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-cosets-is-prime">
       <statement>
         <p>
           The number <m>p=137909</m> is prime.

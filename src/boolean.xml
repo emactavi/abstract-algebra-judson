@@ -1233,7 +1233,7 @@
 
   <reading-questions>
 
-    <exercise>
+    <exercise label="rq-boolean-poset">
       <statement>
         <p>
           Describe succinctly what a poset is.
@@ -1247,7 +1247,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-boolean-lattice">
       <statement>
         <p>
           How does a lattice differ from a poset?
@@ -1257,7 +1257,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-boolean-algebra">
       <statement>
         <p>
           How does a Boolean algebra differ from a lattice?
@@ -1267,7 +1267,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-boolean-finite-algebra">
       <statement>
         <p>
           Give two (perhaps related) reasons why any discussion of finite Boolean algebras might center on the example of the power set of a finite set.
@@ -1276,7 +1276,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-boolean-innovation">
       <statement>
         <p>
           Describe a major innovation of the middle twentieth century made possible by Boolean algebra.

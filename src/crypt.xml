@@ -489,7 +489,7 @@
 
     <reading-questions>
 
-    <exercise>
+    <exercise label="rq-crypt-euler-phi">
       <statement>
         <p>
           Use the <c>euler_phi()</c>function in Sage to compute <m>\phi(893\,456\,123)</m>.
@@ -498,7 +498,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-crypt-power-mod">
       <statement>
         <p>
           Use the <c>power_mod()</c>function in Sage to compute <m>7^{324}\pmod{895}</m>.
@@ -507,7 +507,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-crypt-RSA">
       <statement>
         <p>
           Explain the mathematical basis for saying:
@@ -518,7 +518,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-crypt-verification">
       <statement>
         <p>
           Explain how in <init>RSA</init> message encoding differs from message verification.

@@ -1172,7 +1172,7 @@
 
   <reading-questions>
 
-    <exercise>
+    <exercise label="rq-actions-informal">
       <statement>
         <p>
           Give an informal description of a group action.
@@ -1181,7 +1181,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-actions-class-equation">
       <statement>
         <p>
           Describe the class equation.
@@ -1190,7 +1190,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-actions-order-49">
       <statement>
         <p>
           What are the groups of order <m>49</m>?
@@ -1199,7 +1199,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-actions-switching">
       <statement>
         <p>
           How many switching functions are there with 5 inputs? (Give both a simple expression and the total number as a single integer.)
@@ -1208,7 +1208,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-actions-burnside">
       <statement>
         <p>
           The <q>Historical Note</q> mentions the proof of Burnside's Conjecture.
