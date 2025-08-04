@@ -1533,7 +1533,7 @@
 
     <reading-questions>
 
-    <exercise>
+    <exercise label="rq-galois-group">
       <statement>
         <p>
           What is the Galois group of a field extension?
@@ -1542,7 +1542,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-galois-conjugate">
       <statement>
         <p>
           When are two elements of a field extension conjugate? (In other words,
@@ -1552,7 +1552,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-galois-fund-theory">
       <statement>
         <p>
           Summarize the nature and importance of the Fundamental Theorem of Galois Theory.
@@ -1562,7 +1562,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-galois-solvable">
       <statement>
         <p>
           Why are <q>solvable</q> groups so named?
@@ -1572,7 +1572,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-galois-preparation">
       <statement>
         <p>
           Argue the following statement, both pro and con.

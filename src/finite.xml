@@ -1097,7 +1097,7 @@
 
     <reading-questions>
 
-    <exercise>
+    <exercise label="rq-finite-separable">
       <statement>
         <p>
           When is a field extension separable?
@@ -1106,7 +1106,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-finite-subfields">
       <statement>
         <p>
           What are the possible orders for subfields of a finite field?
@@ -1115,7 +1115,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-finite-element-structure">
       <statement>
         <p>
           What is the structure of the non-zero elements of a finite field?
@@ -1124,7 +1124,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-finite-splitting-field">
       <statement>
         <p>
           Provide a characterization of finite fields using the concept of a splitting field.
@@ -1133,7 +1133,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-finite-fresh-dream">
       <statement>
         <p>
           Why is a theorem in this chapter titled
