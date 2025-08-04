@@ -539,7 +539,7 @@
 
     <reading-questions>
 
-    <exercise>
+    <exercise label="rq-vect-axioms">
       <statement>
         <p>
           Why do the axioms of a vector space appear to only have four conditions,
@@ -549,7 +549,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-vect-square-root">
       <statement>
         <p>
           The set <m>V={\mathbb Q}(\sqrt{11})=\{a+b\sqrt{11}\mid a,b\in{\mathbb Q}\}</m> is a vector space.
@@ -561,7 +561,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-vect-linear-independence">
       <statement>
         <p>
           Write a long paragraph, or a short essay,
@@ -571,7 +571,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-vect-spanning">
       <statement>
         <p>
           Write a long paragraph, or a short essay,
@@ -581,7 +581,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-vect-linear-combinations">
       <statement>
         <p>
           <q>Linear algebra is all about linear combinations.</q>

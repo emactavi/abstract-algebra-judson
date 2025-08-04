@@ -557,7 +557,7 @@
 
     <reading-questions>
 
-    <exercise>
+    <exercise label="rq-normal-equilateral">
       <statement>
         <p>
           Let <m>G</m> be the group of symmetries of an equilateral triangle,
@@ -569,7 +569,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-normal-is-normal">
       <statement>
         <p>
           Based on your answer to the previous question,
@@ -580,7 +580,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-normal-8Z">
       <statement>
         <p>
           The subgroup <m>8\mathbb Z</m> is normal in <m>\mathbb Z</m>.
@@ -591,7 +591,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-normal-equivalent">
       <statement>
         <p>
           List two statements about a group <m>G</m> and a subgroup <m>H</m> that are equivalent to
@@ -601,7 +601,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-normal-factor">
       <statement>
         <p>
           In your own words, what is a factor group?

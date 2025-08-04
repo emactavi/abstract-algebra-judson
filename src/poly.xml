@@ -1163,7 +1163,7 @@
 
   <reading-questions>
 
-    <exercise>
+    <exercise label="rq-poly-roots">
       <statement>
         <p>
           Suppose <m>p(x)</m> is a polynomial of degree <m>n</m> with coefficients from any field.
@@ -1174,7 +1174,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-poly-irreducible">
       <statement>
         <p>
           What is the definition of an irreducible polynomial?
@@ -1183,7 +1183,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-poly-remainder">
       <statement>
         <p>
           Find the remainder upon division of
@@ -1193,7 +1193,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-poly-previous-chapter">
       <statement>
         <p>
           A single theorem in this chapter connects many of the ideas of this chapter to many of the ideas of the previous chapter.
@@ -1203,7 +1203,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-poly-integers">
       <statement>
         <p>
           Early in this chapter, we say,

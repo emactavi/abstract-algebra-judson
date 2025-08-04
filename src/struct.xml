@@ -823,7 +823,7 @@
 
   <reading-questions>
 
-    <exercise>
+    <exercise label="rq-struct-200">
       <statement>
         <p>
           How many abelian groups are there of order <m>200 = 2^3 5^2</m>?
@@ -832,7 +832,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-struct-729">
       <statement>
         <p>
           How many abelian groups are there of order <m>729=3^6</m>?
@@ -841,7 +841,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-struct-subgroup-order6">
       <statement>
         <p>
           Find a subgroup of order 6 in <m>\mathbb Z_8\times\mathbb Z_3\times\mathbb Z_3</m>.
@@ -850,7 +850,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-struct-72">
       <statement>
         <p>
           It can be shown that an abelian group of order <m>72</m> contains a subgroup of order <m>8</m>.
@@ -861,7 +861,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-struct-principal-series">
       <statement>
         <p>
           What is a principal series of the group <m>G</m>?

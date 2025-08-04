@@ -703,7 +703,7 @@
   
   <reading-questions>
 
-    <exercise>
+    <exercise label="rq-sylow-first-theorem">
       <statement>
         <p>
           State Sylow's First Theorem.
@@ -712,7 +712,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-sylow-order69">
       <statement>
         <p>
           How many groups are there of order <m>69</m>?
@@ -722,7 +722,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-sylow-normalizer">
       <statement>
         <p>
           Give two descriptions, fundamentally different in character,
@@ -732,7 +732,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-sylow-commutator">
       <statement>
         <p>
           Suppose that <m>G</m> is an abelian group.  What is the commutator subgroup of <m>G</m>, and how do you know?
@@ -741,7 +741,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-sylow-fuss">
       <statement>
         <p>
           What's all the fuss about Sylow's Theorems?

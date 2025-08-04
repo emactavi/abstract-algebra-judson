@@ -1427,7 +1427,7 @@
 
   <reading-questions>
 
-    <exercise>
+    <exercise label="rq-sets-relations-maps">
       <statement>
         <p>
           What do relations and mappings have in common?
@@ -1436,7 +1436,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-sets-relations-maps-difference">
       <statement>
         <p>
           What makes relations and mappings different?
@@ -1445,7 +1445,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-sets-equiv-relation">
       <statement>
         <p>
           State carefully the three defining properties of an equivalence relation.
@@ -1456,7 +1456,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-sets-partitions">
       <statement>
         <p>
           What is the big deal about equivalence relations? (Hint: Partitions.)
@@ -1465,7 +1465,7 @@
       <response/>
     </exercise>
 
-    <exercise>
+    <exercise label="rq-sets-set-equality">
       <statement>
         <p>
           Describe a general technique for proving that two sets are equal.
