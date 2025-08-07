@@ -37,15 +37,35 @@
         <email>abehn@uchile.cl</email>
       </author>
     </credit>
-    <!-- Do not change this for the Annual Edition unless RAB -->
+    <!-- Do not change date of the Annual Edition unless RAB  -->
     <!-- is forming a final commit to tag and digitally sign  -->
     <!-- (an annual task).  It can revert to the "today"      -->
     <!-- element for intermediate builds during the year.     -->
+    <!--                                   -->
+    <!-- ********************************* -->
+    <!-- READ COMMENT ABOVE BEFORE EDITING -->
+    <!-- ********************************* -->
+    <!--                                   -->
     <date>August 1, 2025</date>
+    <!--                                   -->
+    <!-- ********************************* -->
+    <!-- READ COMMENT ABOVE BEFORE EDITING -->
+    <!-- ********************************* -->
+    <!--                                   -->
   </titlepage>
 
   <colophon>
+    <!--                                   -->
+    <!-- ********************************* -->
+    <!-- READ COMMENT ABOVE BEFORE EDITING -->
+    <!-- ********************************* -->
+    <!--                                   -->
     <edition>Annual Edition 2025</edition>
+    <!--                                   -->
+    <!-- ********************************* -->
+    <!-- READ COMMENT ABOVE BEFORE EDITING -->
+    <!-- ********************************* -->
+    <!--                                   -->
     <website>
       <url href="https://judsonbooks.org/aata/" visual="judsonbooks.org/aata/"/>
     </website>
