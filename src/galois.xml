@@ -2473,16 +2473,14 @@
         Sequence([[fromL(tau(r)) for r in roots] for tau in G], cr=True)
         </input>
                 <output>
-        [
-        [b, a, -a, -b],
+        [[b, a, -a, -b],
         [-b, -a, a, b],
         [a, -b, b, -a],
         [b, -a, a, -b],
         [-a, -b, b, a],
         [a, b, -b, -a],
         [-b, a, -a, b],
-        [-a, b, -b, a]
-        ]
+        [-a, b, -b, a]]
         </output>
             </sage>
 
@@ -2751,10 +2749,10 @@
          ((1,4),),
          ((1,2)(3,4),),
          ((1,3)(2,4),),
-         ((2,3), (1,4)(2,3)),
-         ((1,2,4,3), (1,4)(2,3)),
-         ((1,2)(3,4), (1,4)(2,3)),
-         ((2,3), (1,2,4,3), (1,4)(2,3))]
+         ((1,4)(2,3), (2,3)),
+         ((1,4)(2,3), (1,2,4,3)),
+         ((1,4)(2,3), (1,2)(3,4)),
+         ((1,4)(2,3), (2,3), (1,2,4,3))]
         </output>
             </sage>
             <sage>
@@ -3045,8 +3043,7 @@
         L.subfields()
         </input>
                 <output>
-    [
-    (Number Field in c0 with defining polynomial x, Ring morphism:
+    [(Number Field in c0 with defining polynomial x, Ring morphism:
       From: Number Field in c0 with defining polynomial x
       To:   Number Field in c with defining polynomial x^8 + 28*x^4 + 2500
       Defn: 0 |--> 0, None),
@@ -3088,8 +3085,7 @@
       Defn: c9 |--> c, Ring morphism:
       From: Number Field in c with defining polynomial x^8 + 28*x^4 + 2500
       To:   Number Field in c9 with defining polynomial x^8 + 28*x^4 + 2500
-      Defn: c |--> c9)
-    ]
+      Defn: c |--> c9)]
         </output>
             </sage>
 

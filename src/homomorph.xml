@@ -1398,7 +1398,7 @@
         results[0]
         </input>
                 <output>
-        Permutation Group with generators [(4,5,6,7), (4,7)(5,6), (1,2,3)]
+        Permutation Group with generators [(1,2,3), (4,5,6,7), (4,7)(5,6)]
         </output>
             </sage>
             <sage>
@@ -1409,7 +1409,7 @@
         Permutation group morphism:
           From: Cyclic group of order 3 as a permutation group
           To:   Permutation Group with generators
-                [(4,5,6,7), (4,7)(5,6), (1,2,3)]
+                [(1,2,3), (4,5,6,7), (4,7)(5,6)]
           Defn: Embedding( Group( [ (1,2,3), (4,5,6,7), (4,7)(5,6) ] ), 1 )
         </output>
             </sage>
@@ -1421,7 +1421,7 @@
         Permutation group morphism:
           From: Dihedral group of order 8 as a permutation group
           To:   Permutation Group with generators
-                [(4,5,6,7), (4,7)(5,6), (1,2,3)]
+                [(1,2,3), (4,5,6,7), (4,7)(5,6)]
           Defn: Embedding( Group( [ (1,2,3), (4,5,6,7), (4,7)(5,6) ] ), 2 )
         </output>
             </sage>
@@ -1432,7 +1432,7 @@
                 <output>
         Permutation group morphism:
           From: Permutation Group with generators
-                [(4,5,6,7), (4,7)(5,6), (1,2,3)]
+                [(1,2,3), (4,5,6,7), (4,7)(5,6)]
           To:   Cyclic group of order 3 as a permutation group
           Defn: Projection( Group( [ (1,2,3), (4,5,6,7), (4,7)(5,6) ] ), 1 )
         </output>
@@ -1444,7 +1444,7 @@
                 <output>
         Permutation group morphism:
           From: Permutation Group with generators
-                [(4,5,6,7), (4,7)(5,6), (1,2,3)]
+                [(1,2,3), (4,5,6,7), (4,7)(5,6)]
           To:   Dihedral group of order 8 as a permutation group
           Defn: Projection( Group( [ (1,2,3), (4,5,6,7), (4,7)(5,6) ] ), 2 )
         </output>
