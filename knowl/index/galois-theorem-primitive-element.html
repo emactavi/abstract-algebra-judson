@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">23.13</span><span class="period">.</span><span class="space"> </span><span class="title">Primitive Element Theorem.</span>
+</h4>
+<div class="para">Let <span class="process-math">\(E\)</span> be a finite separable extension of a field <span class="process-math">\(F\text{.}\)</span> Then there exists an <span class="process-math">\(\alpha \in E\)</span> such that <span class="process-math">\(E=F( \alpha )\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#galois-theorem-primitive-element-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 23.13: Primitive Element Theorem"><a href="#galois-theorem-primitive-element" title="Copy heading and permalink for Theorem 23.13: Primitive Element Theorem">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We already know that there is no problem if <span class="process-math">\(F\)</span> is a finite field. Suppose that <span class="process-math">\(E\)</span> is a finite extension of an infinite field. We will prove the result for <span class="process-math">\(F(\alpha, \beta)\text{.}\)</span> The general case easily follows when we use mathematical induction. Let <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> be  the minimal polynomials of <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{,}\)</span> respectively. Let <span class="process-math">\(K\)</span> be the field in which both <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> split. Suppose that <span class="process-math">\(f(x)\)</span> has zeros <span class="process-math">\(\alpha = \alpha_1, \ldots, \alpha_n\)</span> in <span class="process-math">\(K\)</span> and <span class="process-math">\(g(x)\)</span> has zeros <span class="process-math">\(\beta = \beta_1, \ldots, \beta_m\)</span> in <span class="process-math">\(K\text{.}\)</span> All of these zeros have multiplicity <span class="process-math">\(1\text{,}\)</span> since <span class="process-math">\(E\)</span> is separable over <span class="process-math">\(F\text{.}\)</span> Since <span class="process-math">\(F\)</span> is infinite, we can find an <span class="process-math">\(a\)</span> in <span class="process-math">\(F\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a \neq \frac{\alpha_i - \alpha}{\beta - \beta_j}
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\(i\)</span> and <span class="process-math">\(j\)</span> with <span class="process-math">\(j \neq 1\text{.}\)</span> Therefore, <span class="process-math">\(a( \beta - \beta_j ) \neq \alpha_i - \alpha\text{.}\)</span> Let <span class="process-math">\(\gamma = \alpha + a \beta\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\gamma = \alpha + a \beta \neq \alpha_i + a \beta_j;
+\end{equation*}
+</div>
+<div class="para">hence, <span class="process-math">\(\gamma - a \beta_j \neq \alpha_i\)</span> for all <span class="process-math">\(i,
+j\)</span> with <span class="process-math">\(j \neq 1\text{.}\)</span> Define <span class="process-math">\(h(x) \in F( \gamma )[x]\)</span> by <span class="process-math">\(h(x) = f( \gamma - ax)\text{.}\)</span> Then <span class="process-math">\(h( \beta ) = f( \alpha ) = 0\text{.}\)</span> However, <span class="process-math">\(h( \beta_j ) \neq 0\)</span> for <span class="process-math">\(j \neq 1\text{.}\)</span> Hence, <span class="process-math">\(h(x)\)</span> and <span class="process-math">\(g(x)\)</span> have a single common factor in <span class="process-math">\(F( \gamma )[x]\text{;}\)</span> that is, the minimal polynomial of <span class="process-math">\(\beta\)</span> over <span class="process-math">\(F( \gamma )\)</span> must be linear, since <span class="process-math">\(\beta\)</span> is the only zero common to both <span class="process-math">\(g(x)\)</span> and <span class="process-math">\(h(x)\text{.}\)</span> So <span class="process-math">\(\beta \in F( \gamma )\)</span> and <span class="process-math">\(\alpha = \gamma - a \beta\)</span> is in <span class="process-math">\(F( \gamma )\text{.}\)</span> Hence, <span class="process-math">\(F( \alpha, \beta ) = F( \gamma )\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#galois-theorem-primitive-element-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 23.13.1"><a href="#galois-theorem-primitive-element-4" title="Copy heading and permalink for Proof 23.13.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="galois-section-field-automorphisms.html#galois-theorem-primitive-element">in-context</a></span>
+</body>
+</html>

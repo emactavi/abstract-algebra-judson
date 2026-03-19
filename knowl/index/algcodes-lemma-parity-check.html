@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.27</span><span class="period">.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(H = (A \mid I_m )\)</span> be an <span class="process-math">\(m \times n\)</span> canonical parity-check matrix and <span class="process-math">\(G = \left( \frac{I_{n-m} }{A} \right)\)</span> be the corresponding <span class="process-math">\(n \times (n-m)\)</span> standard generator matrix. Then <span class="process-math">\(HG = {\mathbf 0}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-lemma-parity-check-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 8.27"><a href="#algcodes-lemma-parity-check" title="Copy heading and permalink for Lemma 8.27">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(C = HG\text{.}\)</span> The <span class="process-math">\(ij\)</span>th entry in <span class="process-math">\(C\)</span> is</div>
+<div class="displaymath process-math">
+\begin{align*}
+c_{ij} &amp; = \sum_{k=1}^n h_{ik} g_{kj}\\
+&amp; =  \sum_{k=1}^{n-m} h_{ik} g_{kj} + \sum_{k=n-m+1}^n h_{ik} g_{kj}\\
+&amp; = \sum_{k=1}^{n-m} a_{ik} \delta_{kj} + \sum_{k=n-m+1}^n \delta_{i-(m-n),k} a_{kj}\\
+&amp; =  a_{ij} + a_{ij}\\
+&amp; = 0\text{,}
+\end{align*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\delta_{ij} =
+\begin{cases}
+1 &amp; i = j \\
+0 &amp; i \neq j
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">is the Kronecker delta. </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-lemma-parity-check-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 8.27.1"><a href="#algcodes-lemma-parity-check-2" title="Copy heading and permalink for Proof 8.27.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="algcodes-section-parity-check.html#algcodes-lemma-parity-check">in-context</a></span>
+</body>
+</html>

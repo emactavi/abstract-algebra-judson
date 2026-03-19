@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Before exploring the theory behind the <abbr class="acronym">RSA</abbr> cryptosystem or attempting to use large integers, we will use some small integers just to see that the system does indeed work. Suppose that we wish to send some message, which when digitized is <span class="process-math">\(25\text{.}\)</span> Let <span class="process-math">\(p = 23\)</span> and <span class="process-math">\(q = 29\text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cyclic.html">
+\begin{equation*}
+n = pq = 667
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cyclic.html">
+\begin{equation*}
+\phi(n) = m = (p - 1)(q - 1) = 616\text{.}
+\end{equation*}
+</div>
+<div class="para">We can let <span class="process-math">\(E = 487\text{,}\)</span> since <span class="process-math">\(\gcd(616, 487) = 1\text{.}\)</span> The encoded message is computed to be</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cyclic.html">
+\begin{equation*}
+25^{487} \bmod 667 = 169\text{.}
+\end{equation*}
+</div>
+<div class="para">This computation can be reasonably done by using the method of repeated squares as described in <a href="cyclic.html" class="internal" title="Chapter 4: Cyclic Groups">Chapter 4</a>. Using the Euclidean algorithm, we determine that <span class="process-math">\(191 E = 1 + 151 m\text{;}\)</span> therefore, the decrypting key is <span class="process-math">\((n, D) = ( 667, 191)\text{.}\)</span> We can recover the original message by calculating</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cyclic.html">
+\begin{equation*}
+169^{191} \bmod 667 = 25\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#crypt-example-rsa-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.5"><a href="#crypt-example-rsa" title="Copy heading and permalink for Example 7.5">🔗</a></div></article><span class="incontext"><a class="internal" href="crypt-section-public-key.html#crypt-example-rsa">in-context</a></span>
+</body>
+</html>

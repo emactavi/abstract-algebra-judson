@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">16.7</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">For an example of a noncommutative division ring, let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 = 
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix},
+\quad
+{\mathbf i}
+=
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix},
+\quad
+{\mathbf j} =
+\begin{pmatrix}
+0 &amp; i \\
+i &amp; 0
+\end{pmatrix},
+\quad
+{\mathbf k} = 
+\begin{pmatrix}
+i &amp; 0 \\
+0 &amp; -i
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(i^2 = -1\text{.}\)</span> These elements satisfy the following relations:</div>
+<div class="displaymath process-math">
+\begin{align*}
+{\mathbf i}^2 = {\mathbf j}^2 &amp; =  {\mathbf k}^2 = -1\\
+{\mathbf i}  {\mathbf j} &amp; =  {\mathbf k}\\
+{\mathbf j}  {\mathbf k} &amp; =  {\mathbf i}\\
+{\mathbf k}  {\mathbf i} &amp; =  {\mathbf j}\\
+{\mathbf j}  {\mathbf i} &amp; =  - {\mathbf k}\\
+{\mathbf k}  {\mathbf j} &amp; =  - {\mathbf i}\\
+{\mathbf i}  {\mathbf k} &amp; =  - {\mathbf j}\text{.}
+\end{align*}
+</div>
+<div class="para">Let <span class="process-math">\({\mathbb H}\)</span> consist of elements of the form <span class="process-math">\(a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}\text{,}\)</span> where <span class="process-math">\(a, b , c, d\)</span> are real numbers. Equivalently, <span class="process-math">\({\mathbb H}\)</span> can be considered to be the set of all <span class="process-math">\(2 \times 2\)</span> matrices of the form </div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+\alpha &amp; \beta \\
+-\overline{\beta} &amp; \overline{\alpha }
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\alpha = a + di\)</span> and <span class="process-math">\(\beta = b + ci\)</span> are complex numbers. We can define addition and multiplication on <span class="process-math">\({\mathbb H}\)</span> either by the usual matrix operations or in terms of the generators <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\({\mathbf i}\text{,}\)</span> <span class="process-math">\({\mathbf j}\text{,}\)</span> and <span class="process-math">\({\mathbf k}\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{gather*}
+(a_1 + b_1 {\mathbf i} + c_1 {\mathbf j} +d_1 {\mathbf k} ) + ( a_2 + b_2 {\mathbf i} + c_2 {\mathbf j} +d_2 {\mathbf k} )\\
+= (a_1 + a_2) + ( b_1 + b_2) {\mathbf i}  + ( c_1 + c_2) \mathbf j + (d_1 + d_2) \mathbf k
+\end{gather*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a_1 + b_1 {\mathbf i}  + c_1 {\mathbf j} +d_1 {\mathbf k} ) ( a_2 + b_2 {\mathbf i}  + c_2 {\mathbf j} +d_2 {\mathbf k} ) = \alpha + \beta {\mathbf i}  + \gamma {\mathbf j} + \delta {\mathbf k}\text{,}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{align*}
+\alpha &amp; =  a_1 a_2 - b_1 b_2 - c_1 c_2 -d_1 d_2\\
+\beta &amp; =  a_1 b_2 + a_2 b_1 + c_1 d_2 - d_1 c_2\\
+\gamma &amp; =  a_1 c_2 - b_1 d_2 + c_1 a_2 + d_1 b_2\\
+\delta &amp; =  a_1 d_2 + b_1 c_2 - c_1 b_2 + d_1 a_2\text{.}
+\end{align*}
+</div>
+<div class="para">Though multiplication looks complicated, it is actually a straightforward computation if we remember that we just add and multiply elements in <span class="process-math">\({\mathbb H}\)</span> like polynomials and keep in mind the relationships between the generators <span class="process-math">\({\mathbf i}\text{,}\)</span> <span class="process-math">\({\mathbf j}\text{,}\)</span> and <span class="process-math">\({\mathbf k}\text{.}\)</span> The ring <span class="process-math">\({\mathbb H}\)</span> is called the ring of <dfn class="terminology">quaternions</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rings-example-noncommutative-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To show that the quaternions are a division ring, we must be able to find an inverse for each nonzero element. Notice that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+( a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k} )( a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} ) = a^2 + b^2 + c^2 + d^2\text{.}
+\end{equation*}
+</div>
+<div class="para">This element can be zero only if <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\)</span> are all zero. So if <span class="process-math">\(a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k})\left( \frac{a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} }{a^2 + b^2 + c^2 + d^2} \right) = 1\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rings-example-noncommutative-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 16.7"><a href="#rings-example-noncommutative" title="Copy heading and permalink for Example 16.7">🔗</a></div></article><span class="incontext"><a class="internal" href="rings-section-definitions.html#rings-example-noncommutative">in-context</a></span>
+</body>
+</html>

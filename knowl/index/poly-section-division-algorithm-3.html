@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span><span class="space"> </span><span class="title">Division Algorithm.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> be polynomials in <span class="process-math">\(F[x]\text{,}\)</span> where <span class="process-math">\(F\)</span> is a field and  <span class="process-math">\(g(x)\)</span> is a nonzero polynomial. Then there exist unique polynomials <span class="process-math">\(q(x),
+r(x) \in F[x]\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = g(x) q(x) + r(x)\text{,}
+\end{equation*}
+</div>
+<div class="para">where either  <span class="process-math">\(\deg r(x) \lt \deg g(x)\)</span> or <span class="process-math">\(r(x)\)</span> is the zero polynomial.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-section-division-algorithm-3-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 17.6: Division Algorithm"><a href="#poly-section-division-algorithm-3" title="Copy heading and permalink for Theorem 17.6: Division Algorithm">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We will first consider the existence of <span class="process-math">\(q(x)\)</span> and <span class="process-math">\(r(x)\text{.}\)</span> If <span class="process-math">\(f(x)\)</span> is the zero polynomial, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0 = 0 \cdot g(x) + 0;
+\end{equation*}
+</div>
+<div class="para">hence, both <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> must also be the zero polynomial. Now suppose that <span class="process-math">\(f(x)\)</span> is not the zero polynomial and that <span class="process-math">\(\deg f(x) = n\)</span> and <span class="process-math">\(\deg g(x) = m\text{.}\)</span> If <span class="process-math">\(m \gt n\text{,}\)</span> then we can let <span class="process-math">\(q(x) = 0\)</span> and <span class="process-math">\(r(x) = f(x)\text{.}\)</span> Hence, we may assume that <span class="process-math">\(m  \leq n\)</span> and proceed by induction on <span class="process-math">\(n\text{.}\)</span> If</div>
+<div class="displaymath process-math">
+\begin{align*}
+f(x) &amp; = a_n x^n + a_{n-1} x^{n - 1} + \cdots + a_1 x + a_0\\
+g(x) &amp; = b_m x^m + b_{m-1} x^{m - 1} + \cdots + b_1 x + b_0
+\end{align*}
+</div>
+<div class="para">the polynomial</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(x) = f(x) - \frac{a_n}{b_m} x^{n - m} g(x)
+\end{equation*}
+</div>
+<div class="para">has degree less than <span class="process-math">\(n\)</span> or is the zero polynomial. By induction, there exist polynomials <span class="process-math">\(q'(x)\)</span> and <span class="process-math">\(r(x)\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f'(x) = q'(x) g(x) + r(x)\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(r(x) = 0\)</span> or the degree of <span class="process-math">\(r(x)\)</span> is less than the degree of <span class="process-math">\(g(x)\text{.}\)</span> Now let</div>
+<div class="displaymath process-math">
+\begin{equation*}
+q(x) = q'(x) + \frac{a_n}{b_m} x^{n - m}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = g(x) q(x) + r(x)\text{,}
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(r(x)\)</span> the zero polynomial or <span class="process-math">\(\deg r(x) \lt \deg g(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-section-division-algorithm-3-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To show that  <span class="process-math">\(q(x)\)</span> and <span class="process-math">\(r(x)\)</span> are unique, suppose that there exist two other polynomials <span class="process-math">\(q_1(x)\)</span> and <span class="process-math">\(r_1(x)\)</span> such that <span class="process-math">\(f(x) = g(x) q_1(x) + r_1(x)\)</span> with <span class="process-math">\(\deg r_1(x) \lt \deg g(x)\)</span> or <span class="process-math">\(r_1(x) = 0\text{,}\)</span> so that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = g(x) q(x) + r(x) = g(x) q_1(x) + r_1(x)\text{,}
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(q(x) - q_1(x)\)</span> is not the zero polynomial, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\deg( g(x) [q(x) - q_1(x) ] )= \deg( r_1(x) - r(x) ) \geq \deg g(x)\text{.}
+\end{equation*}
+</div>
+<div class="para">However, the degrees of both <span class="process-math">\(r(x)\)</span> and <span class="process-math">\(r_1(x)\)</span> are strictly less than the degree of <span class="process-math">\(g(x)\text{;}\)</span> therefore, <span class="process-math">\(r(x) = r_1(x)\)</span> and <span class="process-math">\(q(x) = q_1(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-section-division-algorithm-3-5-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 17.6.1"><a href="#poly-section-division-algorithm-3-5" title="Copy heading and permalink for Proof 17.6.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="poly-section-division-algorithm.html#poly-section-division-algorithm-3">in-context</a></span>
+</body>
+</html>

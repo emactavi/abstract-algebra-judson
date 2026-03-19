@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">21.32</span><span class="period">.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(\phi : E \rightarrow F\)</span> be an isomorphism of fields. Let <span class="process-math">\(K\)</span> be an extension field of <span class="process-math">\(E\)</span> and <span class="process-math">\(\alpha \in K\)</span> be algebraic over <span class="process-math">\(E\)</span> with minimal polynomial <span class="process-math">\(p(x)\text{.}\)</span> Suppose that <span class="process-math">\(L\)</span> is an extension field of <span class="process-math">\(F\)</span> such that <span class="process-math">\(\beta\)</span> is root of the polynomial in <span class="process-math">\(F[x]\)</span> obtained from <span class="process-math">\(p(x)\)</span> under the image of <span class="process-math">\(\phi\text{.}\)</span> Then <span class="process-math">\(\phi\)</span> extends to a unique isomorphism <span class="process-math">\(\overline{\phi} : E( \alpha ) \rightarrow F( \beta )\)</span> such that <span class="process-math">\(\overline{\phi}( \alpha ) = \beta\)</span> and <span class="process-math">\(\overline{\phi}\)</span> agrees with <span class="process-math">\(\phi\)</span> on <span class="process-math">\(E\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fields-lemma-field-isomorphism-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 21.32"><a href="#fields-lemma-field-isomorphism" title="Copy heading and permalink for Lemma 21.32">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">If <span class="process-math">\(p(x)\)</span> has degree <span class="process-math">\(n\text{,}\)</span> then by <a href="fields-section-extension-fields.html#fields-theorem-simple_extension" class="xref" data-knowl="./knowl/xref/fields-theorem-simple_extension.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 21.13">Theorem 21.13</a> we can write any element in <span class="process-math">\(E( \alpha )\)</span> as a linear combination of <span class="process-math">\(1, \alpha, \ldots, \alpha^{n - 1}\text{.}\)</span> Therefore, the isomorphism that we are seeking must be</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fields-theorem-simple_extension.html">
+\begin{equation*}
+\overline{\phi}( a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}) = \phi(a_0) + \phi(a_1) \beta + \cdots + \phi(a_{n - 1}) \beta^{n - 1}\text{,}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fields-theorem-simple_extension.html">
+\begin{equation*}
+a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}
+\end{equation*}
+</div>
+<div class="para">is an element in <span class="process-math">\(E(\alpha)\text{.}\)</span> The fact that <span class="process-math">\(\overline{\phi}\)</span> is an isomorphism could be checked by direct computation; however, it is easier to observe that <span class="process-math">\(\overline{\phi}\)</span> is a composition of maps that we already know to be isomorphisms.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fields-lemma-field-isomorphism-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">We can extend <span class="process-math">\(\phi\)</span> to be an isomorphism from <span class="process-math">\(E[x]\)</span> to <span class="process-math">\(F[x]\text{,}\)</span> which we will also denote by <span class="process-math">\(\phi\text{,}\)</span> by letting</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fields-proposition-minimal-poly.html ./knowl/xref/fields-figure-splitting-fields-1.html">
+\begin{equation*}
+\phi( a_0 + a_1 x + \cdots + a_n x^n ) =  \phi( a_0 ) + \phi(a_1) x + \cdots + \phi(a_n) x^n\text{.}
+\end{equation*}
+</div>
+<div class="para">This extension agrees with the original isomorphism <span class="process-math">\(\phi : E \rightarrow F\text{,}\)</span> since constant polynomials get mapped to constant polynomials. By assumption, <span class="process-math">\(\phi(p(x)) = q(x)\text{;}\)</span> hence, <span class="process-math">\(\phi\)</span> maps <span class="process-math">\(\langle p(x) \rangle\)</span> onto <span class="process-math">\(\langle q(x) \rangle\text{.}\)</span> Consequently, we have an isomorphism <span class="process-math">\(\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle\text{.}\)</span> By <a href="fields-section-extension-fields.html#fields-proposition-minimal-poly" class="xref" data-knowl="./knowl/xref/fields-proposition-minimal-poly.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 21.12">Proposition 21.12</a>, we have isomorphisms <span class="process-math">\(\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)\)</span> and <span class="process-math">\(\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )\text{,}\)</span> defined by evaluation at <span class="process-math">\(\alpha\)</span> and <span class="process-math">\(\beta\text{,}\)</span> respectively. Therefore, <span class="process-math">\(\overline{\phi} = \tau \psi \sigma^{-1}\)</span> is the required isomorphism (see <a href="fields-section-splitting-fields.html#fields-figure-splitting-fields-1" class="xref" data-knowl="./knowl/xref/fields-figure-splitting-fields-1.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 21.33">Figure 21.33</a>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fields-lemma-field-isomorphism-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{CD}
+E[x]/\langle p(x) \rangle    @&gt;\psi&gt;&gt;  F[x]/\langle q(x) \rangle  \\
+@VV{\sigma}V        @VV{\tau}V\\
+E(\alpha)     @&gt;\overline{\phi}&gt;&gt;  F(\beta) \\
+@VVV        @VVV\\
+E     @&gt;\phi&gt;&gt;  F
+\end{CD}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fields-figure-splitting-fields-1-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">21.33<span class="period">.</span></span><span class="space"> </span>Commutative diagram for <a href="fields-section-splitting-fields.html#fields-lemma-field-isomorphism" class="xref" data-knowl="./knowl/xref/fields-lemma-field-isomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 21.32">Lemma 21.32</a><div class="autopermalink" data-description="Figure 21.33"><a href="#fields-figure-splitting-fields-1" title="Copy heading and permalink for Figure 21.33">🔗</a></div></figcaption></figure><div class="para">We leave the proof of uniqueness as a exercise.<div class="autopermalink" data-description="Paragraph"><a href="#fields-lemma-field-isomorphism-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 21.32.1"><a href="#fields-lemma-field-isomorphism-2" title="Copy heading and permalink for Proof 21.32.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="fields-section-splitting-fields.html#fields-lemma-field-isomorphism">in-context</a></span>
+</body>
+</html>

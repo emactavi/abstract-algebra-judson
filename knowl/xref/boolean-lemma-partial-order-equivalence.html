@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">19.20</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(B\)</span> be a Boolean algebra and <span class="process-math">\(a, b \in B\text{.}\)</span> The following statements are equivalent.</div>
+<ol class="decimal" id="boolean-lemma-partial-order-equivalence-1-1-3">
+<li>
+<div class="para">
+<span class="process-math">\(a \preceq b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#boolean-lemma-partial-order-equivalence-1-1-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#boolean-lemma-partial-order-equivalence-1-1-3-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(a \wedge b' = O\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#boolean-lemma-partial-order-equivalence-1-1-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#boolean-lemma-partial-order-equivalence-1-1-3-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(a' \vee b = I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#boolean-lemma-partial-order-equivalence-1-1-3-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#boolean-lemma-partial-order-equivalence-1-1-3-3" title="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#boolean-lemma-partial-order-equivalence-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 19.20"><a href="#boolean-lemma-partial-order-equivalence" title="Copy heading and permalink for Lemma 19.20">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">(1) <span class="process-math">\(\Rightarrow\)</span> (2). If <span class="process-math">\(a \preceq b\text{,}\)</span> then <span class="process-math">\(a \vee b = b\text{.}\)</span> Therefore,</div>
+<div class="displaymath process-math">
+\begin{align*}
+a \wedge b' &amp; = a \wedge (a \vee b)'\\
+&amp; = a \wedge ( a' \wedge b')\\
+&amp; = ( a \wedge a') \wedge b'\\
+&amp; = O \wedge b'\\
+&amp; = O\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#boolean-lemma-partial-order-equivalence-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">(2) <span class="process-math">\(\Rightarrow\)</span> (3). If <span class="process-math">\(a \wedge b' = O\text{,}\)</span> then <span class="process-math">\(a' \vee b = (a \wedge b')' = O' = I\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#boolean-lemma-partial-order-equivalence-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">(3) <span class="process-math">\(\Rightarrow\)</span> (1). If <span class="process-math">\(a' \vee b = I\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{align*}
+a &amp; =  a \wedge (a' \vee b)\\
+&amp; =  (a \wedge a') \vee (a  \wedge  b)\\
+&amp; = O \vee (a  \wedge  b)\\
+&amp; = a \wedge b\text{.}
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(a \preceq b\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#boolean-lemma-partial-order-equivalence-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 19.20.1"><a href="#boolean-lemma-partial-order-equivalence-2" title="Copy heading and permalink for Proof 19.20.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="boolean-section-boolean-algebras.html#boolean-lemma-partial-order-equivalence">in-context</a></span>
+</body>
+</html>

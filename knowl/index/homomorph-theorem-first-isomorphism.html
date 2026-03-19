@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.10</span><span class="period">.</span><span class="space"> </span><span class="title">First Isomorphism Theorem.</span>
+</h3>
+<div class="para">If <span class="process-math">\(\psi : G \rightarrow H\)</span> is a group homomorphism with <span class="process-math">\(K =\ker \psi\text{,}\)</span> then <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(G\text{.}\)</span> Let <span class="process-math">\(\phi: G \rightarrow G/K\)</span> be the canonical homomorphism. Then there exists a unique isomorphism <span class="process-math">\(\eta: G/K \rightarrow \psi(G)\)</span> such that <span class="process-math">\(\psi = \eta \phi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#homomorph-theorem-first-isomorphism-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 11.10: First Isomorphism Theorem"><a href="#homomorph-theorem-first-isomorphism" title="Copy heading and permalink for Theorem 11.10: First Isomorphism Theorem">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We already know that <span class="process-math">\(K\)</span> is normal in <span class="process-math">\(G\text{.}\)</span> Define <span class="process-math">\(\eta: G/K \rightarrow \psi(G)\)</span> by <span class="process-math">\(\eta(gK) = \psi(g)\text{.}\)</span> We first show that <span class="process-math">\(\eta\)</span> is a well-defined map. If <span class="process-math">\(g_1 K =g_2 K\text{,}\)</span> then for some <span class="process-math">\(k \in K\text{,}\)</span> <span class="process-math">\(g_1 k=g_2\text{;}\)</span> consequently,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\eta(g_1 K) = \psi(g_1) = \psi(g_1) \psi(k) = \psi(g_1k) = \psi(g_2) = \eta(g_2 K)\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\eta\)</span> does not depend on the choice of coset representatives and the map <span class="process-math">\(\eta: G/K \rightarrow \psi(G)\)</span> is uniquely defined since <span class="process-math">\(\psi =  \eta \phi\text{.}\)</span> We must also show that <span class="process-math">\(\eta\)</span> is a homomorphism. Indeed,</div>
+<div class="displaymath process-math">
+\begin{align*}
+\eta( g_1K g_2K ) &amp; = \eta(g_1 g_2K)\\
+&amp; = \psi(g_1 g_2)\\
+&amp; = \psi(g_1) \psi(g_2)\\
+&amp; = \eta( g_1K) \eta( g_2K )\text{.}
+\end{align*}
+</div>
+<div class="para">Clearly, <span class="process-math">\(\eta\)</span> is onto <span class="process-math">\(\psi( G)\text{.}\)</span> To show that <span class="process-math">\(\eta\)</span> is one-to-one, suppose that <span class="process-math">\(\eta(g_1 K) = \eta(g_2 K)\text{.}\)</span> Then <span class="process-math">\(\psi(g_1) = \psi(g_2)\text{.}\)</span> This implies that <span class="process-math">\(\psi( g_1^{-1} g_2 ) = e\text{,}\)</span> or <span class="process-math">\(g_1^{-1} g_2\)</span> is in the kernel of <span class="process-math">\(\psi\text{;}\)</span> hence, <span class="process-math">\(g_1^{-1} g_2K = K\text{;}\)</span> that is, <span class="process-math">\(g_1K =g_2K\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#homomorph-theorem-first-isomorphism-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 11.10.1"><a href="#homomorph-theorem-first-isomorphism-4" title="Copy heading and permalink for Proof 11.10.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="homomorph-section-group-isomorphism-theorems.html#homomorph-theorem-first-isomorphism">in-context</a></span>
+</body>
+</html>

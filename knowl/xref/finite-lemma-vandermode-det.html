@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h4 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">22.20</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(\alpha_1, \ldots, \alpha_n\)</span> be elements in a field <span class="process-math">\(F\)</span> with <span class="process-math">\(n \geq 2\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\det
+\begin{pmatrix}
+1              &amp; 1              &amp; \cdots &amp; 1 \\
+\alpha_1       &amp; \alpha_2       &amp; \cdots &amp; \alpha_n \\
+\alpha_1^2     &amp; \alpha_2^2     &amp; \cdots &amp; \alpha_n^2 \\
+\vdots         &amp; \vdots         &amp; \ddots &amp; \vdots \\
+\alpha_1^{n-1} &amp; \alpha_2^{n-1} &amp; \cdots &amp; \alpha_n^{n-1} 
+\end{pmatrix}
+= \prod_{1 \leq j \lt i \leq n} (\alpha_i - \alpha_j)\text{.}
+\end{equation*}
+</div>
+<div class="para">In particular, if the <span class="process-math">\(\alpha_i\)</span>’s are distinct, then the determinant is nonzero.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#finite-lemma-vandermode-det-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 22.20"><a href="#finite-lemma-vandermode-det" title="Copy heading and permalink for Lemma 22.20">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We will induct on <span class="process-math">\(n\text{.}\)</span> If <span class="process-math">\(n = 2\text{,}\)</span> then the determinant is <span class="process-math">\(\alpha_2 - \alpha_1\text{.}\)</span> Let us assume the result for <span class="process-math">\(n - 1\)</span> and consider the polynomial <span class="process-math">\(p(x)\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x) = \det
+\begin{pmatrix}
+1              &amp; 1              &amp; \cdots &amp; 1              &amp; 1 \\
+\alpha_1       &amp; \alpha_2       &amp; \cdots &amp; \alpha_{n-1}   &amp; x \\
+\alpha_1^2     &amp; \alpha_2^2     &amp; \cdots &amp; \alpha_{n-1}^2 &amp; x^2 \\
+\vdots         &amp; \vdots         &amp; \ddots &amp; \vdots         &amp; \vdots \\
+\alpha_1^{n-1} &amp; \alpha_2^{n-1} &amp; \cdots &amp; \alpha_{n-1}^{n-1} &amp; x^{n-1}
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Expanding this determinant by cofactors on the last column, we see that <span class="process-math">\(p(x)\)</span> is a polynomial of at most degree <span class="process-math">\(n-1\text{.}\)</span> Moreover, the roots of <span class="process-math">\(p(x)\)</span> are <span class="process-math">\(\alpha_1, \ldots, \alpha_{n-1}\text{,}\)</span> since the substitution of any one of these elements in the last column will produce a column identical to the last column in the matrix. Remember that the determinant of a matrix is zero if it has two identical columns. Therefore,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_{n-1}) \beta\text{,}
+\end{equation*}
+</div>
+<div class="para">where</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\beta = (-1)^{n + n} \det
+\begin{pmatrix}
+1              &amp; 1              &amp; \cdots &amp; 1 \\
+\alpha_1       &amp; \alpha_2       &amp; \cdots &amp; \alpha_{n-1} \\
+\alpha_1^2     &amp; \alpha_2^2     &amp; \cdots &amp; \alpha_{n-1}^2 \\
+\vdots         &amp; \vdots         &amp; \ddots &amp; \vdots \\
+\alpha_1^{n-2} &amp; \alpha_2^{n-2} &amp; \cdots &amp; \alpha_{n-1}^{n-2} 
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">By our induction hypothesis,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\beta = (-1)^{n+n} \prod_{1 \leq j \lt i \leq n - 1} (\alpha_i - \alpha_j)\text{.}
+\end{equation*}
+</div>
+<div class="para">If we let <span class="process-math">\(x = \alpha_n\text{,}\)</span> the result now follows immediately.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#finite-lemma-vandermode-det-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 22.20.1"><a href="#finite-lemma-vandermode-det-2" title="Copy heading and permalink for Proof 22.20.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="finite-section-poly-codes.html#finite-lemma-vandermode-det">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+</h3>
+<div class="para">A better algorithm for factoring odd positive integers is <dfn class="terminology">Fermat’s factorization algorithm</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-fermats-factorization-algorithm-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="crypt-exercise-fermats-factorization-algorithm-1-2">
+<li>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(n= ab\)</span> be an odd composite number. Prove that <span class="process-math">\(n\)</span> can be written as the difference of two perfect squares:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+n = x^2 - y^2 = (x - y)(x + y)\text{.}
+\end{equation*}
+</div>
+<div class="para">Consequently, a positive odd integer can be factored exactly when we can find integers <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> such that <span class="process-math">\(n = x^2 - y^2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-fermats-factorization-algorithm-1-2-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.5.1.a"><a href="#crypt-exercise-fermats-factorization-algorithm-1-2-1" title="Copy heading and permalink for Item 7.5.1.a">🔗</a></div>
+</li>
+<li>
+<div class="para">Write a program to implement the following factorization algorithm based on the observation in part (a). The expression <code class="code-inline tex2jax_ignore">ceiling(sqrt(n))</code> means the smallest integer greater than or equal to the square root of <span class="process-math">\(n\text{.}\)</span> Write another program to do factorization using trial division and compare the speed of the two algorithms. Which algorithm is faster and why?<div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-fermats-factorization-algorithm-1-2-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.5.1.b"><a href="#crypt-exercise-fermats-factorization-algorithm-1-2-2" title="Copy heading and permalink for Item 7.5.1.b">🔗</a></div>
+</li>
+</ol> <div class="code-box"><pre class="program"><code class="language-none">x := ceiling(sqrt(n))
+y := 1
+
+1 : while x^2 - y^2 &gt; n do
+    y := y + 1
+
+if x^2 - y^2 &lt; n then
+    x := x + 1
+    y := 1
+    goto 1
+else if x^2 - y^2 = 0 then
+    a := x - y
+    b := x + y
+    write n = a * b
+</code></pre></div>
+<div class="autopermalink" data-description="Exercise 7.5.1"><a href="#crypt-exercise-fermats-factorization-algorithm" title="Copy heading and permalink for Exercise 7.5.1">🔗</a></div></article><span class="incontext"><a class="internal" href="crypt-exercises-additional.html#crypt-exercise-fermats-factorization-algorithm">in-context</a></span>
+</body>
+</html>

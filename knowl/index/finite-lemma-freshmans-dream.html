@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="lemma theorem-like"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">22.3</span><span class="period">.</span><span class="space"> </span><span class="title">Freshman’s Dream.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(p\)</span> be prime and <span class="process-math">\(D\)</span> be an integral domain of characteristic <span class="process-math">\(p\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a^{p^n} + b^{p^n} = (a + b)^{p^n}
+\end{equation*}
+</div>
+<div class="para">for all positive integers <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#finite-lemma-freshmans-dream-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 22.3: Freshman’s Dream"><a href="#finite-lemma-freshmans-dream" title="Copy heading and permalink for Lemma 22.3: Freshman’s Dream">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We will prove this lemma using mathematical induction on <span class="process-math">\(n\text{.}\)</span> We can use the binomial formula (see <a href="integers.html" class="internal" title="Chapter 2: The Integers">Chapter 2</a>, <a href="integers-section-math-induction.html#integers-example-binomial-theorem" class="xref" data-knowl="./knowl/xref/integers-example-binomial-theorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.4">Example 2.4</a>) to verify the case for <span class="process-math">\(n = 1\text{;}\)</span> that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/integers.html ./knowl/xref/integers-example-binomial-theorem.html">
+\begin{equation*}
+(a + b)^p = \sum_{k = 0}^{p} \binom{p}{k} a^k b^{p - k}\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(0 \lt k \lt p\text{,}\)</span> then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/integers.html ./knowl/xref/integers-example-binomial-theorem.html">
+\begin{equation*}
+\binom{p}{k} = \frac{p!}{k!(p - k)!}
+\end{equation*}
+</div>
+<div class="para">must be divisible by <span class="process-math">\(p\text{,}\)</span> since <span class="process-math">\(p\)</span> cannot divide <span class="process-math">\(k!(p - k)!\text{.}\)</span> Note that <span class="process-math">\(D\)</span> is an integral domain of characteristic <span class="process-math">\(p\text{,}\)</span> so all but the first and last terms in the sum must be zero. Therefore, <span class="process-math">\((a + b)^p = a^p + b^p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#finite-lemma-freshmans-dream-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Now suppose that the result holds for all <span class="process-math">\(k\text{,}\)</span> where <span class="process-math">\(1 \leq k \leq n\text{.}\)</span> By the induction hypothesis,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a + b)^{p^{n + 1}} = ((a + b)^p)^{p^{n}} = (a^p + b^p)^{p^{n}} = (a^p)^{p^{n}} + (b^p)^{p^{n}} = a^{p^{n + 1}} + b^{p^{n + 1}}\text{.}
+\end{equation*}
+</div>
+<div class="para">Therefore, the lemma is true for <span class="process-math">\(n + 1\)</span> and the proof is complete.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#finite-lemma-freshmans-dream-4-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 22.3.1"><a href="#finite-lemma-freshmans-dream-4" title="Copy heading and permalink for Proof 22.3.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="finite-section-field.html#finite-lemma-freshmans-dream">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h3 class="heading">
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Primality Testing.</span>
+</h3>
+<div class="para logical">
+<div class="para">Recall Fermat’s Little Theorem from <a href="cosets.html" class="internal" title="Chapter 6: Cosets and Lagrange’s Theorem">Chapter 6</a>. Let <span class="process-math">\(p\)</span> be prime with <span class="process-math">\(\gcd(a, p) = 1\text{.}\)</span> Then <span class="process-math">\(a^{p-1} \equiv 1 \pmod{p}\text{.}\)</span> We can use Fermat’s Little Theorem as a screening test for primes. For example, <span class="process-math">\(15\)</span> cannot be prime since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cosets.html">
+\begin{equation*}
+2^{15-1} \equiv 2^{14} \equiv 4 \pmod{15}\text{.}
+\end{equation*}
+</div>
+<div class="para">However, <span class="process-math">\(17\)</span> is a potential prime since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cosets.html">
+\begin{equation*}
+2^{17-1} \equiv 2^{16} \equiv 1 \pmod{17}\text{.}
+\end{equation*}
+</div>
+<div class="para">We say that an odd composite number <span class="process-math">\(n\)</span> is a <dfn class="terminology">pseudoprime</dfn> if</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cosets.html">
+\begin{equation*}
+2^{n-1} \equiv 1 \pmod{n}\text{.}
+\end{equation*}
+</div>
+<div class="para">Which of the following numbers are primes and which are pseudoprimes?</div>
+<ol class="lower-alpha lower-alpha-level-1 cols3" id="crypt-exercise-primality-testing-2-1-13">
+<li>
+<div class="para">
+<span class="process-math">\(\displaystyle 342\)</span><div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-primality-testing-2-1-13-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.5.2.a"><a href="#crypt-exercise-primality-testing-2-1-13-1" title="Copy heading and permalink for Item 7.5.2.a">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\displaystyle 811\)</span><div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-primality-testing-2-1-13-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.5.2.b"><a href="#crypt-exercise-primality-testing-2-1-13-2" title="Copy heading and permalink for Item 7.5.2.b">🔗</a></div>
+</li>
+<li>
+<div class="para">601<div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-primality-testing-2-1-13-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.5.2.c"><a href="#crypt-exercise-primality-testing-2-1-13-3" title="Copy heading and permalink for Item 7.5.2.c">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\displaystyle 561\)</span><div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-primality-testing-2-1-13-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.5.2.d"><a href="#crypt-exercise-primality-testing-2-1-13-4" title="Copy heading and permalink for Item 7.5.2.d">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\displaystyle 771\)</span><div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-primality-testing-2-1-13-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.5.2.e"><a href="#crypt-exercise-primality-testing-2-1-13-5" title="Copy heading and permalink for Item 7.5.2.e">🔗</a></div>
+</li>
+<li>
+<div class="para">
+<span class="process-math">\(\displaystyle 631\)</span><div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-primality-testing-2-1-13-6-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 7.5.2.f"><a href="#crypt-exercise-primality-testing-2-1-13-6" title="Copy heading and permalink for Item 7.5.2.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#crypt-exercise-primality-testing-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 7.5.2: Primality Testing"><a href="#crypt-exercise-primality-testing" title="Copy heading and permalink for Exercise 7.5.2: Primality Testing">🔗</a></div></article><span class="incontext"><a class="internal" href="crypt-exercises-additional.html#crypt-exercise-primality-testing">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Suppose that <span class="process-math">\(H\)</span> is an <span class="process-math">\(m \times n\)</span> matrix with entries in <span class="process-math">\({\mathbb Z}_2\)</span> and <span class="process-math">\(n \gt m\text{.}\)</span> If the last <span class="process-math">\(m\)</span> columns of the matrix form the <span class="process-math">\(m \times m\)</span> identity matrix, <span class="process-math">\(I_m\text{,}\)</span> then the matrix is a <dfn class="terminology">canonical parity-check matrix</dfn>. More specifically, <span class="process-math">\(H= (A \mid I_m)\text{,}\)</span> where <span class="process-math">\(A\)</span> is the <span class="process-math">\(m \times (n-m)\)</span> matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1,n-m} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2,n-m} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots    \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{m,n-m}
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(I_m\)</span> is the <span class="process-math">\(m \times m\)</span> identity matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; 1 &amp; \cdots &amp; 0 \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; 1
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">With each canonical parity-check matrix we can associate an <span class="process-math">\(n \times (n-m)\)</span> <dfn class="terminology">standard generator matrix</dfn>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+G = \left( \frac{I_{n-m}}{A} \right)\text{.}
+\end{equation*}
+</div>
+<div class="para">Our goal will be to show that an <span class="process-math">\(\mathbf x\)</span> satisfying <span class="process-math">\(G {\mathbf x} = {\mathbf y}\)</span> exists if and only if <span class="process-math">\(H{\mathbf y} = {\mathbf 0}\text{.}\)</span> Given a message block <span class="process-math">\({\mathbf x}\)</span> to be encoded, the matrix <span class="process-math">\(G\)</span> will allow us to quickly encode it into a linear codeword <span class="process-math">\({\mathbf y}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-section-parity-check-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="algcodes-section-parity-check.html#algcodes-section-parity-check-3">in-context</a></span>
+</body>
+</html>

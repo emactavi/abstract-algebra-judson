@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">Let us investigate a slightly more sophisticated cryptosystem. Suppose that the encoding function is given by</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/groups-proposition-zn-equiv-classes.html">
+\begin{equation*}
+f(p) = ap + b \bmod 26\text{.}
+\end{equation*}
+</div>
+<div class="para">We first need to find out when a decoding function <span class="process-math">\(f^{-1}\)</span> exists. Such a decoding function exists when we can solve the equation</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/groups-proposition-zn-equiv-classes.html">
+\begin{equation*}
+c = ap + b \bmod 26
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(p\text{.}\)</span> By <a href="groups-section-mod-n-sym.html#groups-proposition-zn-equiv-classes" class="xref" data-knowl="./knowl/xref/groups-proposition-zn-equiv-classes.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.4">Proposition 3.4</a>, this is possible exactly when <span class="process-math">\(a\)</span> has an inverse or, equivalently, when <span class="process-math">\(\gcd( a, 26) =1\text{.}\)</span> In this case</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/groups-proposition-zn-equiv-classes.html">
+\begin{equation*}
+f^{-1}(p) = a^{-1} p - a^{-1} b \bmod 26\text{.}
+\end{equation*}
+</div>
+<div class="para">Such a cryptosystem is called an <dfn class="terminology">affine cryptosystem</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#crypt-section-private-key-7" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="crypt-section-private-key.html#crypt-section-private-key-7">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">14.19</span><span class="period">.</span><span class="space"> </span><span class="title">Burnside.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(G\)</span> be a  finite group acting on a set <span class="process-math">\(X\)</span> and let <span class="process-math">\(k\)</span> denote the number of orbits of <span class="process-math">\(X\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+k = \frac{1}{|G|} \sum_{g \in G} |X_g|\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#actions-section-burnsides-counting-theorem-2-5-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 14.19: Burnside"><a href="#actions-section-burnsides-counting-theorem-2-5" title="Copy heading and permalink for Theorem 14.19: Burnside">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We look at all the fixed points <span class="process-math">\(x\)</span> of all the elements in <span class="process-math">\(g \in G\text{;}\)</span> that is, we look at all <span class="process-math">\(g\)</span>’s and all <span class="process-math">\(x\)</span>’s such that <span class="process-math">\(gx =x\text{.}\)</span> If viewed in terms of fixed point sets, the number of all <span class="process-math">\(g\)</span>’s fixing <span class="process-math">\(x\)</span>’s is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/actions-lemma-gset.html ./knowl/xref/actions-theorem-orbit.html">
+\begin{equation*}
+\sum_{g \in G} |X_g|\text{.}
+\end{equation*}
+</div>
+<div class="para">However, if viewed in terms of the stabilizer subgroups, this number is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/actions-lemma-gset.html ./knowl/xref/actions-theorem-orbit.html">
+\begin{equation*}
+\sum_{x \in X} |G_x|;
+\end{equation*}
+</div>
+<div class="para">hence, <span class="process-math">\(\sum_{g \in G} |X_g| = \sum_{x \in X} |G_x|\text{.}\)</span> By <a href="actions-section-burnsides-counting-theorem.html#actions-lemma-gset" class="xref" data-knowl="./knowl/xref/actions-lemma-gset.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 14.18">Lemma 14.18</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/actions-lemma-gset.html ./knowl/xref/actions-theorem-orbit.html">
+\begin{equation*}
+\sum_{y \in {\mathcal O}_x} |G_y|  =  | {\mathcal O}_x| \cdot |G_x|\text{.}
+\end{equation*}
+</div>
+<div class="para">By <a href="actions-section-groups-acting-on-sets.html#actions-theorem-orbit" class="xref" data-knowl="./knowl/xref/actions-theorem-orbit.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 14.11">Theorem 14.11</a> and Lagrange’s Theorem, this expression is equal  to <span class="process-math">\(|G|\text{.}\)</span> Summing over all of the <span class="process-math">\(k\)</span> distinct orbits, we conclude that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/actions-lemma-gset.html ./knowl/xref/actions-theorem-orbit.html">
+\begin{equation*}
+\sum_{g \in G} |X_g| = \sum_{x \in X} |G_x| = k \cdot |G|\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#actions-section-burnsides-counting-theorem-2-5-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 14.19.1"><a href="#actions-section-burnsides-counting-theorem-2-5-4" title="Copy heading and permalink for Proof 14.19.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="actions-section-burnsides-counting-theorem.html#actions-section-burnsides-counting-theorem-2-5">in-context</a></span>
+</body>
+</html>

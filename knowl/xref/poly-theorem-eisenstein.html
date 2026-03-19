@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.17</span><span class="period">.</span><span class="space"> </span><span class="title">Eisenstein’s Criterion.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(p\)</span> be a prime and suppose that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x) = a_n x^n + \cdots + a_0 \in {\mathbb Z}[x]\text{.}
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(p \mid a_i\)</span> for <span class="process-math">\(i = 0, 1, \ldots,
+n-1\text{,}\)</span> but <span class="process-math">\(p \notdivide a_n\)</span> and <span class="process-math">\(p^2 \notdivide a_0\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> is irreducible over <span class="process-math">\({\mathbb Q}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-theorem-eisenstein-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 17.17: Eisenstein’s Criterion"><a href="#poly-theorem-eisenstein" title="Copy heading and permalink for Theorem 17.17: Eisenstein’s Criterion">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">By Gauss’s Lemma (see <a href="poly-section-irreducible-poly.html#poly-theorem-eisenstein" class="xref" data-knowl="./knowl/xref/poly-theorem-eisenstein.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 17.17: Eisenstein’s Criterion">Theorem 17.17</a> and <a href="domains-section-factorization-domains.html#domains-lemma-ufd-factorization" class="xref" data-knowl="./knowl/xref/domains-lemma-ufd-factorization.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 18.26">Lemma 18.26</a>), we need only show that <span class="process-math">\(f(x)\)</span> does not factor into polynomials of lower degree in <span class="process-math">\({\mathbb Z}[x]\text{.}\)</span> Let</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/poly-theorem-eisenstein.html ./knowl/xref/domains-lemma-ufd-factorization.html">
+\begin{equation*}
+f(x) = (b_rx^r + \cdots + b_0)(c_s x^s + \cdots + c_0 )
+\end{equation*}
+</div>
+<div class="para">be a factorization in <span class="process-math">\({\mathbb Z}[x]\text{,}\)</span> with <span class="process-math">\(b_r\)</span> and <span class="process-math">\(c_s\)</span> not equal to zero and <span class="process-math">\(r,
+s \lt n\text{.}\)</span> Since <span class="process-math">\(p^2\)</span> does not divide <span class="process-math">\(a_0 = b_0 c_0\text{,}\)</span> either <span class="process-math">\(b_0\)</span> or <span class="process-math">\(c_0\)</span> is not divisible by <span class="process-math">\(p\text{.}\)</span> Suppose that <span class="process-math">\(p \notdivide b_0\)</span> and <span class="process-math">\(p \mid c_0\text{.}\)</span> Since <span class="process-math">\(p \notdivide a_n\)</span> and <span class="process-math">\(a_n = b_r c_s\text{,}\)</span> neither <span class="process-math">\(b_r\)</span> nor <span class="process-math">\(c_s\)</span> is divisible by <span class="process-math">\(p\text{.}\)</span> Let <span class="process-math">\(m\)</span> be the smallest value of <span class="process-math">\(k\)</span> such that <span class="process-math">\(p \notdivide c_k\text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/poly-theorem-eisenstein.html ./knowl/xref/domains-lemma-ufd-factorization.html">
+\begin{equation*}
+a_m = b_0 c_m + b_1 c_{m - 1} + \cdots + b_m c_0
+\end{equation*}
+</div>
+<div class="para">is not divisible by <span class="process-math">\(p\text{,}\)</span> since each term on the right-hand side of the equation is divisible by <span class="process-math">\(p\)</span> except for <span class="process-math">\(b_0 c_m\text{.}\)</span> Therefore, <span class="process-math">\(m = n\)</span> since <span class="process-math">\(a_i\)</span> is divisible by <span class="process-math">\(p\)</span> for <span class="process-math">\(m \lt n\text{.}\)</span> Hence, <span class="process-math">\(f(x)\)</span> cannot be factored into polynomials of lower degree and therefore must be irreducible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-theorem-eisenstein-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 17.17.1"><a href="#poly-theorem-eisenstein-4" title="Copy heading and permalink for Proof 17.17.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="poly-section-irreducible-poly.html#poly-theorem-eisenstein">in-context</a></span>
+</body>
+</html>

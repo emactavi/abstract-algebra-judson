@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Error-Detecting and Correcting Codes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="http://abstract.ups.edu/aata/external/cover/cover_aata_2022.png">
+<meta property="book:title" content="Abstract Algebra">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.19';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="AATA" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://abstract.pugetsound.edu"><img src="external/cover/cover_aata_2022.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-5.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="algcodes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="algcodes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="algcodes-section-linear-codes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="aata.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="aata-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="aata-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets-section-note-on-proofs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Short Note on Proofs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-section-note-on-proofs.html#sets-subsection-cautions" class="internal"><span class="title">Some Cautions and Suggestions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets-section-sets-and-equivalence-relations.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets and Equivalence Relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-section-sets-and-equivalence-relations.html#sets-subsection-set-theory" class="internal"><span class="title">Set Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-section-sets-and-equivalence-relations.html#sets-subsection-cartesian-products" class="internal"><span class="title">Cartesian Products and Mappings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-section-sets-and-equivalence-relations.html#sets-subsection-equivalence-relations" class="internal"><span class="title">Equivalence Relations and Partitions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sets-5.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets-exercises.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sets-references.html" class="internal"><span class="codenumber">1.5</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">2</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="integers-section-math-induction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integers-section-division-algorithm.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Division Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-section-division-algorithm.html#integers-subsection-euclidean-algorithm" class="internal"><span class="title">The Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-section-division-algorithm.html#integers-subsection-prime-numbers" class="internal"><span class="title">Prime Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-section-division-algorithm.html#integers-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="integers-5.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-exercises.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-exercises-programming.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="integers-references.html" class="internal"><span class="codenumber">2.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-section-mod-n-sym.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Integer Equivalence Classes and Symmetries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-mod-n-sym.html#groups-subsection-integers-mod-n" class="internal"><span class="title">The Integers mod <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-mod-n-sym.html#groups-subsection-symmetries" class="internal"><span class="title">Symmetries</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-section-defnitions.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Definitions and Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-defnitions.html#groups-subsection-basic-properties" class="internal"><span class="title">Basic Properties of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-defnitions.html#groups-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-section-subgroups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-subgroups.html#groups-subsection-subgroup-examples" class="internal"><span class="title">Definitions and Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-subgroups.html#groups-subsection-subgroup-theorems" class="internal"><span class="title">Some Subgroup Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="groups-6.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-exercises-detecting-errors.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional Exercises: Detecting Errors</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="groups-references.html" class="internal"><span class="codenumber">3.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cyclic.html" class="internal"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cyclic-section-cyclic-subgroups.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Cyclic Subgroups</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="cyclic-section-cyclic-subgroups.html#cyclic-subsection-cyclic-subgroups" class="internal"><span class="title">Subgroups of Cyclic Groups</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cyclic-section-mult-group-c.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Multiplicative Group of Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="cyclic-section-mult-group-c.html#cyclic-subsection-circle-group" class="internal"><span class="title">The Circle Group and the Roots of Unity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-section-method-of-repeated-squares.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Method of Repeated Squares</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="cyclic-6.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-exercises.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-exercises-programming.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cyclic-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="permute.html" class="internal"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="permute-section-permutation-definitions.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Definitions and Notation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-permutation-definitions.html#permute-subsection-cycle-notation" class="internal"><span class="title">Cycle Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-permutation-definitions.html#permute-subsection-transpositions" class="internal"><span class="title">Transpositions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-permutation-definitions.html#permute-subsection-alternating-groups" class="internal"><span class="title">The Alternating Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-permutation-definitions.html#permute-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="permute-section-dihedral-groups.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Dihedral Groups</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-dihedral-groups.html#permute-subsection-motion-group-cube" class="internal"><span class="title">The Motion Group of a Cube</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="permute-5.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="permute-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cosets.html" class="internal"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cosets-section-cosets.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Cosets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cosets-section-lagranges-theorem.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Lagrange’s Theorem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cosets-section-fermat-euler.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Fermat’s and Euler’s Theorems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="cosets-section-fermat-euler.html#cosets-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="cosets-6.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cosets-exercises.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="crypt.html" class="internal"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="crypt-section-private-key.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Private Key Cryptography</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="crypt-section-public-key.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Public Key Cryptography</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="crypt-section-public-key.html#crypt-subsection-rsa" class="internal"><span class="title">The <abbr class="acronym">RSA</abbr> Cryptosystem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="crypt-section-public-key.html#crypt-subsection-message-verification" class="internal"><span class="title">Message Verification</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="crypt-section-public-key.html#crypt-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="crypt-5.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="crypt-exercises.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="crypt-exercises-additional.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Additional Exercises: Primality and Factoring</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="crypt-references.html" class="internal"><span class="codenumber">7.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="algcodes.html" class="internal"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="algcodes-section-error-detecting-correcting-codes.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Error-Detecting and Correcting Codes</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-subsection-max-likelihood" class="internal"><span class="title">Maximum-Likelihood Decoding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-subsection-block-codes" class="internal"><span class="title">Block Codes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="algcodes-section-linear-codes.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Linear Codes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-linear-codes.html#algcodes-subsection-linear-codes" class="internal"><span class="title">Linear Codes</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="algcodes-section-parity-check.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Parity-Check and Generator Matrices</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="algcodes-section-efficient-decoding.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Efficient Decoding</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-efficient-decoding.html#algcodes-subsection-coset-decoding" class="internal"><span class="title">Coset Decoding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="algcodes-7.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="algcodes-exercises.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="algcodes-exercises-programming.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="algcodes-references.html" class="internal"><span class="codenumber">8.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="isomorph.html" class="internal"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="isomorph-section-definitions.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Definition and Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="isomorph-section-definitions.html#isomorph-subsection-cayleys-theorem" class="internal"><span class="title">Cayley’s Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="isomorph-section-definitions.html#isomorph-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="isomorph-section-direct-products.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Direct Products</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="isomorph-section-direct-products.html#isomorph-subsection-external-products" class="internal"><span class="title">External Direct Products</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="isomorph-section-direct-products.html#isomorph-subsection-internal-products" class="internal"><span class="title">Internal Direct Products</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="isomorph-5.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="isomorph-exercises.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="normal.html" class="internal"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="normal-section-factor-groups.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Factor Groups and Normal Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="normal-section-factor-groups.html#normal-subsection-normal-subgroups" class="internal"><span class="title">Normal Subgroups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="normal-section-factor-groups.html#normal-subsection-factor-groups" class="internal"><span class="title">Factor Groups</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="normal-section-simplicity-of-an.html" class="internal"><span class="codenumber">10.2</span> <span class="title">The Simplicity of the Alternating Group</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="normal-section-simplicity-of-an.html#normal-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="normal-5.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="normal-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="homomorph.html" class="internal"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="homomorph-section-group-homomorphisms.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Group Homomorphisms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="homomorph-section-group-isomorphism-theorems.html" class="internal"><span class="codenumber">11.2</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="homomorph-5.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="homomorph-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="homomorph-exercises-automorphisms.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Additional Exercises: Automorphisms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="matrix.html" class="internal"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrix-section-groups.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Matrix Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-groups.html#matrix-subsection-linear-algebra" class="internal"><span class="title">Some Facts from Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-groups.html#matrix-subsection-general-linear-group" class="internal"><span class="title">The General and Special Linear Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-groups.html#matrix-subsection-orthogonal-group" class="internal"><span class="title">The Orthogonal Group <span class="process-math">\(O(n)\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrix-section-symmetry.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Symmetry</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-symmetry.html#matrix-subsection-wallpaper" class="internal"><span class="title">The Wallpaper Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-symmetry.html#matrix-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="matrix-5.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matrix-exercises.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="matrix-references.html" class="internal"><span class="codenumber">12.5</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="struct.html" class="internal"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="struct-section-finite-abelian-groups.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Finite Abelian Groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="struct-section-solvable-groups.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Solvable Groups</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="struct-5.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="struct-exercises.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="struct-exercises-programming.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="struct-references.html" class="internal"><span class="codenumber">13.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="actions.html" class="internal"><span class="codenumber">14</span> <span class="title">Group Actions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="actions-section-groups-acting-on-sets.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Groups Acting on Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="actions-section-class-equation.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Class Equation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="actions-section-burnsides-counting-theorem.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Burnside’s Counting Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="actions-section-burnsides-counting-theorem.html#actions-subsection-geometric-example" class="internal"><span class="title">A Geometric Example</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="actions-section-burnsides-counting-theorem.html#actions-subsection-switching-functions" class="internal"><span class="title">Switching Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="actions-section-burnsides-counting-theorem.html#actions-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="actions-6.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="actions-exercises.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="actions-exercises-programming.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Programming Exercise</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="actions-references.html" class="internal"><span class="codenumber">14.7</span> <span class="title">References and Suggested Reading</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sylow.html" class="internal"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sylow-section-sylow-theorems.html" class="internal"><span class="codenumber">15.1</span> <span class="title">The Sylow Theorems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sylow-section-sylow-theorems.html#sylow-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sylow-section-applications.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Examples and Applications</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sylow-section-applications.html#sylow-subsection-finite-simple-groups" class="internal"><span class="title">Finite Simple Groups</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sylow-5.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sylow-exercises.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sylow-exercises-project.html" class="internal"><span class="codenumber">15.5</span> <span class="title">A Project</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sylow-references.html" class="internal"><span class="codenumber">15.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rings.html" class="internal"><span class="codenumber">16</span> <span class="title">Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rings-section-definitions.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Rings</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rings-section-domains-and-fields.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Integral Domains and Fields</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rings-section-homomorphisms.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Ring Homomorphisms and Ideals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rings-section-maximal-prime-ideals.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Maximal and Prime Ideals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rings-section-maximal-prime-ideals.html#rings-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rings-section-software-application.html" class="internal"><span class="codenumber">16.5</span> <span class="title">An Application to Software Design</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rings-8.html" class="internal"><span class="codenumber">16.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rings-exercises.html" class="internal"><span class="codenumber">16.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rings-exercises-programming.html" class="internal"><span class="codenumber">16.8</span> <span class="title">Programming Exercise</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="rings-references.html" class="internal"><span class="codenumber">16.9</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="poly.html" class="internal"><span class="codenumber">17</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poly-section-rings.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Polynomial Rings</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poly-section-division-algorithm.html" class="internal"><span class="codenumber">17.2</span> <span class="title">The Division Algorithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poly-section-irreducible-poly.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Irreducible Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poly-section-irreducible-poly.html#poly-subsection-ideals" class="internal"><span class="title">Ideals in <span class="process-math">\(F\lbrack x \rbrack\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poly-section-irreducible-poly.html#poly-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="poly-6.html" class="internal"><span class="codenumber">17.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="poly-exercises.html" class="internal"><span class="codenumber">17.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="poly-exercises-cubics-quartics.html" class="internal"><span class="codenumber">17.6</span> <span class="title">Additional Exercises:  Solving the Cubic and Quartic Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="domains.html" class="internal"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="domains-section-field-of-fractions.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Fields of Fractions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="domains-section-factorization-domains.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Factorization in Integral Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="domains-section-factorization-domains.html#domains-subsection-pids" class="internal"><span class="title">Principal Ideal Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="domains-section-factorization-domains.html#domains-subsection-euclidean-domains" class="internal"><span class="title">Euclidean Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="domains-section-factorization-domains.html#domains-subsection-factorization" class="internal"><span class="title">Factorization in <span class="process-math">\(D\lbrack x \rbrack\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="domains-section-factorization-domains.html#domains-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="domains-5.html" class="internal"><span class="codenumber">18.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="domains-exercises.html" class="internal"><span class="codenumber">18.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="domains-references.html" class="internal"><span class="codenumber">18.5</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="boolean.html" class="internal"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boolean-section-lattices.html" class="internal"><span class="codenumber">19.1</span> <span class="title">Lattices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boolean-section-lattices.html#boolean-subsection-poset" class="internal"><span class="title">Partially Ordered Sets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boolean-section-boolean-algebras.html" class="internal"><span class="codenumber">19.2</span> <span class="title">Boolean Algebras</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boolean-section-boolean-algebras.html#boolean-subsection-finite-algebras" class="internal"><span class="title">Finite Boolean Algebras</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boolean-section-algebra-of-circuits.html" class="internal"><span class="codenumber">19.3</span> <span class="title">The Algebra of Electrical Circuits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boolean-section-algebra-of-circuits.html#boolean-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="boolean-6.html" class="internal"><span class="codenumber">19.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="boolean-exercises.html" class="internal"><span class="codenumber">19.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="boolean-exercises-programming.html" class="internal"><span class="codenumber">19.6</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="boolean-references.html" class="internal"><span class="codenumber">19.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="vect.html" class="internal"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-vect-definitions-and-examples.html" class="internal"><span class="codenumber">20.1</span> <span class="title">Definitions and Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="vect-section-subspaces.html" class="internal"><span class="codenumber">20.2</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="vect-section-linear-independence.html" class="internal"><span class="codenumber">20.3</span> <span class="title">Linear Independence</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="vect-6.html" class="internal"><span class="codenumber">20.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vect-exercises.html" class="internal"><span class="codenumber">20.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="vect-references.html" class="internal"><span class="codenumber">20.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="fields.html" class="internal"><span class="codenumber">21</span> <span class="title">Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="fields-section-extension-fields.html" class="internal"><span class="codenumber">21.1</span> <span class="title">Extension Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-extension-fields.html#fields-subsection-algebraic-elements" class="internal"><span class="title">Algebraic Elements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-extension-fields.html#fields-subsection-algebraic-closure" class="internal"><span class="title">Algebraic Closure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fields-section-splitting-fields.html" class="internal"><span class="codenumber">21.2</span> <span class="title">Splitting Fields</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="fields-section-constructions.html" class="internal"><span class="codenumber">21.3</span> <span class="title">Geometric Constructions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-constructions.html#fields-subsection-constructible-numbers" class="internal"><span class="title">Constructible Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-constructions.html#fields-subsection-doubling-the-cube" class="internal"><span class="title">Doubling the Cube and Squaring the Circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-constructions.html#fields-subsection-trisect-angle" class="internal"><span class="title">Trisecting an Angle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-constructions.html#fields-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="fields-6.html" class="internal"><span class="codenumber">21.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fields-exercises.html" class="internal"><span class="codenumber">21.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="fields-references.html" class="internal"><span class="codenumber">21.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="finite.html" class="internal"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="finite-section-field.html" class="internal"><span class="codenumber">22.1</span> <span class="title">Structure of a Finite Field</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="finite-section-poly-codes.html" class="internal"><span class="codenumber">22.2</span> <span class="title">Polynomial Codes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="finite-section-poly-codes.html#finite-subsection-poly-codes" class="internal"><span class="title">Polynomial Codes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="finite-section-poly-codes.html#finite-subsection-bch-codes" class="internal"><span class="title"><abbr class="acronym">BCH</abbr> Codes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="finite-5.html" class="internal"><span class="codenumber">22.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="finite-exercises.html" class="internal"><span class="codenumber">22.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="finite-exercises-bch-codes.html" class="internal"><span class="codenumber">22.5</span> <span class="title">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="finite-references.html" class="internal"><span class="codenumber">22.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="galois.html" class="internal"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="galois-section-field-automorphisms.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Field Automorphisms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-field-automorphisms.html#galois-subsection-separable-extensions" class="internal"><span class="title">Separable Extensions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="galois-section-fund-theorem-galois-theory.html" class="internal"><span class="codenumber">23.2</span> <span class="title">The Fundamental Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-fund-theorem-galois-theory.html#galois-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="galois-section-applications.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-applications.html#galois-subsection-solvable-by-radicals" class="internal"><span class="title">Solvability by Radicals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-applications.html#galois-subsection-quintic" class="internal"><span class="title">Insolvability of the Quintic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-applications.html#galois-subsection-fun-theorem-of-algebra" class="internal"><span class="title">The Fundamental Theorem of Algebra</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="galois-6.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="galois-exercises.html" class="internal"><span class="codenumber">23.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="galois-references.html" class="internal"><span class="codenumber">23.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Reference</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="algcodes-section-error-detecting-correcting-codes"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">8.1</span><span class="space"> </span><span class="title">Error-Detecting and Correcting Codes</span>
+</h2>
+<section class="introduction" id="algcodes-section-error-detecting-correcting-codes-2"><div class="para" id="algcodes-section-error-detecting-correcting-codes-2-1">Let us examine a simple model of a communications system for transmitting and receiving coded messages (<a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-figure-encoding" class="xref" data-knowl="./knowl/xref/algcodes-figure-encoding.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.1">Figure 8.1</a>).<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-section-error-detecting-correcting-codes-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="algcodes-figure-encoding"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/algcodes-encode-decode.svg" role="img" class="contained" alt="A vertical flow chart where an m-digit message is passed to an encoder which is represented by a rectangle to become an n-digit codeword which is passed to a transmitter that is also represented by a rectangle.  The outcome of the transmitter may have noise and is passed to the receiver which is prepresented by a rectangle.  The receiver passes an n-digit received word to a decoder that is represented by a rectangle.  The decoder produces an m-digit received word or an error."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.1<span class="period">.</span></span><span class="space"> </span>Encoding and decoding messages<div class="autopermalink" data-description="Figure 8.1"><a href="#algcodes-figure-encoding" title="Copy heading and permalink for Figure 8.1">🔗</a></div></figcaption></figure><div class="para" id="algcodes-section-error-detecting-correcting-codes-2-3">Uncoded messages may be composed of letters or characters, but typically they consist of binary <span class="process-math">\(m\)</span>-tuples. These messages are encoded into codewords, consisting of binary <span class="process-math">\(n\)</span>-tuples, by a device called an <dfn class="terminology">encoder</dfn>. The message is transmitted and then decoded. We will consider the occurrence of errors during transmission. An <dfn class="terminology">error</dfn> occurs if there is a change in one or more bits in the codeword. A <dfn class="terminology">decoding scheme</dfn> is a method that either converts an arbitrarily received <span class="process-math">\(n\)</span>-tuple into a meaningful decoded message or gives an error message for that <span class="process-math">\(n\)</span>-tuple. If the received message is a codeword (one of the special <span class="process-math">\(n\)</span>-tuples allowed to be transmitted), then the decoded message must be the unique message that was encoded into the codeword. For received non-codewords, the decoding scheme will give an error indication, or, if we are more clever, will actually try to correct the error and reconstruct the original message. Our goal is to transmit error-free messages as cheaply and quickly as possible.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-section-error-detecting-correcting-codes-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="algcodes-example-repeat"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.2</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="algcodes-example-repeat-1">
+<div class="para">One possible coding scheme would be to send a message several times and to compare the received copies with one another. Suppose that the message to be encoded is a binary <span class="process-math">\(n\)</span>-tuple <span class="process-math">\((x_{1}, x_{2}, \ldots,
+x_{n})\text{.}\)</span> The message is encoded into a binary <span class="process-math">\(3n\)</span>-tuple by simply repeating the message three times:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(x_{1}, x_{2}, \ldots, x_{n}) \mapsto (x_{1}, x_{2}, \ldots, x_{n}, x_{1}, x_{2}, \ldots, x_{n}, x_{1}, x_{2}, \ldots, x_{n})\text{.}
+\end{equation*}
+</div>
+<div class="para">To decode the message, we choose as the <span class="process-math">\(i\)</span>th digit the one that appears in the <span class="process-math">\(i\)</span>th place in at least two of the three transmissions. For example, if the original message is <span class="process-math">\((0110)\text{,}\)</span> then the transmitted message will be <span class="process-math">\((0110\;  0110\;  0110)\text{.}\)</span> If there is a transmission error in the fifth digit, then the received codeword will be <span class="process-math">\((0110\;  1110\;  0110)\text{,}\)</span> which will be correctly decoded as <span class="process-math">\((0110)\text{.}\)</span><details class="ptx-footnote" aria-live="polite" id="algcodes-example-repeat-1-11"><summary class="ptx-footnote__number" title="Footnote 7"><sup> 7 </sup></summary><div class="ptx-footnote__contents" id="algcodes-example-repeat-1-11">We will adopt the convention that bits are numbered left to right in binary <span class="process-math">\(n\)</span>-tuples.</div></details> This triple-repetition method will automatically detect and correct all single errors, but it is slow and inefficient: to send a message consisting of <span class="process-math">\(n\)</span> bits, <span class="process-math">\(2n\)</span> extra bits are required, and we can only detect and correct single errors. We will see that it is possible to find an encoding scheme that will encode a message of <span class="process-math">\(n\)</span> bits into <span class="process-math">\(m\)</span> bits with <span class="process-math">\(m\)</span> much smaller than <span class="process-math">\(3n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-repeat-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.2"><a href="#algcodes-example-repeat" title="Copy heading and permalink for Example 8.2">🔗</a></div></article><article class="example example-like" id="algcodes-example-even-parity"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.3</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="algcodes-example-even-parity-1">
+<div class="para">
+<dfn class="terminology">Even parity</dfn>, a commonly used coding scheme, is much more efficient than the simple repetition scheme. The <abbr class="acronym">ASCII</abbr> (American Standard Code for Information Interchange) coding system uses binary <span class="process-math">\(8\)</span>-tuples, yielding <span class="process-math">\(2^{8} = 256\)</span> possible <span class="process-math">\(8\)</span>-tuples. However, only seven bits are needed since there are only <span class="process-math">\(2^7 = 128\)</span> <abbr class="acronym">ASCII</abbr> characters. What can or should be done with the extra bit? Using the full eight bits, we can detect single transmission errors. For example, the <abbr class="acronym">ASCII</abbr> codes for A, B, and C are</div>
+<div class="displaymath process-math" id="algcodes-example-even-parity-1-9">
+\begin{align*}
+\text{A} &amp; = 65_{10} = 01000001_{2},\\
+\text{B} &amp; = 66_{10} = 01000010_{2},\\
+\text{C} &amp; = 67_{10} = 01000011_{2}\text{.}
+\end{align*}
+</div>
+<div class="para">Notice that the leftmost bit is always set to 0; that is, the <span class="process-math">\(128\)</span> <abbr class="acronym">ASCII</abbr> characters have codes</div>
+<div class="displaymath process-math" id="algcodes-example-even-parity-1-12">
+\begin{align*}
+00000000_{2} &amp; = 0_{10},\\
+&amp; \vdots\\
+01111111_{2} &amp; = 127_{10}\text{.}
+\end{align*}
+</div>
+<div class="para">The bit can be used for error checking on the other seven bits. It is set to either <span class="process-math">\(0\)</span> or <span class="process-math">\(1\)</span> so that the total number of <span class="process-math">\(1\)</span> bits in the representation of a character is even. Using even parity, the codes for A, B, and C now become</div>
+<div class="displaymath process-math" id="algcodes-example-even-parity-1-16">
+\begin{align*}
+\text{A} &amp; = 01000001_{2},\\
+\text{B} &amp; = 01000010_{2},\\
+\text{C} &amp; = 11000011_{2}\text{.}
+\end{align*}
+</div>
+<div class="para">Suppose an A is sent and a transmission error in the sixth bit is caused by noise over the communication channel so that  <span class="process-math">\((0100\; 0101)\)</span> is received. We know an error has occurred since the received word has an odd number of <span class="process-math">\(1\)</span>s, and we can now request that the codeword be transmitted again. When used for error checking, the leftmost bit is called a <dfn class="terminology">parity check bit</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-even-parity-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="algcodes-example-even-parity-2">By far the most common error-detecting codes used in computers are based on the addition of a parity bit. Typically, a computer stores information in <span class="process-math">\(m\)</span>-tuples called <dfn class="terminology">words</dfn>. Common word lengths are <span class="process-math">\(8\text{,}\)</span> <span class="process-math">\(16\text{,}\)</span> and <span class="process-math">\(32\)</span> bits. One bit in the word is set aside as the parity check bit, and is not used to store information. This bit is set to either <span class="process-math">\(0\)</span> or <span class="process-math">\(1\text{,}\)</span> depending on the number of <span class="process-math">\(1\)</span>s in the word.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-even-parity-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="algcodes-example-even-parity-3">Adding a parity check bit allows the detection of all single errors because changing a single bit either increases or decreases the number of <span class="process-math">\(1\)</span>s by one, and in either case the parity has been changed from even to odd, so the new word is not a codeword. (We could also construct an error detection scheme based on <dfn class="terminology">odd parity</dfn>; that is, we could set the parity check bit so that a codeword always has an odd number of <span class="process-math">\(1\)</span>s.)<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-even-parity-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.3"><a href="#algcodes-example-even-parity" title="Copy heading and permalink for Example 8.3">🔗</a></div></article><div class="para" id="algcodes-section-error-detecting-correcting-codes-2-6">The even parity system is easy to implement, but has two drawbacks. First, multiple errors are not detectable. Suppose an A is sent and the first and seventh bits are changed from <span class="process-math">\(0\)</span> to <span class="process-math">\(1\text{.}\)</span> The received word is a codeword, but will be decoded into a C instead of an A. Second, we do not have the ability to correct errors. If the 8-tuple <span class="process-math">\((1001\; 1000)\)</span> is received, we know that an error has occurred, but we have no idea which bit has been changed. We will now investigate a coding scheme that will not only allow us to detect transmission errors but will actually correct the errors.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-section-error-detecting-correcting-codes-2-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="algcodes-example-nearest"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="algcodes-example-nearest-1">Suppose that our original message is either a <span class="process-math">\(0\)</span> or a <span class="process-math">\(1\text{,}\)</span> and that <span class="process-math">\(0\)</span> encodes to <span class="process-math">\((000)\)</span> and <span class="process-math">\(1\)</span> encodes to <span class="process-math">\((111)\text{.}\)</span> If only a single error occurs during transmission, we can detect and correct the error. For example, if a <span class="process-math">\((101)\)</span> is received, then the second bit must have been changed from a <span class="process-math">\(1\)</span> to a <span class="process-math">\(0\text{.}\)</span> The originally transmitted codeword must have been <span class="process-math">\((111)\text{.}\)</span> This method will detect and correct all single errors.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-nearest-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="algcodes-table-repetition-code"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">8.5<span class="period">.</span></span><span class="space"> </span>A repetition code<div class="autopermalink" data-description="Table 8.5: A repetition code"><a href="#algcodes-table-repetition-code" title="Copy heading and permalink for Table 8.5: A repetition code">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t2 lines">Transmitted</td>
+<td class="c m b0 r0 l0 t2 lines" colspan="8">Received Word</td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines">Codeword</td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(000\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(001\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(010\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(011\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(100\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(101\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(110\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(111\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(000\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(111\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="algcodes-example-nearest-3">In <a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-table-repetition-code" class="xref" data-knowl="./knowl/xref/algcodes-table-repetition-code.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 8.5: A repetition code">Table 8.5</a>, we present all possible words that might be received for the transmitted codewords <span class="process-math">\((000)\)</span> and <span class="process-math">\((111)\text{.}\)</span> <a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-table-repetition-code" class="xref" data-knowl="./knowl/xref/algcodes-table-repetition-code.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 8.5: A repetition code">Table 8.5</a> also shows the number of bits by which each received <span class="process-math">\(3\)</span>-tuple differs from each original codeword.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-nearest-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.4"><a href="#algcodes-example-nearest" title="Copy heading and permalink for Example 8.4">🔗</a></div></article></section><section class="subsection" id="algcodes-subsection-max-likelihood"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Maximum-Likelihood Decoding</span>
+</h3>
+<div class="para" id="algcodes-subsection-max-likelihood-2">The coding scheme presented in <a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-example-nearest" class="xref" data-knowl="./knowl/xref/algcodes-example-nearest.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 8.4">Example 8.4</a> is not a complete solution to the problem because it does not account for the possibility of multiple errors. For example, either a (000) or a (111) could be sent and a (001) received. We have no means of deciding from the received word whether there was a single error in the third bit or two errors, one in the first bit and one in the second. No matter what coding scheme is used, an incorrect message could be received. We could transmit a (000), have errors in all three bits, and receive the codeword (111). It is important to make explicit assumptions about the likelihood and distribution of transmission errors so that, in a particular application, it will be known whether a given error detection scheme is appropriate. We will assume that transmission errors are rare, and, that when they do occur, they occur independently in each bit; that is, if <span class="process-math">\(p\)</span> is the probability of an error in one bit and <span class="process-math">\(q\)</span> is the probability of an error in a different bit, then the probability of errors occurring in both of these bits at the same time is <span class="process-math">\(pq\text{.}\)</span> We will also assume that a received <span class="process-math">\(n\)</span>-tuple is decoded into a codeword that is closest to it; that is, we assume that the receiver uses <dfn class="terminology">maximum-likelihood decoding</dfn>.<details class="ptx-footnote" aria-live="polite" id="algcodes-subsection-max-likelihood-2-8"><summary class="ptx-footnote__number" title="Footnote 8"><sup> 8 </sup></summary><div class="ptx-footnote__contents" id="algcodes-subsection-max-likelihood-2-8">This section requires a knowledge of probability, but can be skipped without loss of continuity.</div></details><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-max-likelihood-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="algcodes-figure-channel"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/algcodes-binary-channel.svg" role="img" class="contained" alt="A schematic diagram where a zero has probabilty p that it will be decoded as a zero and probability q that it will be decoded as a one, which are represented by arrows from 0 to 0 and 1 to 1, respectively.  A one has probabilty p that it will be decoded as a one and probability q that it will be decoded as a zero, which are represented by arrows from 1 to 1 and 0 to 1, respectively."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.6<span class="period">.</span></span><span class="space"> </span>Binary symmetric channel<div class="autopermalink" data-description="Figure 8.6"><a href="#algcodes-figure-channel" title="Copy heading and permalink for Figure 8.6">🔗</a></div></figcaption></figure><div class="para logical" id="algcodes-subsection-max-likelihood-4">
+<div class="para">A <dfn class="terminology">binary symmetric channel</dfn> is a model that consists of a transmitter capable of sending a binary signal, either a <span class="process-math">\(0\)</span> or a <span class="process-math">\(1\text{,}\)</span> together with a receiver. Let <span class="process-math">\(p\)</span> be the probability that the signal is correctly received. Then <span class="process-math">\(q = 1 - p\)</span> is the probability of an incorrect reception. If a <span class="process-math">\(1\)</span> is sent, then the probability that a <span class="process-math">\(1\)</span> is received is <span class="process-math">\(p\)</span> and the probability that a <span class="process-math">\(0\)</span> is received is <span class="process-math">\(q\)</span> (<a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-figure-channel" class="xref" data-knowl="./knowl/xref/algcodes-figure-channel.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.6">Figure 8.6</a>). The probability that no errors occur during the transmission of a binary codeword of length <span class="process-math">\(n\)</span> is <span class="process-math">\(p^{n}\text{.}\)</span> For example, if <span class="process-math">\(p=0.999\)</span> and a message consisting of 10,000 bits is sent, then the probability of a perfect transmission is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/algcodes-figure-channel.html">
+\begin{equation*}
+(0.999)^{10,000} \approx 0.00005\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-max-likelihood-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="algcodes-subsection-max-likelihood-5"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.7</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="algcodes-subsection-max-likelihood-5-1-1">
+<div class="para">If a binary <span class="process-math">\(n\)</span>-tuple <span class="process-math">\((x_{1}, \ldots,
+x_{n})\)</span> is transmitted across a binary symmetric channel with probability <span class="process-math">\(p\)</span> that no error will occur in each coordinate, then the probability that there are errors in exactly <span class="process-math">\(k\)</span> coordinates is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{k} q^kp^{n - k}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-max-likelihood-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 8.7"><a href="#algcodes-subsection-max-likelihood-5" title="Copy heading and permalink for Theorem 8.7">🔗</a></div></article><details id="algcodes-subsection-max-likelihood-5-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="algcodes-subsection-max-likelihood-5-2-1">
+<div class="para">Fix <span class="process-math">\(k\)</span> different coordinates. We first compute the probability that an error has occurred in this fixed set of coordinates. The probability of an error occurring in a particular one of these <span class="process-math">\(k\)</span> coordinates is <span class="process-math">\(q\text{;}\)</span> the probability that an error will not occur in any of the remaining <span class="process-math">\(n-k\)</span> coordinates is <span class="process-math">\(p\text{.}\)</span> The probability of each of these <span class="process-math">\(n\)</span> independent events is <span class="process-math">\(q^{k}p^{n-k}\text{.}\)</span> The number of possible error patterns with exactly <span class="process-math">\(k\)</span> errors occurring is equal to</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{k}  = \frac{n!}{k!(n - k)!}\text{,}
+\end{equation*}
+</div>
+<div class="para">the number of combinations of <span class="process-math">\(n\)</span> things taken <span class="process-math">\(k\)</span> at a time. Each of these error patterns has probability <span class="process-math">\(q^{k}p^{n-k}\)</span> of occurring; hence, the probability of all of these error patterns is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{k}  q^{k}p^{n - k}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-max-likelihood-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 8.7.1"><a href="#algcodes-subsection-max-likelihood-5-2" title="Copy heading and permalink for Proof 8.7.1">🔗</a></div></article></details><article class="example example-like" id="algcodes-example-probability"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="algcodes-example-probability-1">
+<div class="para">Suppose that <span class="process-math">\(p = 0.995\)</span> and a <span class="process-math">\(500\)</span>-bit message is sent. The probability that the message was sent error-free is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+p^{n} = (0.995)^{500} \approx 0.082\text{.}
+\end{equation*}
+</div>
+<div class="para">The probability of exactly one error occurring is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{1}  qp^{n - 1}= 500(0.005)(0.995)^{499} \approx 0.204\text{.}
+\end{equation*}
+</div>
+<div class="para">The probability of exactly two errors is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\binom{n}{2} q^{2}p^{n - 2}= \frac{500 \cdot 499}{2}(0.005)^{2}(0.995)^{498} \approx 0.257\text{.}
+\end{equation*}
+</div>
+<div class="para">The probability of more than two errors is approximately</div>
+<div class="displaymath process-math">
+\begin{equation*}
+1 - 0.082 - 0.204 - 0.257 = 0.457\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-probability-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.8"><a href="#algcodes-example-probability" title="Copy heading and permalink for Example 8.8">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Maximum-Likelihood Decoding"><a href="#algcodes-subsection-max-likelihood" title="Copy heading and permalink for Subsection: Maximum-Likelihood Decoding">🔗</a></div></section><section class="subsection" id="algcodes-subsection-block-codes"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Block Codes</span>
+</h3>
+<div class="para logical" id="algcodes-subsection-block-codes-2">
+<div class="para">If we are to develop efficient error-detecting and error-correcting codes, we will need more sophisticated mathematical tools. Group theory  will allow faster methods of encoding and decoding messages. A code is an <span class="process-math">\((n, m)\)</span>-<dfn class="terminology">block code</dfn> if the information that is to be coded can be divided into blocks of <span class="process-math">\(m\)</span> binary digits, each of which can be encoded into <span class="process-math">\(n\)</span> binary digits. More specifically, an <span class="process-math">\((n, m)\)</span>-block code consists of an <dfn class="terminology">encoding function</dfn>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E:{\mathbb Z}^{m}_{2} \rightarrow {\mathbb Z}^{n}_{2}
+\end{equation*}
+</div>
+<div class="para">and a <dfn class="terminology">decoding function</dfn>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{m}_{2}\text{.}
+\end{equation*}
+</div>
+<div class="para">A <dfn class="terminology">codeword</dfn> is any element in the image of <span class="process-math">\(E\text{.}\)</span> We also require that <span class="process-math">\(E\)</span> be one-to-one so that two information blocks will not be encoded into the same codeword. If our code is to be error-correcting, then <span class="process-math">\(D\)</span> must be onto.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="algcodes-example-block-code"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.9</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="algcodes-example-block-code-1">
+<div class="para">The even-parity coding system developed to detect single errors in <abbr class="acronym">ASCII</abbr> characters is an <span class="process-math">\((8,7)\)</span>-block code. The encoding function is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E(x_7, x_6, \ldots, x_1) = (x_8, x_7,  \ldots, x_1)\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(x_8 = x_7 + x_6 + \cdots + x_1\)</span> with addition in <span class="process-math">\({\mathbb Z}_2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-block-code-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.9"><a href="#algcodes-example-block-code" title="Copy heading and permalink for Example 8.9">🔗</a></div></article><div class="para" id="algcodes-subsection-block-codes-4">Let <span class="process-math">\({\mathbf x} = (x_1, \ldots,
+x_n)\)</span> and <span class="process-math">\({\mathbf y} = (y_1, \ldots,
+y_n)\)</span> be binary <span class="process-math">\(n\)</span>-tuples. The <dfn class="terminology">Hamming distance</dfn> or <dfn class="terminology">distance</dfn>, <span class="process-math">\(d({\mathbf x}, {\mathbf y})\text{,}\)</span> between <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\)</span> is the number of bits in which <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\)</span> differ. The distance between two codewords is the minimum number of transmission errors required to change one codeword into the other. The <dfn class="terminology">minimum distance</dfn> for a code, <span class="process-math">\(d_{\min}\text{,}\)</span> is the minimum of all distances <span class="process-math">\(d({\mathbf x}, {\mathbf y})\text{,}\)</span> where <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\)</span> are distinct codewords. The <dfn class="terminology">weight</dfn>, <span class="process-math">\(w({\mathbf x})\text{,}\)</span> of a binary codeword <span class="process-math">\({\mathbf x}\)</span> is the number of <span class="process-math">\(1\)</span>s in <span class="process-math">\({\mathbf x}\text{.}\)</span> Clearly, <span class="process-math">\(w({\mathbf x}) = d({\mathbf x}, {\mathbf 0})\text{,}\)</span> where <span class="process-math">\({\mathbf 0} = (00 \cdots 0)\text{.}\)</span> <div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="algcodes-example-min-distance"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="algcodes-example-min-distance-1">
+<div class="para">Let <span class="process-math">\({\mathbf x} = (10101)\text{,}\)</span> <span class="process-math">\({\mathbf y} = (11010)\text{,}\)</span> and <span class="process-math">\({\mathbf z} = (00011)\)</span> be all of the codewords in some code <span class="process-math">\(C\text{.}\)</span> Then we have the following Hamming distances:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d({\mathbf x},{\mathbf y}) = 4, \qquad d({\mathbf x},{\mathbf z}) = 3, \qquad d({\mathbf y},{\mathbf z}) = 3\text{.}
+\end{equation*}
+</div>
+<div class="para">The minimum distance  for this code is 3. We also have the following weights:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-min-distance-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.10"><a href="#algcodes-example-min-distance" title="Copy heading and permalink for Example 8.10">🔗</a></div></article><div class="para" id="algcodes-subsection-block-codes-6">The following proposition lists some basic properties about the weight of a codeword and the distance between two codewords. The proof is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="proposition theorem-like" id="algcodes-subsection-block-codes-7"><h4 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.11</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="algcodes-subsection-block-codes-7-1-1">
+<div class="para">Let <span class="process-math">\({\mathbf x}\text{,}\)</span> <span class="process-math">\({\mathbf y}\text{,}\)</span> and <span class="process-math">\({\mathbf z}\)</span> be binary <span class="process-math">\(n\)</span>-tuples. Then</div>
+<ol class="decimal" id="algcodes-subsection-block-codes-7-1-1-5">
+<li id="algcodes-subsection-block-codes-7-1-1-5-1">
+<div class="para" id="algcodes-subsection-block-codes-7-1-1-5-1-1">
+<span class="process-math">\(w({\mathbf x}) = d( {\mathbf x}, {\mathbf 0})\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-7-1-1-5-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#algcodes-subsection-block-codes-7-1-1-5-1" title="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="algcodes-subsection-block-codes-7-1-1-5-2">
+<div class="para" id="algcodes-subsection-block-codes-7-1-1-5-2-1">
+<span class="process-math">\(d( {\mathbf x}, {\mathbf y}) \geq 0\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-7-1-1-5-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#algcodes-subsection-block-codes-7-1-1-5-2" title="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="algcodes-subsection-block-codes-7-1-1-5-3">
+<div class="para" id="algcodes-subsection-block-codes-7-1-1-5-3-1">
+<span class="process-math">\(d( {\mathbf x}, {\mathbf y}) = 0\)</span> exactly when <span class="process-math">\({\mathbf x} = {\mathbf y}\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-7-1-1-5-3-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#algcodes-subsection-block-codes-7-1-1-5-3" title="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="algcodes-subsection-block-codes-7-1-1-5-4">
+<div class="para" id="algcodes-subsection-block-codes-7-1-1-5-4-1">
+<span class="process-math">\(d( {\mathbf x}, {\mathbf y})= d( {\mathbf y}, {\mathbf x})\text{;}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-7-1-1-5-4-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#algcodes-subsection-block-codes-7-1-1-5-4" title="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="algcodes-subsection-block-codes-7-1-1-5-5">
+<div class="para" id="algcodes-subsection-block-codes-7-1-1-5-5-1">
+<span class="process-math">\(d( {\mathbf x}, {\mathbf y}) \leq d( {\mathbf x}, {\mathbf z}) + d( {\mathbf z}, {\mathbf y})\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-7-1-1-5-5-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#algcodes-subsection-block-codes-7-1-1-5-5" title="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-7-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 8.11"><a href="#algcodes-subsection-block-codes-7" title="Copy heading and permalink for Proposition 8.11">🔗</a></div></article><div class="para" id="algcodes-subsection-block-codes-8">The weights in a particular code are usually much easier to compute than the Hamming distances between all codewords in the code. If a code is set up carefully, we can use this fact to our advantage.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-8" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="algcodes-subsection-block-codes-9">Suppose that <span class="process-math">\({\mathbf x} = (1101)\)</span> and <span class="process-math">\({\mathbf y} = (1100)\)</span> are codewords in some code. If we transmit <span class="process-math">\((1101)\)</span> and an error occurs in the rightmost bit, then (1100) will be received. Since <span class="process-math">\((1100)\)</span> is a codeword, the decoder will decode <span class="process-math">\((1100)\)</span> as the transmitted message. This code is clearly not very appropriate for error detection. The problem is that <span class="process-math">\(d({\mathbf x}, {\mathbf y}) = 1\text{.}\)</span> If <span class="process-math">\({\mathbf x} = (1100)\)</span> and <span class="process-math">\({\mathbf y} = (1010)\)</span> are codewords, then <span class="process-math">\(d({\mathbf x}, {\mathbf y}) = 2\text{.}\)</span> If <span class="process-math">\({\mathbf x}\)</span> is transmitted and a single error occurs, then <span class="process-math">\({\mathbf y}\)</span> can never be received. <a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-table-4-bit-words" class="xref" data-knowl="./knowl/xref/algcodes-table-4-bit-words.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 8.12: Distances between 4-bit codewords">Table 8.12</a> gives the distances between all 4-bit codewords in which the first three bits carry information and the fourth is an even parity check bit. We can see that the minimum distance here is <span class="process-math">\(2\text{;}\)</span> hence, the code is suitable as a single error-detecting code.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="algcodes-table-4-bit-words"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">8.12<span class="period">.</span></span><span class="space"> </span>Distances between 4-bit codewords<div class="autopermalink" data-description="Table 8.12: Distances between 4-bit codewords"><a href="#algcodes-table-4-bit-words" title="Copy heading and permalink for Table 8.12: Distances between 4-bit codewords">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t2 lines"></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(0000\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(0011\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(0101\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(0110\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(1001\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(1010\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(1100\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(1111\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(0000\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(0011\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(0101\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(0110\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(1001\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(1010\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(1100\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"><span class="process-math">\(1111\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+</table></div></figure><div class="para logical" id="algcodes-subsection-block-codes-11">
+<div class="para">To determine exactly what the error-detecting and error-correcting capabilities for a code are, we need to analyze the minimum distance for the code. Let <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\)</span> be codewords. If <span class="process-math">\(d({\mathbf x}, {\mathbf y}) = 1\)</span> and an error occurs where <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\)</span> differ, then <span class="process-math">\({\mathbf x}\)</span> is changed to <span class="process-math">\({\mathbf y}\text{.}\)</span> The received codeword is <span class="process-math">\({\mathbf y}\)</span> and no error message is given. Now suppose <span class="process-math">\(d({\mathbf x}, {\mathbf y}) = 2\text{.}\)</span> Then a single error cannot change <span class="process-math">\({\mathbf x}\)</span> to <span class="process-math">\({\mathbf y}\text{.}\)</span> Therefore, if <span class="process-math">\(d_{\min} = 2\text{,}\)</span> we have the ability to detect single errors. However, suppose that <span class="process-math">\(d({\mathbf x}, {\mathbf y}) = 2\text{,}\)</span> <span class="process-math">\({\mathbf y}\)</span> is sent, and a noncodeword <span class="process-math">\({\mathbf z}\)</span> is received such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d({\mathbf x}, {\mathbf z}) = d({\mathbf y}, {\mathbf z}) = 1\text{.}
+\end{equation*}
+</div>
+<div class="para">Then the decoder cannot decide between <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\text{.}\)</span> Even though we are aware that an error has occurred, we do not know what the error is.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-11" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="algcodes-subsection-block-codes-12">Suppose <span class="process-math">\(d_{\min} \geq 3\text{.}\)</span> Then the maximum-likelihood decoding scheme corrects all single errors. Starting with a codeword <span class="process-math">\({\mathbf x}\text{,}\)</span> an error in the transmission of a single bit gives <span class="process-math">\({\mathbf y}\)</span> with <span class="process-math">\(d({\mathbf x}, {\mathbf y}) = 1\text{,}\)</span> but <span class="process-math">\(d({\mathbf z}, {\mathbf y}) \geq 2\)</span> for any other codeword <span class="process-math">\({\mathbf z} \neq {\mathbf x}\text{.}\)</span> If we do not require the correction of errors, then we can detect multiple errors when a code has a minimum distance that is greater than or equal to <span class="process-math">\(3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-block-codes-12" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="algcodes-theorem-min-distance"><h4 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.13</span><span class="period">.</span>
+</h4>
+<div class="para" id="algcodes-theorem-min-distance-1-1">Let <span class="process-math">\(C\)</span> be a code with <span class="process-math">\(d_{\min} = 2n + 1\text{.}\)</span> Then <span class="process-math">\(C\)</span> can correct any <span class="process-math">\(n\)</span> or fewer errors. Furthermore, any <span class="process-math">\(2n\)</span> or fewer errors can be detected in <span class="process-math">\(C\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#algcodes-theorem-min-distance-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 8.13"><a href="#algcodes-theorem-min-distance" title="Copy heading and permalink for Theorem 8.13">🔗</a></div></article><details id="algcodes-theorem-min-distance-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="algcodes-theorem-min-distance-2-1">
+<div class="para">Suppose that a codeword <span class="process-math">\({\mathbf x}\)</span> is sent and the word <span class="process-math">\({\mathbf y}\)</span> is received with at most <span class="process-math">\(n\)</span> errors. Then <span class="process-math">\(d( {\mathbf x}, {\mathbf y}) \leq n\text{.}\)</span> If <span class="process-math">\({\mathbf z}\)</span> is any codeword other than <span class="process-math">\({\mathbf x}\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+2n+1 \leq d( {\mathbf x}, {\mathbf z}) \leq d( {\mathbf x}, {\mathbf y}) + d( {\mathbf y}, {\mathbf z}) \leq n + d( {\mathbf y}, {\mathbf z})\text{.}
+\end{equation*}
+</div>
+<div class="para">Hence, <span class="process-math">\(d({\mathbf y}, {\mathbf z} ) \geq n+1\)</span> and <span class="process-math">\({\mathbf y}\)</span> will be correctly decoded as <span class="process-math">\({\mathbf x}\text{.}\)</span> Now suppose that <span class="process-math">\({\mathbf x}\)</span> is transmitted and <span class="process-math">\({\mathbf y}\)</span> is received and that at least one error  has occurred, but not more than <span class="process-math">\(2n\)</span> errors. Then <span class="process-math">\(1 \leq d( {\mathbf x}, {\mathbf y} ) \leq 2n\text{.}\)</span> Since the minimum distance between codewords is <span class="process-math">\(2n +1\text{,}\)</span> <span class="process-math">\({\mathbf y}\)</span> cannot be a codeword. Consequently, the code can detect between <span class="process-math">\(1\)</span> and <span class="process-math">\(2n\)</span> errors.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-theorem-min-distance-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 8.13.1"><a href="#algcodes-theorem-min-distance-2" title="Copy heading and permalink for Proof 8.13.1">🔗</a></div></article></details><article class="example example-like" id="algcodes-example-single-correct"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.14</span><span class="period">.</span>
+</h4>
+<div class="para" id="algcodes-example-single-correct-1">In <a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-table-hamming-distance" class="xref" data-knowl="./knowl/xref/algcodes-table-hamming-distance.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 8.15: Hamming distances for an error-correcting code">Table 8.15</a>, the codewords <span class="process-math">\({\mathbf c}_1 = (00000)\text{,}\)</span> <span class="process-math">\({\mathbf c}_2 = (00111)\text{,}\)</span> <span class="process-math">\({\mathbf c}_3 = (11100)\text{,}\)</span> and <span class="process-math">\({\mathbf c}_4 = (11011)\)</span> determine a single error-correcting code.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-example-single-correct-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="table table-like" id="algcodes-table-hamming-distance"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">8.15<span class="period">.</span></span><span class="space"> </span>Hamming distances for an error-correcting code<div class="autopermalink" data-description="Table 8.15: Hamming distances for an error-correcting code"><a href="#algcodes-table-hamming-distance" title="Copy heading and permalink for Table 8.15: Hamming distances for an error-correcting code">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l2 t2 lines"></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(00000\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(00111\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(11100\)</span></td>
+<td class="c m b2 r2 l0 t2 lines"><span class="process-math">\(11011\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(00000 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(00111 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r2 l2 t0 lines"><span class="process-math">\(11100 \)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b0 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+</tr>
+<tr>
+<td class="c m b2 r2 l2 t0 lines"><span class="process-math">\(11011 \)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b2 r2 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Example 8.14"><a href="#algcodes-example-single-correct" title="Copy heading and permalink for Example 8.14">🔗</a></div></article><div class="autopermalink" data-description="Subsection: Block Codes"><a href="#algcodes-subsection-block-codes" title="Copy heading and permalink for Subsection: Block Codes">🔗</a></div></section><section class="subsection" id="algcodes-subsection-historical-note"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Historical Note</span>
+</h3>
+<div class="para" id="algcodes-subsection-historical-note-2">Modern coding theory began in 1948 with C. Shannon’s paper, “A Mathematical Theory of Information” [7]. This paper offered an example of an algebraic code, and Shannon’s Theorem proclaimed exactly how good codes could be expected to be. Richard Hamming began working with linear codes at Bell Labs in the late 1940s and early 1950s after becoming frustrated because the programs that he was running could not recover from simple errors generated by noise. Coding theory has grown tremendously in the past several decades. <em class="emphasis">The Theory of Error-Correcting Codes</em>, by MacWilliams and Sloane [5], published in 1977, already contained over 1500 references. Linear codes (Reed-Muller <span class="process-math">\((32, 6)\)</span>-block codes) were used on NASA’s Mariner space probes. More recent space probes such as Voyager have used what are called convolution codes. Currently, very active research is being done with Goppa codes, which are heavily dependent on algebraic geometry.<div class="autopermalink" data-description="Paragraph"><a href="#algcodes-subsection-historical-note-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Historical Note"><a href="#algcodes-subsection-historical-note" title="Copy heading and permalink for Subsection: Historical Note">🔗</a></div></section><div class="autopermalink" data-description="Section 8.1: Error-Detecting and Correcting Codes"><a href="#algcodes-section-error-detecting-correcting-codes" title="Copy heading and permalink for Section 8.1: Error-Detecting and Correcting Codes">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="algcodes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="algcodes-section-linear-codes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+</body>
+</html>

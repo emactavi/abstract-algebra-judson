@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">Notice that a lattice can have several bases. For example, the vectors <span class="process-math">\((1,1)^\transpose\)</span> and <span class="process-math">\((2,0)^\transpose\)</span> have the  same lattice as the vectors <span class="process-math">\((-1, 1)^\transpose\)</span> and <span class="process-math">\((-1, -1)^\transpose\)</span> (<a href="matrix-section-symmetry.html#matrix-figure-lattice" class="xref" data-knowl="./knowl/xref/matrix-figure-lattice.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.18">Figure 12.18</a>). However, any lattice is completely determined by a basis. Given two bases for the same lattice, say <span class="process-math">\(\{ {\mathbf x}_1, {\mathbf x}_2 \}\)</span> and <span class="process-math">\(\{ {\mathbf y}_1, {\mathbf y}_2 \}\text{,}\)</span> we can write</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html">
+\begin{align*}
+{\mathbf y}_1 &amp; = \alpha_1  {\mathbf x}_1 + \alpha_2 {\mathbf x}_2\\
+{\mathbf y}_2 &amp; = \beta_1  {\mathbf x}_1 + \beta_2 {\mathbf x}_2\text{,}
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(\alpha_1\text{,}\)</span> <span class="process-math">\(\alpha_2\text{,}\)</span> <span class="process-math">\(\beta_1\text{,}\)</span> and <span class="process-math">\(\beta_2\)</span> are integers. The matrix corresponding to this transformation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html">
+\begin{equation*}
+U
+=
+\begin{pmatrix}
+\alpha_1 &amp; \alpha_2 \\
+\beta_1 &amp; \beta_2
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">If we wish to give <span class="process-math">\({\mathbf x}_1\)</span> and <span class="process-math">\({\mathbf x}_2\)</span> in terms of <span class="process-math">\({\mathbf y}_1\)</span> and <span class="process-math">\({\mathbf y}_2\text{,}\)</span> we need only calculate <span class="process-math">\(U^{-1}\text{;}\)</span> that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html">
+\begin{equation*}
+U^{-1}
+\begin{pmatrix}
+{\mathbf y}_1 \\ {\mathbf y}_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+{\mathbf x}_1 \\ {\mathbf x}_2
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(U\)</span> has integer entries, <span class="process-math">\(U^{-1}\)</span> must also have integer entries; hence the determinants of both <span class="process-math">\(U\)</span> and <span class="process-math">\(U^{-1}\)</span> must be integers. Because <span class="process-math">\(U U^{-1} = I\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html">
+\begin{equation*}
+\det(U U^{-1}) =\det(U) \det( U^{-1}) = 1;
+\end{equation*}
+</div>
+<div class="para">consequently, <span class="process-math">\(\det(U) = \pm 1\text{.}\)</span> A matrix with determinant <span class="process-math">\(\pm 1\)</span> and integer entries is called <dfn class="terminology">unimodular</dfn>. For example, the matrix</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html">
+\begin{equation*}
+\begin{pmatrix}
+3 &amp; 1 \\
+5 &amp; 2
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">is unimodular. It should be clear that there is a minimum length for vectors in a lattice.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-6" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="matrix-section-symmetry.html#matrix-subsection-wallpaper-6">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<div class="para logical">
+<div class="para">A cryptosystem would be more secure if a ciphertext letter could represent more than one plaintext letter. To give an example of this type of cryptosystem, called a <dfn class="terminology">polyalphabetic cryptosystem</dfn>, we will generalize affine codes by using matrices. The idea works roughly the same as before; however, instead of encrypting one letter at a time we will encrypt pairs of letters. We can store a pair of letters <span class="process-math">\(p_1\)</span> and <span class="process-math">\(p_2\)</span> in a vector</div>
+<div class="displaymath process-math">
+\begin{equation*}
+{\mathbf p} = 
+\begin{pmatrix}
+p_1 \\ p_2
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(A\)</span> be a <span class="process-math">\(2 \times 2\)</span> invertible matrix with entries in <span class="process-math">\({\mathbb Z}_{26}\text{.}\)</span> We can define an encoding function by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f({\mathbf p}) = A {\mathbf p} + {\mathbf b}\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\({\mathbf b}\)</span> is a fixed column vector and matrix operations are performed in <span class="process-math">\({\mathbb Z}_{26}\text{.}\)</span> The decoding function must be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1}({\mathbf p}) = A^{-1} {\mathbf p} - A^{-1} {\mathbf b}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#crypt-section-private-key-9" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<span class="incontext"><a class="internal" href="crypt-section-private-key.html#crypt-section-private-key-9">in-context</a></span>
+</body>
+</html>

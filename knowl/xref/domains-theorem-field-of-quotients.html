@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">18.4</span><span class="period">.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(D\)</span> be an integral domain. Then <span class="process-math">\(D\)</span> can be embedded in a field of fractions <span class="process-math">\(F_D\text{,}\)</span> where any element in <span class="process-math">\(F_D\)</span> can be expressed as the quotient of two elements in <span class="process-math">\(D\text{.}\)</span> Furthermore, the field of fractions <span class="process-math">\(F_D\)</span> is unique in the sense that if <span class="process-math">\(E\)</span> is any field containing <span class="process-math">\(D\text{,}\)</span> then there exists a map <span class="process-math">\(\psi : F_D \rightarrow E\)</span> giving an isomorphism with a subfield of <span class="process-math">\(E\)</span> such that <span class="process-math">\(\psi(a) = a\)</span> for all elements <span class="process-math">\(a \in D\text{,}\)</span> where we identify <span class="process-math">\(a\)</span> with its image in <span class="process-math">\(F_D\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#domains-theorem-field-of-quotients-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 18.4"><a href="#domains-theorem-field-of-quotients" title="Copy heading and permalink for Theorem 18.4">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">We will first demonstrate that <span class="process-math">\(D\)</span> can be embedded in the field  <span class="process-math">\(F_D\text{.}\)</span> Define a map <span class="process-math">\(\phi : D \rightarrow F_D\)</span> by <span class="process-math">\(\phi(a)  = [a, 1]\text{.}\)</span> Then for <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> in <span class="process-math">\(D\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi( a + b ) = [a+b, 1] = [a, 1] + [b, 1] = \phi(a ) + \phi(b)
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi( a b ) = [a b, 1] = [a, 1]  [b, 1] = \phi(a ) \phi(b);
+\end{equation*}
+</div>
+<div class="para">hence, <span class="process-math">\(\phi\)</span> is a homomorphism. To show that <span class="process-math">\(\phi\)</span> is one-to-one, suppose that <span class="process-math">\(\phi(a) = \phi( b)\text{.}\)</span> Then <span class="process-math">\([a, 1] = [b, 1]\text{,}\)</span> or <span class="process-math">\(a = a1 = 1b = b\text{.}\)</span> Finally, any element of <span class="process-math">\(F_D\)</span> can be expressed as the quotient of two elements in <span class="process-math">\(D\text{,}\)</span> since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi(a) [\phi(b)]^{-1} = [a, 1] [b, 1]^{-1} = [a, 1] \cdot [1, b] = [a, b]\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#domains-theorem-field-of-quotients-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Now let <span class="process-math">\(E\)</span> be a field containing <span class="process-math">\(D\)</span> and define a map <span class="process-math">\(\psi :F_D \rightarrow E\)</span> by <span class="process-math">\(\psi([a, b]) = a b^{-1}\text{.}\)</span> To show that <span class="process-math">\(\psi\)</span> is well-defined, let <span class="process-math">\([a_1, b_1] = [a_2, b_2]\text{.}\)</span> Then <span class="process-math">\(a_1 b_2 = b_1 a_2\text{.}\)</span> Therefore, <span class="process-math">\(a_1 b_1^{-1} = a_2 b_2^{-1}\)</span> and <span class="process-math">\(\psi( [a_1, b_1]) = \psi( [a_2, b_2])\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#domains-theorem-field-of-quotients-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">If <span class="process-math">\([a, b ]\)</span> and <span class="process-math">\([c, d]\)</span> are in <span class="process-math">\(F_D\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{align*}
+\psi( [a, b] + [c, d] )  &amp; = \psi( [ad + b c, b d ] )\\
+&amp; =  (ad + b c)(b d)^{-1}\\
+&amp; = a b^{-1} + c d^{-1}\\
+&amp; = \psi( [a, b] ) + \psi( [c, d] )
+\end{align*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{align*}
+\psi( [a, b] \cdot [c, d] ) &amp; = \psi( [ac, b d ] )\\
+&amp; =  (ac)(b d)^{-1}\\
+&amp; = a b^{-1}  c d^{-1}\\
+&amp; = \psi( [a, b] )  \psi( [c, d] )\text{.}
+\end{align*}
+</div>
+<div class="para">Therefore, <span class="process-math">\(\psi\)</span> is a homomorphism.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#domains-theorem-field-of-quotients-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">To complete the proof of the theorem, we need to show that <span class="process-math">\(\psi\)</span> is one-to-one. Suppose that <span class="process-math">\(\psi( [a, b] ) = ab^{-1} = 0\text{.}\)</span> Then <span class="process-math">\(a = 0b = 0\)</span> and <span class="process-math">\([a, b] = [0, b]\text{.}\)</span> Therefore, the kernel of <span class="process-math">\(\psi\)</span> is the zero element <span class="process-math">\([ 0, b]\)</span> in <span class="process-math">\(F_D\text{,}\)</span> and <span class="process-math">\(\psi\)</span> is injective.<div class="autopermalink" data-description="Paragraph"><a href="#domains-theorem-field-of-quotients-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 18.4.1"><a href="#domains-theorem-field-of-quotients-2" title="Copy heading and permalink for Proof 18.4.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="domains-section-field-of-fractions.html#domains-theorem-field-of-quotients">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">22.15</span><span class="period">.</span>
+</h4>
+<div class="para logical">
+<div class="para">If we let <span class="process-math">\(g(x)= 1 + x^3\text{,}\)</span> we can define a <span class="process-math">\((6,3)\)</span>-code <span class="process-math">\(C\)</span> as follows. To encode a <span class="process-math">\(3\)</span>-tuple <span class="process-math">\(( a_0, a_1, a_2 )\text{,}\)</span> we multiply the corresponding polynomial <span class="process-math">\(f(x) = a_0 + a_1 x + a_2 x^2\)</span> by <span class="process-math">\(1 + x^3\text{.}\)</span> We are defining a map <span class="process-math">\(\phi : {\mathbb Z}_2^3 \rightarrow {\mathbb Z}_2^6\)</span> by <span class="process-math">\(\phi  : f(x) \mapsto g(x) f(x)\text{.}\)</span> It is easy to check that this map is a group homomorphism. In fact, if we regard <span class="process-math">\({\mathbb Z}_2^n\)</span> as a vector space over <span class="process-math">\({\mathbb Z}_2\text{,}\)</span> <span class="process-math">\(\phi\)</span> is a linear transformation of vector spaces (see <a href="vect-exercises.html#vect-exercise-linear-transformation" class="xref" data-knowl="./knowl/xref/vect-exercise-linear-transformation.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 20.5.15: Linear Transformations">Exercise 20.5.15</a>, <a href="vect.html" class="internal" title="Chapter 20: Vector Spaces">Chapter 20</a>). Let us compute the kernel of <span class="process-math">\(\phi\text{.}\)</span> Observe that <span class="process-math">\(\phi ( a_0, a_1, a_2 ) = (000000)\)</span> exactly when</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/vect-exercise-linear-transformation.html ./knowl/xref/vect.html">
+\begin{align*}
+0 + 0x + 0x^2 + 0x^3 + 0x^4 + 0 x^5 &amp; = (1 + x^3) ( a_0 + a_1 x + a_2 x^2 )\\
+&amp; = a_0 + a_1 x + a_2 x^2 + a_0 x^3 + a_1 x^4 + a_2 x^5\text{.}
+\end{align*}
+</div>
+<div class="para">Since the polynomials over a field form an integral domain, <span class="process-math">\(a_0 + a_1 x + a_2 x^2\)</span> must be the zero polynomial. Therefore, <span class="process-math">\(\ker \phi = \{ (000) \}\)</span> and <span class="process-math">\(\phi\)</span> is one-to-one.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#finite-example-generator-63-code-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To calculate a generator matrix for <span class="process-math">\(C\text{,}\)</span> we merely need to examine the way the polynomials <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(x\text{,}\)</span> and <span class="process-math">\(x^2\)</span> are encoded:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/finite-example-6-3-linear-code.html">
+\begin{align*}
+(1 + x^3) \cdot 1 &amp; = 1 + x^3\\
+(1 + x^3)x &amp; = x + x^4\\
+(1 + x^3)x^2 &amp; = x^2 + x^5\text{.}
+\end{align*}
+</div>
+<div class="para">We obtain the code corresponding to the generator matrix <span class="process-math">\(G_1\)</span> in <a href="finite-section-poly-codes.html#finite-example-6-3-linear-code" class="xref" data-knowl="./knowl/xref/finite-example-6-3-linear-code.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 22.14">Example 22.14</a>. The parity-check matrix for this code is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/finite-example-6-3-linear-code.html">
+\begin{equation*}
+H
+= 
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since the smallest weight of any nonzero codeword is <span class="process-math">\(2\text{,}\)</span> this code has the ability to detect all single errors.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#finite-example-generator-63-code-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 22.15"><a href="#finite-example-generator-63-code" title="Copy heading and permalink for Example 22.15">🔗</a></div></article><span class="incontext"><a class="internal" href="finite-section-poly-codes.html#finite-example-generator-63-code">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.5</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(R\)</span> be a commutative ring with identity and <span class="process-math">\(\alpha \in R\text{.}\)</span> Then we have a ring homomorphism  <span class="process-math">\(\phi_{\alpha} : R[x] \rightarrow R\)</span> defined by </div>
+<div class="displaymath process-math">
+\begin{equation*}
+\phi_{\alpha} (p(x) ) = p( \alpha ) = a_n \alpha^n + \cdots + a_1 \alpha + a_0\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(p( x ) = a_n x^n + \cdots + a_1 x + a_0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-theorem-3-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 17.5"><a href="#poly-theorem-3" title="Copy heading and permalink for Theorem 17.5">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(p(x) = \sum_{i = 0}^n a_i x^i\)</span> and <span class="process-math">\(q(x) = \sum_{i = 0}^m b_i x^i\text{.}\)</span> It is easy to show that <span class="process-math">\(\phi_{\alpha}(p(x) + q(x)) = \phi_{\alpha}(p(x)) + \phi_{\alpha}(q(x))\text{.}\)</span> To show that multiplication is preserved under the map <span class="process-math">\(\phi_{\alpha}\text{,}\)</span> observe that</div>
+<div class="displaymath process-math">
+\begin{align*}
+\phi_{\alpha} (p(x) ) \phi_{\alpha} (q(x)) &amp; = p( \alpha ) q(\alpha)\\
+&amp; = \left( \sum_{i = 0}^n a_i \alpha^i \right) \left( \sum_{i = 0}^m b_i \alpha^i \right)\\
+&amp; = \sum_{i = 0}^{m + n} \left( \sum_{k = 0}^i a_k b_{i - k} \right) \alpha^i\\
+&amp; = \phi_{\alpha} (p(x) q(x))\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-theorem-3-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 17.5.1"><a href="#poly-theorem-3-2" title="Copy heading and permalink for Proof 17.5.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="poly-section-rings.html#poly-theorem-3">in-context</a></span>
+</body>
+</html>

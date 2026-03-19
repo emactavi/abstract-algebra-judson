@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="proposition theorem-like"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">17.10</span><span class="period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Let <span class="process-math">\(F\)</span> be a field and suppose that <span class="process-math">\(d(x)\)</span> is a greatest common divisor of two polynomials <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> in <span class="process-math">\(F[x]\text{.}\)</span> Then there exist polynomials <span class="process-math">\(r(x)\)</span> and <span class="process-math">\(s(x)\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d(x) = r(x) p(x) + s(x) q(x)\text{.}
+\end{equation*}
+</div>
+<div class="para">Furthermore, the greatest common divisor of two polynomials is unique.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-proposition-gcd-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 17.10"><a href="#poly-proposition-gcd" title="Copy heading and permalink for Proposition 17.10">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Let <span class="process-math">\(d(x)\)</span> be the monic polynomial of smallest degree in the set</div>
+<div class="displaymath process-math">
+\begin{equation*}
+S = \{ f(x) p(x) + g(x) q(x) : f(x), g(x) \in F[x]  \}\text{.}
+\end{equation*}
+</div>
+<div class="para">We can write <span class="process-math">\(d(x) = r(x) p(x) + s(x) q(x)\)</span> for two polynomials  <span class="process-math">\(r(x)\)</span> and <span class="process-math">\(s(x)\)</span> in <span class="process-math">\(F[x]\text{.}\)</span> We need to show that <span class="process-math">\(d(x)\)</span> divides both <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{.}\)</span> We shall first show that <span class="process-math">\(d(x)\)</span> divides <span class="process-math">\(p(x)\text{.}\)</span> By the division algorithm, there exist polynomials <span class="process-math">\(a(x)\)</span> and <span class="process-math">\(b(x)\)</span> such that <span class="process-math">\(p(x) = a(x) d(x) + b(x)\text{,}\)</span> where <span class="process-math">\(b(x)\)</span> is either the zero polynomial or <span class="process-math">\(\deg b(x) \lt \deg d(x)\text{.}\)</span> Therefore,</div>
+<div class="displaymath process-math">
+\begin{align*}
+b(x) &amp; = p(x) - a(x) d(x)\\
+&amp; = p(x) - a(x)( r(x) p(x) + s(x) q(x))\\
+&amp; = p(x) - a(x) r(x) p(x) - a(x)  s(x) q(x)\\
+&amp; = p(x)( 1  - a(x) r(x) ) + q(x) ( - a(x) s(x) )
+\end{align*}
+</div>
+<div class="para">is a linear combination of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> and therefore must be in <span class="process-math">\(S\text{.}\)</span> However, <span class="process-math">\(b(x)\)</span> must be the zero polynomial since <span class="process-math">\(d(x)\)</span> was chosen to be of smallest degree; consequently, <span class="process-math">\(d(x)\)</span> divides <span class="process-math">\(p(x)\text{.}\)</span> A symmetric argument shows that <span class="process-math">\(d(x)\)</span> must also divide <span class="process-math">\(q(x)\text{;}\)</span> hence, <span class="process-math">\(d(x)\)</span> is a common divisor of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-proposition-gcd-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">To show that <span class="process-math">\(d(x)\)</span> is a greatest common divisor of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{,}\)</span> suppose that <span class="process-math">\(d'(x)\)</span> is another common divisor of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{.}\)</span> We will show that <span class="process-math">\(d'(x) \mid d(x)\text{.}\)</span> Since <span class="process-math">\(d'(x)\)</span> is a common divisor of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{,}\)</span> there exist polynomials <span class="process-math">\(u(x)\)</span> and <span class="process-math">\(v(x)\)</span> such that <span class="process-math">\(p(x) = u(x) d'(x)\)</span> and <span class="process-math">\(q(x) = v(x) d'(x)\text{.}\)</span> Therefore,</div>
+<div class="displaymath process-math">
+\begin{align*}
+d(x) &amp; = r(x) p(x) + s(x) q(x)\\
+&amp; =  r(x) u(x) d'(x) + s(x) v(x) d'(x)\\
+&amp; = d'(x) [r(x) u(x) + s(x) v(x)]\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(d'(x) \mid d(x)\text{,}\)</span> <span class="process-math">\(d(x)\)</span> is a greatest common divisor of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-proposition-gcd-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">Finally, we must show that the greatest common divisor of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\)</span> is unique. Suppose that <span class="process-math">\(d'(x)\)</span> is another greatest common divisor of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{.}\)</span> We have just shown that there exist polynomials <span class="process-math">\(u(x)\)</span> and <span class="process-math">\(v(x)\)</span> in <span class="process-math">\(F[x]\)</span> such that <span class="process-math">\(d(x) = d'(x)[r(x) u(x) + s(x) v(x)]\text{.}\)</span> Since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\deg d(x) =  \deg d'(x) + \deg[r(x) u(x) + s(x) v(x)]
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(d(x)\)</span> and <span class="process-math">\(d'(x)\)</span> are both greatest common divisors, <span class="process-math">\(\deg d(x) = \deg d'(x)\text{.}\)</span> Since <span class="process-math">\(d(x)\)</span> and <span class="process-math">\(d'(x)\)</span> are both monic polynomials of the same degree, it must be the case that <span class="process-math">\(d(x) = d'(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#poly-proposition-gcd-2-3" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 17.10.1"><a href="#poly-proposition-gcd-2" title="Copy heading and permalink for Proof 17.10.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="poly-section-division-algorithm.html#poly-proposition-gcd">in-context</a></span>
+</body>
+</html>
