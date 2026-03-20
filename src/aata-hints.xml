@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <xi:include href="./bookinfo.xml"/>
+  <book xml:id="aata-hints">
+    <title>Abstract Algebra: Theory and Applications</title>
+    <subtitle>Hints and Answers to Selected Exercises</subtitle>
+    <xi:include href="./sets.xml"/>
+    <backmatter>
+      <xi:include href="./hints.xml"/>
+    </backmatter>
+  </book>
+</pretext>

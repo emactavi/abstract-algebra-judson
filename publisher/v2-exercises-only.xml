@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<publication>
+    <source>
+        <directories external="../external" generated="../images"/>
+    </source>
+    <common>
+        <tableofcontents level="0"/>
+        <exercise-divisional hint="no"/>
+    </common>
+    <numbering>
+        <divisions level="2"/>
+        <blocks    level="1"/>
+        <equations level="1"/>
+        <footnotes level="0"/>
+    </numbering>
+    <latex print="no" font-size="11">
+        <page>
+            <geometry>left=1.25in,right=1.25in,top=0.75in,bottom=0.75in</geometry>
+        </page>
+    </latex>
+</publication>

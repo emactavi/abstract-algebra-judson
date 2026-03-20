@@ -9,7 +9,7 @@
 <!-- This file is part of the book                    -->
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
-<index>
+<index xml:id="index-list">
   <!-- Automatic title, in document language -->
   <index-list/>
 </index>

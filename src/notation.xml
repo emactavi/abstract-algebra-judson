@@ -9,7 +9,7 @@
 <!-- This file is part of the book                    -->
 <!--                                                  -->
 <!-- See the file COPYING for copying conditions.     -->
-<appendix>
+<appendix xml:id="notation">
   <title>Notation</title>
   <introduction>
     <p>

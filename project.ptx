@@ -30,6 +30,39 @@
       <publication>publisher/electronic.xml</publication>
       <output-dir>output/print-latex</output-dir>
     </target>
+    <target name="v1-exercises-paged" pdf-method="xelatex">
+    <format>pdf</format>
+    <source>src/aata.xml</source>
+    <publication>publisher/v2-exercises-only.xml</publication>
+    <output-dir>output/v1-exercises-paged</output-dir>
+</target>
+<target name="v2-exercises-only" pdf-method="xelatex">
+    <format>pdf</format>
+    <source>src/aata.xml</source>
+    <publication>publisher/v2-exercises-only.xml</publication>
+    <output-dir>output/v2-exercises-only</output-dir>
+    <xsl>xsl/v2-exercises.xsl</xsl>
+</target>
+<target name="v3-content-only" pdf-method="xelatex">
+    <format>pdf</format>
+    <source>src/aata.xml</source>
+    <publication>publisher/v3-content-only.xml</publication>
+    <output-dir>output/v3-content-only</output-dir>
+</target>
+<target name="v4-hints" pdf-method="xelatex">
+    <format>pdf</format>
+    <source>src/aata-hints.xml</source>
+    <publication>publisher/v4-hints.xml</publication>
+    <output-dir>output/v4-hints</output-dir>
+    <!-- <xmlid-root>hints</xmlid-root> -->
+</target>
+<target name="v5-notation-index" pdf-method="xelatex">
+    <format>pdf</format>
+    <source>src/aata-notation-index.xml</source>
+    <publication>publisher/v5-notation-index.xml</publication>
+    <output-dir>output/v5-notation-index</output-dir>
+    <!-- <xmlid-root>notation</xmlid-root> -->
+</target>
     <target name="subset">
       <format>html</format>
       <source>src/aata.xml</source>

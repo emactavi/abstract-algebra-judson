@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <xi:include href="./bookinfo.xml"/>
+  <book xml:id="aata-notation-index">
+    <title>Abstract Algebra: Theory and Applications</title>
+    <subtitle>Notation and Index</subtitle>
+    <backmatter>
+      <xi:include href="./notation.xml"/>
+      <xi:include href="./index.xml"/>
+    </backmatter>
+  </book>
+</pretext>
