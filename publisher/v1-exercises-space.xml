@@ -4,9 +4,8 @@
         <directories external="../external" generated="../images"/>
     </source>
     <common>
-        <tableofcontents level="2"/>
-        <exercise-divisional statement="no" hint="no" answer="no" solution="no"/>
-        <exercise-reading statement="no" hint="no" answer="no" solution="no"/>
+        <tableofcontents level="0"/>
+        <exercise-divisional hint="no"/>
     </common>
     <numbering>
         <divisions level="2"/>
