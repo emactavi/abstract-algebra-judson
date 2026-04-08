@@ -55,7 +55,7 @@
         <analytics statcounter-project="10568106"
                    statcounter-security="510ba080"/>
          <!-- trailing slash will be added, if not authored -->
-        <baseurl href="http://abstract.ups.edu/aata/"/>
+        <baseurl href="https://emactavi.github.io/abstract-algebra-judson/"/>
         <index-page ref="aata"/>
     </html>
 
