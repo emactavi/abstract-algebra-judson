@@ -15559,7 +15559,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "D.1",
   "title": "By chapter",
-  "body": " By chapter  Most recent submissions for each chapter. Links open the corresponding PDF on GitHub.   Chapter 1 — Preliminaries    Exercises 1-22:      Chapter 2 — Integers    Exercises 1-10, 15:      Chapter 3 — Groups    Exercises 1-4:     "
+  "body": " By chapter  Most recent submissions for each chapter. Links open the corresponding PDF.   Chapter 1 — Preliminaries    Exercises 1-22:      Chapter 2 — Integers    Exercises 1-10, 15:      Chapter 3 — Groups    Exercises 1-4:     "
 },
 {
   "id": "submissions-chronological",
