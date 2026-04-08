@@ -4,3 +4,4 @@ output/
 .cache/
 logs/
 .error_schema.log
+.DS_Store
