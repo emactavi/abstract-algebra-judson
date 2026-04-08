@@ -15559,7 +15559,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "D.1",
   "title": "By chapter",
-  "body": " By chapter  Most recent submissions for each chapter. Links open the corresponding PDF on GitHub.   Chapter 1 — Preliminaries (Sets)    Exercises 1–15:     "
+  "body": " By chapter  Most recent submissions for each chapter. Links open the corresponding PDF on GitHub.   Chapter 1 — Preliminaries    Exercises 1-22:      Chapter 2 — Integers    Exercises 1-10, 15:      Chapter 3 — Groups    Exercises 1-4:     "
 },
 {
   "id": "submissions-chronological",
@@ -15568,7 +15568,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "D.2",
   "title": "Chronological log",
-  "body": " Chronological log  All submissions in reverse chronological order, including all versions.    2026-04-07 — — Ch. 1, exercises 1–15, first attempt    "
+  "body": " Chronological log  All submissions in reverse chronological order, including all versions.    2026-04-07 — — Ch. 3, exercises 1-4, first attempt  2026-04-07 — — Ch. 2, exercises 1-7, 9, 10, 15, first attempt  2026-04-07 — — Ch. 1, exercises 1-22, first attempt    "
 },
 {
   "id": "backmatter-7",
