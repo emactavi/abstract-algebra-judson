@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">21.34</span><span class="period">.</span>
+</h3>
+<div class="para">Let <span class="process-math">\(\phi : E \rightarrow F\)</span> be an isomorphism of fields and let <span class="process-math">\(p(x)\)</span> be a nonconstant polynomial in <span class="process-math">\(E[x]\)</span> and <span class="process-math">\(q(x)\)</span> the corresponding polynomial in <span class="process-math">\(F[x]\)</span> under the isomorphism. If <span class="process-math">\(K\)</span> is a splitting field of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(L\)</span> is a splitting field of <span class="process-math">\(q(x)\text{,}\)</span> then <span class="process-math">\(\phi\)</span> extends to an isomorphism <span class="process-math">\(\psi : K \rightarrow L\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fields-theorem-isomorphism-extension-1-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 21.34"><a href="#fields-theorem-isomorphism-extension" title="Copy heading and permalink for Theorem 21.34">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para">We will use mathematical induction on the degree of <span class="process-math">\(p(x)\text{.}\)</span> We can assume that <span class="process-math">\(p(x)\)</span> is irreducible over <span class="process-math">\(E\text{.}\)</span> Therefore, <span class="process-math">\(q(x)\)</span> is also irreducible over <span class="process-math">\(F\text{.}\)</span> If <span class="process-math">\(\deg p(x) = 1\text{,}\)</span> then by the definition of a splitting field, <span class="process-math">\(K = E\)</span> and <span class="process-math">\(L = F\)</span> and there is nothing to prove.<div class="autopermalink" data-description="Paragraph"><a href="#fields-theorem-isomorphism-extension-2-1" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Assume that the theorem holds for all polynomials of degree less than <span class="process-math">\(n\text{.}\)</span> Since <span class="process-math">\(K\)</span> is a splitting field of <span class="process-math">\(p(x)\text{,}\)</span> all of the roots of <span class="process-math">\(p(x)\)</span> are in <span class="process-math">\(K\text{.}\)</span> Choose one of these roots, say <span class="process-math">\(\alpha\text{,}\)</span> such that <span class="process-math">\(E \subset E( \alpha ) \subset K\text{.}\)</span> Similarly, we can find a root <span class="process-math">\(\beta\)</span> of <span class="process-math">\(q(x)\)</span> in <span class="process-math">\(L\)</span> such that <span class="process-math">\(F \subset F( \beta) \subset L\text{.}\)</span> By <a href="fields-section-splitting-fields.html#fields-lemma-field-isomorphism" class="xref" data-knowl="./knowl/xref/fields-lemma-field-isomorphism.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 21.32">Lemma 21.32</a>, there exists an isomorphism <span class="process-math">\(\overline{\phi} : E(\alpha ) \rightarrow F( \beta)\)</span> such that <span class="process-math">\(\overline{\phi}( \alpha ) = \beta\)</span> and <span class="process-math">\(\overline{\phi}\)</span> agrees with <span class="process-math">\(\phi\)</span> on <span class="process-math">\(E\)</span>  (see <a href="fields-section-splitting-fields.html#fields-figure-splitting-fields-2" class="xref" data-knowl="./knowl/xref/fields-figure-splitting-fields-2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 21.35">Figure 21.35</a>).<div class="autopermalink" data-description="Paragraph"><a href="#fields-theorem-isomorphism-extension-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{CD}
+K  @&gt;\psi&gt;&gt;  L  \\
+@VV{\sigma}V        @VV{\tau}V\\
+E(\alpha)     @&gt;\overline{\phi}&gt;&gt;  F(\beta) \\
+@VVV        @VVV\\
+E     @&gt;\phi&gt;&gt;  F
+\end{CD}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fields-figure-splitting-fields-2-2" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">21.35<span class="period">.</span></span><span class="space"> </span>Commutative diagram for <a href="fields-section-splitting-fields.html#fields-theorem-isomorphism-extension" class="xref" data-knowl="./knowl/xref/fields-theorem-isomorphism-extension.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 21.34">Theorem 21.34</a><div class="autopermalink" data-description="Figure 21.35"><a href="#fields-figure-splitting-fields-2" title="Copy heading and permalink for Figure 21.35">🔗</a></div></figcaption></figure><div class="para">Now write <span class="process-math">\(p(x) = (x - \alpha ) f(x)\)</span> and <span class="process-math">\(q(x) = ( x - \beta) g(x)\text{,}\)</span> where the degrees of <span class="process-math">\(f(x)\)</span> and <span class="process-math">\(g(x)\)</span> are less than the degrees of <span class="process-math">\(p(x)\)</span> and <span class="process-math">\(q(x)\text{,}\)</span> respectively. The field extension <span class="process-math">\(K\)</span> is a splitting field for <span class="process-math">\(f(x)\)</span> over <span class="process-math">\(E( \alpha)\text{,}\)</span> and <span class="process-math">\(L\)</span> is a splitting field for <span class="process-math">\(g(x)\)</span> over <span class="process-math">\(F( \beta )\text{.}\)</span> By our induction hypothesis there exists an isomorphism <span class="process-math">\(\psi : K \rightarrow L\)</span> such that <span class="process-math">\(\psi\)</span> agrees with <span class="process-math">\(\overline{\phi}\)</span> on <span class="process-math">\(E( \alpha)\text{.}\)</span> Hence, there exists an isomorphism <span class="process-math">\(\psi : K \rightarrow L\)</span> such that <span class="process-math">\(\psi\)</span> agrees with <span class="process-math">\(\phi\)</span> on <span class="process-math">\(E\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fields-theorem-isomorphism-extension-2-4" title="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 21.34.1"><a href="#fields-theorem-isomorphism-extension-2" title="Copy heading and permalink for Proof 21.34.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="fields-section-splitting-fields.html#fields-theorem-isomorphism-extension">in-context</a></span>
+</body>
+</html>
