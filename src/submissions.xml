@@ -13,15 +13,14 @@
   <section xml:id="submissions-by-chapter">
     <title>By chapter</title>
     <p>
-      Most recent submissions for each chapter. Links open the corresponding
-      PDF on GitHub.
+      Most recent submissions for each chapter. Links open the corresponding PDF.
     </p>
 
     <subsection xml:id="submissions-chapter-01">
       <title>Chapter 1 — Preliminaries</title>
       <p>
         <ul>
-          <li><p>Exercises 1-22: <url href="https://github.com/emactavi/abstract-algebra-judson/blob/master/answers/chapter-01/ch01-ex01-22-v1.pdf" visual="ch01-ex01-22-v1.pdf"/></p></li>
+          <li><p>Exercises 1-22: <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-01/ch01-ex01-22-v1.pdf" visual="ch01-ex01-22-v1.pdf"/></p></li>
         </ul>
       </p>
     </subsection>
@@ -30,7 +29,7 @@
       <title>Chapter 2 — Integers</title>
       <p>
         <ul>
-          <li><p>Exercises 1-10, 15: <url href="https://github.com/emactavi/abstract-algebra-judson/blob/master/answers/chapter-02/ch02-ex01-10_15-v1.pdf" visual="ch02-ex01-10_15-v1.pdf"/></p></li>
+          <li><p>Exercises 1-10, 15: <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-02/ch02-ex01-10_15-v1.pdf" visual="ch02-ex01-10_15-v1.pdf"/></p></li>
         </ul>
       </p>
     </subsection>
@@ -39,7 +38,7 @@
       <title>Chapter 3 — Groups</title>
       <p>
         <ul>
-          <li><p>Exercises 1-4: <url href="https://github.com/emactavi/abstract-algebra-judson/blob/master/answers/chapter-03/ch03-ex01-04-v1.pdf" visual="ch03-ex01-04-v1.pdf"/></p></li>
+          <li><p>Exercises 1-4: <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-03/ch03-ex01-04-v1.pdf" visual="ch03-ex01-04-v1.pdf"/></p></li>
         </ul>
       </p>
     </subsection>
@@ -53,9 +52,9 @@
     </p>
     <p>
       <ul>
-        <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/blob/master/answers/chapter-03/ch03-ex01-04-v1.pdf" visual="ch03-ex01-04-v1.pdf"/> — Ch. 3, exercises 1-4, first attempt</p></li>
-        <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/blob/master/answers/chapter-02/ch02-ex01-10_15-v1.pdf" visual="ch02-ex01-10_15-v1.pdf"/> — Ch. 2, exercises 1-7, 9, 10, 15, first attempt</p></li>
-        <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/blob/master/answers/chapter-01/ch01-ex01-22-v1.pdf" visual="ch01-ex01-22-v1.pdf"/> — Ch. 1, exercises 1-22, first attempt</p></li>
+        <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-03/ch03-ex01-04-v1.pdf" visual="ch03-ex01-04-v1.pdf"/> — Ch. 3, exercises 1-4, first attempt</p></li>
+        <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-02/ch02-ex01-10_15-v1.pdf" visual="ch02-ex01-10_15-v1.pdf"/> — Ch. 2, exercises 1-7, 9, 10, 15, first attempt</p></li>
+        <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-01/ch01-ex01-22-v1.pdf" visual="ch01-ex01-22-v1.pdf"/> — Ch. 1, exercises 1-22, first attempt</p></li>
       </ul>
     </p>
   </section>
