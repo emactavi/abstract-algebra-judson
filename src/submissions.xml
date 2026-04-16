@@ -20,7 +20,7 @@
       <title>Chapter 1 — Preliminaries</title>
       <p>
         <ul>
-          <li><p>Exercises 1-22: <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-01/ch01-ex01-22-v1.pdf" visual="ch01-ex01-22-v1.pdf"/></p></li>
+          <li><p>Exercises 1-22: <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-01/ch01-ex01-22-v2.pdf" visual="ch01-ex01-22-v2.pdf"/></p></li>
         </ul>
       </p>
     </subsection>
@@ -29,7 +29,7 @@
       <title>Chapter 2 — Integers</title>
       <p>
         <ul>
-          <li><p>Exercises 1-10, 15: <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-02/ch02-ex01-10_15-v1.pdf" visual="ch02-ex01-10_15-v1.pdf"/></p></li>
+          <li><p>Exercises 1-17 (except 7,8,13,14): <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-02/ch02-ex01-06,09-12,15-17-v2.pdf" visual="ch02-ex01-06,09-12,15-17-v2.pdf"/></p></li>
         </ul>
       </p>
     </subsection>
@@ -52,6 +52,8 @@
     </p>
     <p>
       <ul>
+        <li><p>2026-04-16 — <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-02/ch02-ex01-06,09-12,15-17-v2.pdf" visual="ch02-ex01-06,09-12,15-17-v2.pdf"/> — Ch. 2, adjustments to gcd approach in Exercise 15, and additional solutions to exercises</p></li>
+        <li><p>2026-04-16 — <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-01/ch01-ex01-22-v2.pdf" visual="ch01-ex01-22-v2.pdf"/> — Ch. 1, minor update to Exercise 21 solution</p></li>
         <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-03/ch03-ex01-04-v1.pdf" visual="ch03-ex01-04-v1.pdf"/> — Ch. 3, exercises 1-4, first attempt</p></li>
         <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-02/ch02-ex01-10_15-v1.pdf" visual="ch02-ex01-10_15-v1.pdf"/> — Ch. 2, exercises 1-7, 9, 10, 15, first attempt</p></li>
         <li><p>2026-04-07 — <url href="https://github.com/emactavi/abstract-algebra-judson/raw/master/answers/chapter-01/ch01-ex01-22-v1.pdf" visual="ch01-ex01-22-v1.pdf"/> — Ch. 1, exercises 1-22, first attempt</p></li>
