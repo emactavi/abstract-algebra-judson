@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Symmetry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "textmacros",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[tex]/textmacros",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://emactavi.github.io/abstract-algebra-judson/external/cover/cover_aata_2022.png">
+<meta property="book:title" content="Abstract Algebra">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="AATA" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://abstract.pugetsound.edu"><img src="external/cover/cover_aata_2022.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra</span> <span class="subtitle">Theory and Applications</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="index-list.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="matrix-section-groups.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="matrix.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="matrix-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="aata.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="aata-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="aata-5.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets-section-note-on-proofs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Short Note on Proofs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-section-note-on-proofs.html#sets-subsection-cautions" class="internal"><span class="title">Some Cautions and Suggestions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sets-section-sets-and-equivalence-relations.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets and Equivalence Relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-section-sets-and-equivalence-relations.html#sets-subsection-set-theory" class="internal"><span class="title">Set Theory</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-section-sets-and-equivalence-relations.html#sets-subsection-cartesian-products" class="internal"><span class="title">Cartesian Products and Mappings</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-section-sets-and-equivalence-relations.html#sets-subsection-equivalence-relations" class="internal"><span class="title">Equivalence Relations and Partitions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sets-5.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sets-exercises.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sets-references.html" class="internal"><span class="codenumber">1.5</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">2</span> <span class="title">The Integers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="integers-section-math-induction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematical Induction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="integers-section-division-algorithm.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Division Algorithm</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-section-division-algorithm.html#integers-subsection-euclidean-algorithm" class="internal"><span class="title">The Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-section-division-algorithm.html#integers-subsection-prime-numbers" class="internal"><span class="title">Prime Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-section-division-algorithm.html#integers-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="integers-5.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-exercises.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="integers-exercises-programming.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="integers-references.html" class="internal"><span class="codenumber">2.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-section-mod-n-sym.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Integer Equivalence Classes and Symmetries</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-mod-n-sym.html#groups-subsection-integers-mod-n" class="internal"><span class="title">The Integers mod <span class="process-math">\(n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-mod-n-sym.html#groups-subsection-symmetries" class="internal"><span class="title">Symmetries</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-section-defnitions.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Definitions and Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-defnitions.html#groups-subsection-basic-properties" class="internal"><span class="title">Basic Properties of Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-defnitions.html#groups-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="groups-section-subgroups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-subgroups.html#groups-subsection-subgroup-examples" class="internal"><span class="title">Definitions and Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-section-subgroups.html#groups-subsection-subgroup-theorems" class="internal"><span class="title">Some Subgroup Theorems</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="groups-6.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-exercises.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="groups-exercises-detecting-errors.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Additional Exercises: Detecting Errors</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="groups-references.html" class="internal"><span class="codenumber">3.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cyclic.html" class="internal"><span class="codenumber">4</span> <span class="title">Cyclic Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cyclic-section-cyclic-subgroups.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Cyclic Subgroups</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="cyclic-section-cyclic-subgroups.html#cyclic-subsection-cyclic-subgroups" class="internal"><span class="title">Subgroups of Cyclic Groups</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cyclic-section-mult-group-c.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Multiplicative Group of Complex Numbers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="cyclic-section-mult-group-c.html#cyclic-subsection-circle-group" class="internal"><span class="title">The Circle Group and the Roots of Unity</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-section-method-of-repeated-squares.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Method of Repeated Squares</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="cyclic-6.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-exercises.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cyclic-exercises-programming.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="cyclic-references.html" class="internal"><span class="codenumber">4.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="permute.html" class="internal"><span class="codenumber">5</span> <span class="title">Permutation Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="permute-section-permutation-definitions.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Definitions and Notation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-permutation-definitions.html#permute-subsection-cycle-notation" class="internal"><span class="title">Cycle Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-permutation-definitions.html#permute-subsection-transpositions" class="internal"><span class="title">Transpositions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-permutation-definitions.html#permute-subsection-alternating-groups" class="internal"><span class="title">The Alternating Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-permutation-definitions.html#permute-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="permute-section-dihedral-groups.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Dihedral Groups</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="permute-section-dihedral-groups.html#permute-subsection-motion-group-cube" class="internal"><span class="title">The Motion Group of a Cube</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="permute-5.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="permute-exercises.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="cosets.html" class="internal"><span class="codenumber">6</span> <span class="title">Cosets and Lagrange’s Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cosets-section-cosets.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Cosets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="cosets-section-lagranges-theorem.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Lagrange’s Theorem</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cosets-section-fermat-euler.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Fermat’s and Euler’s Theorems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="cosets-section-fermat-euler.html#cosets-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="cosets-6.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cosets-exercises.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="crypt.html" class="internal"><span class="codenumber">7</span> <span class="title">Introduction to Cryptography</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="crypt-section-private-key.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Private Key Cryptography</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="crypt-section-public-key.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Public Key Cryptography</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="crypt-section-public-key.html#crypt-subsection-rsa" class="internal"><span class="title">The <abbr class="acronym">RSA</abbr> Cryptosystem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="crypt-section-public-key.html#crypt-subsection-message-verification" class="internal"><span class="title">Message Verification</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="crypt-section-public-key.html#crypt-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="crypt-5.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="crypt-exercises.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="crypt-exercises-additional.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Additional Exercises: Primality and Factoring</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="crypt-references.html" class="internal"><span class="codenumber">7.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="algcodes.html" class="internal"><span class="codenumber">8</span> <span class="title">Algebraic Coding Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="algcodes-section-error-detecting-correcting-codes.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Error-Detecting and Correcting Codes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-subsection-max-likelihood" class="internal"><span class="title">Maximum-Likelihood Decoding</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-subsection-block-codes" class="internal"><span class="title">Block Codes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-error-detecting-correcting-codes.html#algcodes-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="algcodes-section-linear-codes.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Linear Codes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-linear-codes.html#algcodes-subsection-linear-codes" class="internal"><span class="title">Linear Codes</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="algcodes-section-parity-check.html" class="internal"><span class="codenumber">8.3</span> <span class="title">Parity-Check and Generator Matrices</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="algcodes-section-efficient-decoding.html" class="internal"><span class="codenumber">8.4</span> <span class="title">Efficient Decoding</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="algcodes-section-efficient-decoding.html#algcodes-subsection-coset-decoding" class="internal"><span class="title">Coset Decoding</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="algcodes-7.html" class="internal"><span class="codenumber">8.5</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="algcodes-exercises.html" class="internal"><span class="codenumber">8.6</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="algcodes-exercises-programming.html" class="internal"><span class="codenumber">8.7</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="algcodes-references.html" class="internal"><span class="codenumber">8.8</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="isomorph.html" class="internal"><span class="codenumber">9</span> <span class="title">Isomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="isomorph-section-definitions.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Definition and Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="isomorph-section-definitions.html#isomorph-subsection-cayleys-theorem" class="internal"><span class="title">Cayley’s Theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="isomorph-section-definitions.html#isomorph-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="isomorph-section-direct-products.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Direct Products</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="isomorph-section-direct-products.html#isomorph-subsection-external-products" class="internal"><span class="title">External Direct Products</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="isomorph-section-direct-products.html#isomorph-subsection-internal-products" class="internal"><span class="title">Internal Direct Products</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="isomorph-5.html" class="internal"><span class="codenumber">9.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="isomorph-exercises.html" class="internal"><span class="codenumber">9.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="normal.html" class="internal"><span class="codenumber">10</span> <span class="title">Normal Subgroups and Factor Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="normal-section-factor-groups.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Factor Groups and Normal Subgroups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="normal-section-factor-groups.html#normal-subsection-normal-subgroups" class="internal"><span class="title">Normal Subgroups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="normal-section-factor-groups.html#normal-subsection-factor-groups" class="internal"><span class="title">Factor Groups</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="normal-section-simplicity-of-an.html" class="internal"><span class="codenumber">10.2</span> <span class="title">The Simplicity of the Alternating Group</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="normal-section-simplicity-of-an.html#normal-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="normal-5.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="normal-exercises.html" class="internal"><span class="codenumber">10.4</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="homomorph.html" class="internal"><span class="codenumber">11</span> <span class="title">Homomorphisms</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="homomorph-section-group-homomorphisms.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Group Homomorphisms</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="homomorph-section-group-isomorphism-theorems.html" class="internal"><span class="codenumber">11.2</span> <span class="title">The Isomorphism Theorems</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="homomorph-5.html" class="internal"><span class="codenumber">11.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="homomorph-exercises.html" class="internal"><span class="codenumber">11.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="homomorph-exercises-automorphisms.html" class="internal"><span class="codenumber">11.5</span> <span class="title">Additional Exercises: Automorphisms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="matrix.html" class="internal"><span class="codenumber">12</span> <span class="title">Matrix Groups and Symmetry</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="matrix-section-groups.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Matrix Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-groups.html#matrix-subsection-linear-algebra" class="internal"><span class="title">Some Facts from Linear Algebra</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-groups.html#matrix-subsection-general-linear-group" class="internal"><span class="title">The General and Special Linear Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-groups.html#matrix-subsection-orthogonal-group" class="internal"><span class="title">The Orthogonal Group <span class="process-math">\(O(n)\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="matrix-section-symmetry.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Symmetry</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-symmetry.html#matrix-subsection-wallpaper" class="internal"><span class="title">The Wallpaper Groups</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="matrix-section-symmetry.html#matrix-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="matrix-5.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="matrix-exercises.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="matrix-references.html" class="internal"><span class="codenumber">12.5</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="struct.html" class="internal"><span class="codenumber">13</span> <span class="title">The Structure of  Groups</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="struct-section-finite-abelian-groups.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Finite Abelian Groups</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="struct-section-solvable-groups.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Solvable Groups</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="struct-5.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="struct-exercises.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="struct-exercises-programming.html" class="internal"><span class="codenumber">13.5</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="struct-references.html" class="internal"><span class="codenumber">13.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="actions.html" class="internal"><span class="codenumber">14</span> <span class="title">Group Actions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="actions-section-groups-acting-on-sets.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Groups Acting on Sets</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="actions-section-class-equation.html" class="internal"><span class="codenumber">14.2</span> <span class="title">The Class Equation</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="actions-section-burnsides-counting-theorem.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Burnside’s Counting Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="actions-section-burnsides-counting-theorem.html#actions-subsection-geometric-example" class="internal"><span class="title">A Geometric Example</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="actions-section-burnsides-counting-theorem.html#actions-subsection-switching-functions" class="internal"><span class="title">Switching Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="actions-section-burnsides-counting-theorem.html#actions-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="actions-6.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="actions-exercises.html" class="internal"><span class="codenumber">14.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="actions-exercises-programming.html" class="internal"><span class="codenumber">14.6</span> <span class="title">Programming Exercise</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="actions-references.html" class="internal"><span class="codenumber">14.7</span> <span class="title">References and Suggested Reading</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sylow.html" class="internal"><span class="codenumber">15</span> <span class="title">The Sylow Theorems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sylow-section-sylow-theorems.html" class="internal"><span class="codenumber">15.1</span> <span class="title">The Sylow Theorems</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sylow-section-sylow-theorems.html#sylow-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sylow-section-applications.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Examples and Applications</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sylow-section-applications.html#sylow-subsection-finite-simple-groups" class="internal"><span class="title">Finite Simple Groups</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sylow-5.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sylow-exercises.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sylow-exercises-project.html" class="internal"><span class="codenumber">15.5</span> <span class="title">A Project</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="sylow-references.html" class="internal"><span class="codenumber">15.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="rings.html" class="internal"><span class="codenumber">16</span> <span class="title">Rings</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rings-section-definitions.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Rings</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rings-section-domains-and-fields.html" class="internal"><span class="codenumber">16.2</span> <span class="title">Integral Domains and Fields</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rings-section-homomorphisms.html" class="internal"><span class="codenumber">16.3</span> <span class="title">Ring Homomorphisms and Ideals</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="rings-section-maximal-prime-ideals.html" class="internal"><span class="codenumber">16.4</span> <span class="title">Maximal and Prime Ideals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rings-section-maximal-prime-ideals.html#rings-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rings-section-software-application.html" class="internal"><span class="codenumber">16.5</span> <span class="title">An Application to Software Design</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rings-8.html" class="internal"><span class="codenumber">16.6</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rings-exercises.html" class="internal"><span class="codenumber">16.7</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rings-exercises-programming.html" class="internal"><span class="codenumber">16.8</span> <span class="title">Programming Exercise</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="rings-references.html" class="internal"><span class="codenumber">16.9</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="poly.html" class="internal"><span class="codenumber">17</span> <span class="title">Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poly-section-rings.html" class="internal"><span class="codenumber">17.1</span> <span class="title">Polynomial Rings</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="poly-section-division-algorithm.html" class="internal"><span class="codenumber">17.2</span> <span class="title">The Division Algorithm</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="poly-section-irreducible-poly.html" class="internal"><span class="codenumber">17.3</span> <span class="title">Irreducible Polynomials</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poly-section-irreducible-poly.html#poly-subsection-ideals" class="internal"><span class="title">Ideals in <span class="process-math">\(F\lbrack x \rbrack\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="poly-section-irreducible-poly.html#poly-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="poly-6.html" class="internal"><span class="codenumber">17.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="poly-exercises.html" class="internal"><span class="codenumber">17.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="poly-exercises-cubics-quartics.html" class="internal"><span class="codenumber">17.6</span> <span class="title">Additional Exercises:  Solving the Cubic and Quartic Equations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="domains.html" class="internal"><span class="codenumber">18</span> <span class="title">Integral Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="domains-section-field-of-fractions.html" class="internal"><span class="codenumber">18.1</span> <span class="title">Fields of Fractions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="domains-section-factorization-domains.html" class="internal"><span class="codenumber">18.2</span> <span class="title">Factorization in Integral Domains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="domains-section-factorization-domains.html#domains-subsection-pids" class="internal"><span class="title">Principal Ideal Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="domains-section-factorization-domains.html#domains-subsection-euclidean-domains" class="internal"><span class="title">Euclidean Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="domains-section-factorization-domains.html#domains-subsection-factorization" class="internal"><span class="title">Factorization in <span class="process-math">\(D\lbrack x \rbrack\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="domains-section-factorization-domains.html#domains-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="domains-5.html" class="internal"><span class="codenumber">18.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="domains-exercises.html" class="internal"><span class="codenumber">18.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="domains-references.html" class="internal"><span class="codenumber">18.5</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="boolean.html" class="internal"><span class="codenumber">19</span> <span class="title">Lattices and Boolean Algebras</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boolean-section-lattices.html" class="internal"><span class="codenumber">19.1</span> <span class="title">Lattices</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boolean-section-lattices.html#boolean-subsection-poset" class="internal"><span class="title">Partially Ordered Sets</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boolean-section-boolean-algebras.html" class="internal"><span class="codenumber">19.2</span> <span class="title">Boolean Algebras</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boolean-section-boolean-algebras.html#boolean-subsection-finite-algebras" class="internal"><span class="title">Finite Boolean Algebras</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="boolean-section-algebra-of-circuits.html" class="internal"><span class="codenumber">19.3</span> <span class="title">The Algebra of Electrical Circuits</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="boolean-section-algebra-of-circuits.html#boolean-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="boolean-6.html" class="internal"><span class="codenumber">19.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="boolean-exercises.html" class="internal"><span class="codenumber">19.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="boolean-exercises-programming.html" class="internal"><span class="codenumber">19.6</span> <span class="title">Programming Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="boolean-references.html" class="internal"><span class="codenumber">19.7</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="vect.html" class="internal"><span class="codenumber">20</span> <span class="title">Vector Spaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-vect-definitions-and-examples.html" class="internal"><span class="codenumber">20.1</span> <span class="title">Definitions and Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="vect-section-subspaces.html" class="internal"><span class="codenumber">20.2</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="vect-section-linear-independence.html" class="internal"><span class="codenumber">20.3</span> <span class="title">Linear Independence</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="vect-6.html" class="internal"><span class="codenumber">20.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="vect-exercises.html" class="internal"><span class="codenumber">20.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="vect-references.html" class="internal"><span class="codenumber">20.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="fields.html" class="internal"><span class="codenumber">21</span> <span class="title">Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="fields-section-extension-fields.html" class="internal"><span class="codenumber">21.1</span> <span class="title">Extension Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-extension-fields.html#fields-subsection-algebraic-elements" class="internal"><span class="title">Algebraic Elements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-extension-fields.html#fields-subsection-algebraic-closure" class="internal"><span class="title">Algebraic Closure</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fields-section-splitting-fields.html" class="internal"><span class="codenumber">21.2</span> <span class="title">Splitting Fields</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="fields-section-constructions.html" class="internal"><span class="codenumber">21.3</span> <span class="title">Geometric Constructions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-constructions.html#fields-subsection-constructible-numbers" class="internal"><span class="title">Constructible Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-constructions.html#fields-subsection-doubling-the-cube" class="internal"><span class="title">Doubling the Cube and Squaring the Circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-constructions.html#fields-subsection-trisect-angle" class="internal"><span class="title">Trisecting an Angle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="fields-section-constructions.html#fields-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="fields-6.html" class="internal"><span class="codenumber">21.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fields-exercises.html" class="internal"><span class="codenumber">21.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="fields-references.html" class="internal"><span class="codenumber">21.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="finite.html" class="internal"><span class="codenumber">22</span> <span class="title">Finite Fields</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="finite-section-field.html" class="internal"><span class="codenumber">22.1</span> <span class="title">Structure of a Finite Field</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="finite-section-poly-codes.html" class="internal"><span class="codenumber">22.2</span> <span class="title">Polynomial Codes</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="finite-section-poly-codes.html#finite-subsection-poly-codes" class="internal"><span class="title">Polynomial Codes</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="finite-section-poly-codes.html#finite-subsection-bch-codes" class="internal"><span class="title"><abbr class="acronym">BCH</abbr> Codes</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="finite-5.html" class="internal"><span class="codenumber">22.3</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="finite-exercises.html" class="internal"><span class="codenumber">22.4</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="finite-exercises-bch-codes.html" class="internal"><span class="codenumber">22.5</span> <span class="title">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="finite-references.html" class="internal"><span class="codenumber">22.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="galois.html" class="internal"><span class="codenumber">23</span> <span class="title">Galois Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="galois-section-field-automorphisms.html" class="internal"><span class="codenumber">23.1</span> <span class="title">Field Automorphisms</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-field-automorphisms.html#galois-subsection-separable-extensions" class="internal"><span class="title">Separable Extensions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="galois-section-fund-theorem-galois-theory.html" class="internal"><span class="codenumber">23.2</span> <span class="title">The Fundamental Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-fund-theorem-galois-theory.html#galois-subsection-historical-note" class="internal"><span class="title">Historical Note</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="galois-section-applications.html" class="internal"><span class="codenumber">23.3</span> <span class="title">Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-applications.html#galois-subsection-solvable-by-radicals" class="internal"><span class="title">Solvability by Radicals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-applications.html#galois-subsection-quintic" class="internal"><span class="title">Insolvability of the Quintic</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="galois-section-applications.html#galois-subsection-fun-theorem-of-algebra" class="internal"><span class="title">The Fundamental Theorem of Algebra</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="galois-6.html" class="internal"><span class="codenumber">23.4</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="galois-exercises.html" class="internal"><span class="codenumber">23.5</span> <span class="title">Exercises</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="galois-references.html" class="internal"><span class="codenumber">23.6</span> <span class="title">References and Suggested Readings</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Reference</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="hints.html" class="internal"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="notation.html" class="internal"><span class="codenumber">C</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="index-list.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix">
+<div class="toc-title-box"><a href="submissions.html" class="internal"><span class="codenumber">D</span> <span class="title">Exercise Submissions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="submissions-by-chapter.html" class="internal"><span class="codenumber">D.1</span> <span class="title">By chapter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="submissions-by-chapter.html#submissions-chapter-01" class="internal"><span class="title">Chapter 1 — Preliminaries</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="submissions-by-chapter.html#submissions-chapter-02" class="internal"><span class="title">Chapter 2 — Integers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="submissions-by-chapter.html#submissions-chapter-03" class="internal"><span class="title">Chapter 3 — Groups</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="submissions-chronological.html" class="internal"><span class="codenumber">D.2</span> <span class="title">Chronological log</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="matrix-section-symmetry"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Symmetry</span>
+</h2>
+<section class="introduction" id="matrix-section-symmetry-2"><div class="para logical" id="matrix-section-symmetry-2-1">
+<div class="para">An <dfn class="terminology">isometry</dfn> or <dfn class="terminology">rigid motion</dfn> in <span class="process-math">\({\mathbb R}^n\)</span> is a distance-preserving function <span class="process-math">\(f\)</span> from <span class="process-math">\({\mathbb R}^n\)</span> to <span class="process-math">\({\mathbb R}^n\text{.}\)</span> This means that <span class="process-math">\(f\)</span> must satisfy</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-theorem-orthnormal-matrix.html ./knowl/xref/matrix-figure-isometries.html" id="matrix-section-symmetry-2-1-10">
+\begin{equation*}
+\| f({\mathbf x}) - f({\mathbf y}) \| =\|{\mathbf x} - {\mathbf y} \|
+\end{equation*}
+</div>
+<div class="para">for all <span class="process-math">\({\mathbf x}, {\mathbf y} \in {\mathbb R}^n\text{.}\)</span> It is not difficult to show that <span class="process-math">\(f\)</span> must be a one-to-one map. By <a href="matrix-section-groups.html#matrix-theorem-orthnormal-matrix" class="xref" data-knowl="./knowl/xref/matrix-theorem-orthnormal-matrix.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 12.8">Theorem 12.8</a>, any element in <span class="process-math">\(O(n)\)</span> is an isometry on <span class="process-math">\({\mathbb R}^n\text{;}\)</span> however, <span class="process-math">\(O(n)\)</span> does not include all possible isometries on <span class="process-math">\({\mathbb R}^n\text{.}\)</span> Translation by a vector <span class="process-math">\({\mathbf x}\text{,}\)</span> <span class="process-math">\(T_{\mathbf y}({\mathbf x}) = {\mathbf x} + {\mathbf y}\)</span> is also an isometry (<a href="matrix-section-groups.html#matrix-figure-isometries" class="xref" data-knowl="./knowl/xref/matrix-figure-isometries.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.11">Figure 12.11</a>); however, <span class="process-math">\(T\)</span> cannot be in <span class="process-math">\(O(n)\)</span> since it is not a linear map.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="matrix-section-symmetry-2-2">We are mostly interested in isometries in <span class="process-math">\({\mathbb R}^2\text{.}\)</span> In fact, the only isometries in <span class="process-math">\({\mathbb R}^2\)</span> are rotations and reflections about the origin, translations, and combinations of the two. For example, a <dfn class="terminology">glide reflection</dfn> is a translation followed by a reflection (<a href="matrix-section-symmetry.html#matrix-figure-glide" class="xref" data-knowl="./knowl/xref/matrix-figure-glide.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.12">Figure 12.12</a>). In <span class="process-math">\({\mathbb R}^n\)</span> all isometries are given in the same manner. The proof is very easy to generalize.<div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="matrix-figure-glide"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;grid-template-columns:44.4444444444444% 44.4444444444444%;column-gap:10%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/matrix-glide-reflections-a.svg" role="img" class="contained" alt="A set of axes with an arrow pointing up and right from the origin to a point x."></div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/matrix-glide-reflections-b.svg" role="img" class="contained" alt="A set of axes with an arrow of the same length but pointing down and right from a point on the horizontal axis to a point T(x)."></div></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Glide reflections<div class="autopermalink" data-description="Figure 12.12"><a href="#matrix-figure-glide" title="Copy heading and permalink for Figure 12.12" aria-label="Copy heading and permalink for Figure 12.12">🔗</a></div></figcaption></figure><article class="lemma theorem-like" id="matrix-section-symmetry-2-4"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="matrix-section-symmetry-2-4-1-1">An isometry <span class="process-math">\(f\)</span> that fixes the origin in <span class="process-math">\({\mathbb R}^2\)</span> is a linear transformation. In particular, <span class="process-math">\(f\)</span> is given by an element in <span class="process-math">\(O(2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 12.13"><a href="#matrix-section-symmetry-2-4" title="Copy heading and permalink for Lemma 12.13" aria-label="Copy heading and permalink for Lemma 12.13">🔗</a></div></article><details id="matrix-section-symmetry-2-4-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="matrix-section-symmetry-2-4-2-1">
+<div class="para">Let <span class="process-math">\(f\)</span> be an isometry in <span class="process-math">\({\mathbb R}^2\)</span> fixing the origin. We will first show that <span class="process-math">\(f\)</span> preserves inner products. Since <span class="process-math">\(f(0) = 0\text{,}\)</span> <span class="process-math">\(\| f({\mathbf x})\| = \| {\mathbf x} \|\text{;}\)</span> therefore,</div>
+<div class="displaymath process-math" id="matrix-section-symmetry-2-4-2-1-6">
+\begin{align*}
+\| {\mathbf x} \|^2 - 2 \langle f({\mathbf x}), f({\mathbf y}) \rangle + \| {\mathbf y} \|^2  &amp; = \| f({\mathbf x}) \|^2 - 2 \langle f({\mathbf x}), f({\mathbf y}) \rangle + \| f({\mathbf y}) \|^2\\
+&amp; = \langle f({\mathbf x}) -  f({\mathbf y}), f({\mathbf x}) - f({\mathbf y}) \rangle\\
+&amp; = \| f({\mathbf x}) - f({\mathbf y}) \|^2\\
+&amp; = \| {\mathbf x} - {\mathbf y} \|^2\\
+&amp; = \langle {\mathbf x} - {\mathbf y}, {\mathbf x} - {\mathbf y} \rangle\\
+&amp; = \| {\mathbf x} \|^2 - 2 \langle {\mathbf x}, {\mathbf y} \rangle + \| {\mathbf y} \|^2\text{.}
+\end{align*}
+</div>
+<div class="para">Consequently,</div>
+<div class="displaymath process-math" id="matrix-section-symmetry-2-4-2-1-7">
+\begin{equation*}
+\langle f({\mathbf x}), f({\mathbf y}) \rangle = \langle {\mathbf x}, {\mathbf y} \rangle\text{.}
+\end{equation*}
+</div>
+<div class="para">Now let <span class="process-math">\({\mathbf e}_1\)</span> and <span class="process-math">\({\mathbf e_2}\)</span> be <span class="process-math">\((1, 0)^\transpose\)</span> and <span class="process-math">\((0, 1)^\transpose\text{,}\)</span> respectively. If</div>
+<div class="displaymath process-math" id="matrix-section-symmetry-2-4-2-1-12">
+\begin{equation*}
+{\mathbf x} = (x_1, x_2) = x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2\text{,}
+\end{equation*}
+</div>
+<div class="para">then</div>
+<div class="displaymath process-math" id="matrix-section-symmetry-2-4-2-1-13">
+\begin{equation*}
+f({\mathbf x}) = \langle f({\mathbf x}), f({\mathbf e}_1) \rangle f({\mathbf e}_1) + \langle f({\mathbf x}), f({\mathbf e}_2) \rangle f({\mathbf e}_2) = x_1 f({\mathbf e}_1)+x_2 f({\mathbf e}_2)\text{.}
+\end{equation*}
+</div>
+<div class="para">The linearity of <span class="process-math">\(f\)</span> easily follows.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 12.13.1"><a href="#matrix-section-symmetry-2-4-2" title="Copy heading and permalink for Proof 12.13.1" aria-label="Copy heading and permalink for Proof 12.13.1">🔗</a></div></article></details><div class="para logical" id="matrix-section-symmetry-2-5">
+<div class="para">For any arbitrary isometry, <span class="process-math">\(f\text{,}\)</span> <span class="process-math">\(T_{\mathbf x} f\)</span> will fix the origin for some vector <span class="process-math">\({\mathbf x}\)</span> in <span class="process-math">\({\mathbb R}^2\text{;}\)</span> hence, <span class="process-math">\(T_{\mathbf x} f({\mathbf y}) = A {\mathbf y}\)</span> for some matrix <span class="process-math">\(A \in O(2)\text{.}\)</span> Consequently, <span class="process-math">\(f({\mathbf y}) = A {\mathbf y} + {\mathbf x}\text{.}\)</span> Given the isometries</div>
+<div class="displaymath process-math" id="matrix-section-symmetry-2-5-8">
+\begin{align*}
+f({\mathbf y}) &amp; = A {\mathbf y} + {\mathbf x}_1\\
+g({\mathbf y}) &amp; = B {\mathbf y} + {\mathbf x}_2\text{,}
+\end{align*}
+</div>
+<div class="para">their composition is</div>
+<div class="displaymath process-math" id="matrix-section-symmetry-2-5-9">
+\begin{equation*}
+f(g({\mathbf y})) = f(B {\mathbf y} + {\mathbf x}_2) = AB {\mathbf y} + A{\mathbf x}_2 + {\mathbf x}_1\text{.}
+\end{equation*}
+</div>
+<div class="para">This last computation allows us to identify the group of isometries on <span class="process-math">\({\mathbb R}^2\)</span> with <span class="process-math">\(E(2)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="matrix-section-symmetry-2-6"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="matrix-section-symmetry-2-6-1-1">The group of isometries on <span class="process-math">\({\mathbb R}^2\)</span> is the Euclidean group, <span class="process-math">\(E(2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 12.14"><a href="#matrix-section-symmetry-2-6" title="Copy heading and permalink for Theorem 12.14" aria-label="Copy heading and permalink for Theorem 12.14">🔗</a></div></article><div class="para" id="matrix-section-symmetry-2-7">A <dfn class="terminology">symmetry group</dfn> in <span class="process-math">\({\mathbb R}^n\)</span> is a subgroup of the group of isometries on <span class="process-math">\({\mathbb R}^n\)</span> that fixes a set of points <span class="process-math">\(X \subset {\mathbb R}^n\text{.}\)</span> It is important to realize that the symmetry group of <span class="process-math">\(X\)</span> depends <em class="emphasis">both</em> on <span class="process-math">\({\mathbb R}^n\)</span> and on <span class="process-math">\(X\text{.}\)</span> For example, the symmetry group of the origin in <span class="process-math">\({\mathbb R}^1\)</span> is <span class="process-math">\({\mathbb Z}_2\text{,}\)</span> but the symmetry group of the origin in <span class="process-math">\({\mathbb R}^2\)</span> is <span class="process-math">\(O(2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="matrix-section-symmetry-2-8"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="matrix-section-symmetry-2-8-1-1">The only finite symmetry groups in <span class="process-math">\({\mathbb R}^2\)</span> are <span class="process-math">\({\mathbb Z}_n\)</span> and <span class="process-math">\(D_n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 12.15"><a href="#matrix-section-symmetry-2-8" title="Copy heading and permalink for Theorem 12.15" aria-label="Copy heading and permalink for Theorem 12.15">🔗</a></div></article><details id="matrix-section-symmetry-2-8-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="matrix-section-symmetry-2-8-2-1">
+<div class="para">We simply need to find all of the finite subgroups <span class="process-math">\(G\)</span> of <span class="process-math">\(E(2)\text{.}\)</span> Any finite symmetry group <span class="process-math">\(G\)</span> in <span class="process-math">\({\mathbb R}^2\)</span> must fix the origin  and must be a finite subgroup of <span class="process-math">\(O(2)\text{,}\)</span> since translations and glide reflections have infinite order. By <a href="matrix-section-groups.html#matrix-example-o2" class="xref" data-knowl="./knowl/xref/matrix-example-o2.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.10">Example 12.10</a>, elements in <span class="process-math">\(O(2)\)</span> are either rotations of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-example-o2.html" id="matrix-section-symmetry-2-8-2-1-8">
+\begin{equation*}
+R_{\theta}
+=
+\begin{pmatrix}
+\cos \theta &amp; - \sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">or reflections of the form</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-example-o2.html" id="matrix-section-symmetry-2-8-2-1-9">
+\begin{equation*}
+T_{\phi}
+=
+\begin{pmatrix}
+\cos \phi &amp;  - \sin \phi \\
+\sin \phi &amp; \cos \phi
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \phi &amp;  \sin \phi \\
+\sin \phi &amp; - \cos \phi
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Notice that <span class="process-math">\(\det(R_{\theta})=1\text{,}\)</span> <span class="process-math">\(\det(T_{\phi})=-1\text{,}\)</span> and <span class="process-math">\(T_{\phi}^2=I\text{.}\)</span> We can divide the proof up into two cases. In the first case, all of the elements in <span class="process-math">\(G\)</span> have determinant one. In the second case, there exists at least one element in <span class="process-math">\(G\)</span> with determinant <span class="process-math">\(-1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="case" id="matrix-section-symmetry-2-8-2-2"><h4 class="heading">Case 1.</h4>
+<div class="para" id="matrix-section-symmetry-2-8-2-2-2">The determinant of every element in <span class="process-math">\(G\)</span> is one. In this case every element in <span class="process-math">\(G\)</span> must be a rotation. Since <span class="process-math">\(G\)</span> is finite, there is a smallest angle, say <span class="process-math">\(\theta_0\text{,}\)</span> such that the corresponding element <span class="process-math">\(R_{\theta_0}\)</span> is the smallest rotation in the positive direction. We claim that <span class="process-math">\(R_{\theta_0}\)</span> generates <span class="process-math">\(G\text{.}\)</span> If not, then for some positive integer <span class="process-math">\(n\)</span> there is an angle <span class="process-math">\(\theta_1\)</span> between <span class="process-math">\(n \theta_0\)</span> and <span class="process-math">\((n+1) \theta_0\text{.}\)</span> If so, then <span class="process-math">\((n+1) \theta_0 - \theta_1\)</span> corresponds to a rotation smaller than <span class="process-math">\(\theta_0\text{,}\)</span> which contradicts the minimality of <span class="process-math">\(\theta_0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-8-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case: Case 1"><a href="#matrix-section-symmetry-2-8-2-2" title="Copy heading and permalink for Case: Case 1" aria-label="Copy heading and permalink for Case: Case 1">🔗</a></div></article><article class="case" id="matrix-section-symmetry-2-8-2-3"><h4 class="heading">Case 2.</h4>
+<div class="para logical" id="matrix-section-symmetry-2-8-2-3-2">
+<div class="para">The group <span class="process-math">\(G\)</span> contains a reflection <span class="process-math">\(T\text{.}\)</span> The kernel of the homomorphism <span class="process-math">\(\phi : G \rightarrow \{-1, 1\}\)</span> given by <span class="process-math">\(A \mapsto \det(A)\)</span> consists of elements whose determinant is 1. Therefore, <span class="process-math">\(|G/ \ker \phi|=2\text{.}\)</span> We know that the kernel is cyclic by the first case and is a subgroup of <span class="process-math">\(G\)</span> of, say, order <span class="process-math">\(n\text{.}\)</span> Hence, <span class="process-math">\(|G| = 2n\text{.}\)</span> The elements of <span class="process-math">\(G\)</span> are</div>
+<div class="displaymath process-math" id="matrix-section-symmetry-2-8-2-3-2-10">
+\begin{equation*}
+R_{\theta}, \ldots, R_{\theta}^{n-1},  TR_{\theta}, \ldots, TR_{\theta}^{n-1}\text{.}
+\end{equation*}
+</div>
+<div class="para">These elements satisfy the relation</div>
+<div class="displaymath process-math" id="matrix-section-symmetry-2-8-2-3-2-11">
+\begin{equation*}
+TR_{\theta}T = R_{\theta}^{-1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Consequently, <span class="process-math">\(G\)</span> must be isomorphic to <span class="process-math">\(D_n\)</span> in this case.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#matrix-section-symmetry-2-8-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Case: Case 2"><a href="#matrix-section-symmetry-2-8-2-3" title="Copy heading and permalink for Case: Case 2" aria-label="Copy heading and permalink for Case: Case 2">🔗</a></div></article><div class="autopermalink" data-description="Proof 12.15.1"><a href="#matrix-section-symmetry-2-8-2" title="Copy heading and permalink for Proof 12.15.1" aria-label="Copy heading and permalink for Proof 12.15.1">🔗</a></div></article></details></section><section class="subsection" id="matrix-subsection-wallpaper"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Wallpaper Groups</span>
+</h3>
+<div class="para" id="matrix-subsection-wallpaper-2">Suppose that we wish to study wallpaper patterns in the plane or crystals in three dimensions. Wallpaper patterns are simply repeating patterns in the plane (<a href="matrix-section-symmetry.html#matrix-figure-wallpaper" class="xref" data-knowl="./knowl/xref/matrix-figure-wallpaper.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.16">Figure 12.16</a>). The analogs of wallpaper patterns in <span class="process-math">\({\mathbb R}^3\)</span> are crystals, which we can think of as repeating patterns of molecules in three dimensions (<a href="matrix-section-symmetry.html#matrix-figure-crystals" class="xref" data-knowl="./knowl/xref/matrix-figure-crystals.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.17">Figure 12.17</a>). The mathematical equivalent of a wallpaper or crystal pattern is called a lattice.<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="matrix-figure-wallpaper"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/matrix-wallpaper-r2.svg" role="img" class="contained" alt="A wallpaper of chevrons with the top row of chevrons pointing downward, the second row of chevrons pointing upwards, and so on."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A wallpaper pattern in <span class="process-math">\(\mathbb R^2\)</span><div class="autopermalink" data-description="Figure 12.16"><a href="#matrix-figure-wallpaper" title="Copy heading and permalink for Figure 12.16" aria-label="Copy heading and permalink for Figure 12.16">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="matrix-figure-crystals"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/matrix-crystal-r3.svg" role="img" class="contained" alt="A three-dimensional lattice of cubes that are slanted to the right.  The vertices are highlighted with small filled circles."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A crystal structure in <span class="process-math">\(\mathbb R^3\)</span><div class="autopermalink" data-description="Figure 12.17"><a href="#matrix-figure-crystals" title="Copy heading and permalink for Figure 12.17" aria-label="Copy heading and permalink for Figure 12.17">🔗</a></div></figcaption></figure><div class="para" id="matrix-subsection-wallpaper-5">Let us examine wallpaper patterns in the plane a little more closely. Suppose that <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\)</span> are linearly independent vectors in <span class="process-math">\({\mathbb R}^2\text{;}\)</span> that is, one vector cannot be a scalar multiple of the other. A <dfn class="terminology">lattice</dfn> of <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\)</span> is the set of all linear combinations <span class="process-math">\(m {\mathbf x} + n {\mathbf y}\text{,}\)</span> where <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are integers. The vectors <span class="process-math">\({\mathbf x}\)</span> and <span class="process-math">\({\mathbf y}\)</span> are said to be a <dfn class="terminology">basis</dfn> for the lattice.<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="matrix-subsection-wallpaper-6">
+<div class="para">Notice that a lattice can have several bases. For example, the vectors <span class="process-math">\((1,1)^\transpose\)</span> and <span class="process-math">\((2,0)^\transpose\)</span> have the  same lattice as the vectors <span class="process-math">\((-1, 1)^\transpose\)</span> and <span class="process-math">\((-1, -1)^\transpose\)</span> (<a href="matrix-section-symmetry.html#matrix-figure-lattice" class="xref" data-knowl="./knowl/xref/matrix-figure-lattice.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.18">Figure 12.18</a>). However, any lattice is completely determined by a basis. Given two bases for the same lattice, say <span class="process-math">\(\{ {\mathbf x}_1, {\mathbf x}_2 \}\)</span> and <span class="process-math">\(\{ {\mathbf y}_1, {\mathbf y}_2 \}\text{,}\)</span> we can write</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html" id="matrix-subsection-wallpaper-6-8">
+\begin{align*}
+{\mathbf y}_1 &amp; = \alpha_1  {\mathbf x}_1 + \alpha_2 {\mathbf x}_2\\
+{\mathbf y}_2 &amp; = \beta_1  {\mathbf x}_1 + \beta_2 {\mathbf x}_2\text{,}
+\end{align*}
+</div>
+<div class="para">where <span class="process-math">\(\alpha_1\text{,}\)</span> <span class="process-math">\(\alpha_2\text{,}\)</span> <span class="process-math">\(\beta_1\text{,}\)</span> and <span class="process-math">\(\beta_2\)</span> are integers. The matrix corresponding to this transformation is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html" id="matrix-subsection-wallpaper-6-13">
+\begin{equation*}
+U
+=
+\begin{pmatrix}
+\alpha_1 &amp; \alpha_2 \\
+\beta_1 &amp; \beta_2
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">If we wish to give <span class="process-math">\({\mathbf x}_1\)</span> and <span class="process-math">\({\mathbf x}_2\)</span> in terms of <span class="process-math">\({\mathbf y}_1\)</span> and <span class="process-math">\({\mathbf y}_2\text{,}\)</span> we need only calculate <span class="process-math">\(U^{-1}\text{;}\)</span> that is,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html" id="matrix-subsection-wallpaper-6-19">
+\begin{equation*}
+U^{-1}
+\begin{pmatrix}
+{\mathbf y}_1 \\ {\mathbf y}_2
+\end{pmatrix}
+=
+\begin{pmatrix}
+{\mathbf x}_1 \\ {\mathbf x}_2
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(U\)</span> has integer entries, <span class="process-math">\(U^{-1}\)</span> must also have integer entries; hence the determinants of both <span class="process-math">\(U\)</span> and <span class="process-math">\(U^{-1}\)</span> must be integers. Because <span class="process-math">\(U U^{-1} = I\text{,}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html" id="matrix-subsection-wallpaper-6-25">
+\begin{equation*}
+\det(U U^{-1}) =\det(U) \det( U^{-1}) = 1;
+\end{equation*}
+</div>
+<div class="para">consequently, <span class="process-math">\(\det(U) = \pm 1\text{.}\)</span> A matrix with determinant <span class="process-math">\(\pm 1\)</span> and integer entries is called <dfn class="terminology">unimodular</dfn>. For example, the matrix</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/matrix-figure-lattice.html" id="matrix-subsection-wallpaper-6-30">
+\begin{equation*}
+\begin{pmatrix}
+3 &amp; 1 \\
+5 &amp; 2
+\end{pmatrix}
+\end{equation*}
+</div>
+<div class="para">is unimodular. It should be clear that there is a minimum length for vectors in a lattice.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="matrix-figure-lattice"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/matrix-lattice-r2.svg" role="img" class="contained" alt="A lattice of parallelograms slanted to the right.  There are four arrows, each beginning in the center at the origin and pointing to the right to (2,0), pointing up and right to (1,1), pointing up and left to ( minus one, one), and pointing down and left to (minus one, minus one)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A lattice in  <span class="process-math">\(\mathbb R^2\)</span><div class="autopermalink" data-description="Figure 12.18"><a href="#matrix-figure-lattice" title="Copy heading and permalink for Figure 12.18" aria-label="Copy heading and permalink for Figure 12.18">🔗</a></div></figcaption></figure><div class="para" id="matrix-subsection-wallpaper-8">We can classify lattices by studying their symmetry groups. The symmetry group of a lattice is the subgroup of <span class="process-math">\(E(2)\)</span> that maps the lattice to itself. We consider two lattices in <span class="process-math">\({\mathbb R}^2\)</span> to be equivalent if they have the same symmetry group. Similarly, classification of crystals in <span class="process-math">\({\mathbb R}^3\)</span> is accomplished by associating a symmetry group, called a <dfn class="terminology">space group</dfn>, with each type of crystal. Two lattices are considered different if their space groups are not the same. The natural question that now arises is how many space groups exist.<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="matrix-subsection-wallpaper-9">A space group is composed of two parts: a <dfn class="terminology">translation subgroup</dfn> and a <dfn class="terminology">point</dfn>. The translation subgroup is an infinite abelian subgroup of the space group made up of the translational symmetries of the crystal; the point group is a finite group consisting of rotations and reflections of the crystal about a point. More specifically, a space group is a subgroup of <span class="process-math">\(G \subset E(2)\)</span> whose translations are a set of the form <span class="process-math">\(\{ (I, t) : t \in L \}\text{,}\)</span> where <span class="process-math">\(L\)</span> is a lattice. Space groups are, of course, infinite. Using geometric arguments, we can prove the following theorem (see [5] or [6]).<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="matrix-subsection-wallpaper-10"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="matrix-subsection-wallpaper-10-1-1">Every translation group in <span class="process-math">\({\mathbb R}^2\)</span> is isomorphic to <span class="process-math">\({\mathbb Z} \times {\mathbb Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 12.19"><a href="#matrix-subsection-wallpaper-10" title="Copy heading and permalink for Theorem 12.19" aria-label="Copy heading and permalink for Theorem 12.19">🔗</a></div></article><div class="para logical" id="matrix-subsection-wallpaper-11">
+<div class="para">The point group of <span class="process-math">\(G\)</span> is <span class="process-math">\(G_0 = \{A : (A,b) \in G \text{ for some } b \}\text{.}\)</span> In particular, <span class="process-math">\(G_0\)</span> must be a subgroup of <span class="process-math">\(O(2)\text{.}\)</span> Suppose that <span class="process-math">\({\mathbf x}\)</span> is a vector in a lattice <span class="process-math">\(L\)</span> with space group <span class="process-math">\(G\text{,}\)</span> translation group <span class="process-math">\(H\text{,}\)</span> and point group <span class="process-math">\(G_0\text{.}\)</span> For any element <span class="process-math">\((A, {\mathbf y})\)</span> in <span class="process-math">\(G\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="matrix-subsection-wallpaper-11-12">
+\begin{align*}
+(A, {\mathbf y}) (I, {\mathbf x}) (A, {\mathbf y})^{-1} &amp; = (A,A {\mathbf x} + {\mathbf y}) (A^{-1},-A^{-1} {\mathbf y})\\
+&amp; = (A A^{-1},-A A^{-1} {\mathbf y} + A {\mathbf x} + {\mathbf y})\\
+&amp; = (I, A {\mathbf x});
+\end{align*}
+</div>
+<div class="para">hence, <span class="process-math">\((I, A {\mathbf x})\)</span> is in the translation group of <span class="process-math">\(G\text{.}\)</span> More specifically, <span class="process-math">\(A {\mathbf x}\)</span> must be in the lattice <span class="process-math">\(L\text{.}\)</span> It is important to note that <span class="process-math">\(G_0\)</span> is not usually a subgroup of the space group <span class="process-math">\(G\text{;}\)</span> however, if <span class="process-math">\(T\)</span> is the translation subgroup of <span class="process-math">\(G\text{,}\)</span> then <span class="process-math">\(G/T \cong G_0\text{.}\)</span> The proof of the following theorem can be found in [2], [5], or [6].</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="matrix-subsection-wallpaper-12"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="matrix-subsection-wallpaper-12-1-1">The point group in the wallpaper groups is isomorphic to <span class="process-math">\({\mathbb Z}_n\)</span> or <span class="process-math">\(D_n\text{,}\)</span> where <span class="process-math">\(n = 1, 2, 3, 4, 6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 12.20"><a href="#matrix-subsection-wallpaper-12" title="Copy heading and permalink for Theorem 12.20" aria-label="Copy heading and permalink for Theorem 12.20">🔗</a></div></article><div class="para" id="matrix-subsection-wallpaper-13">To answer the question of how the point groups and the translation groups can be combined, we must look at the different types of lattices. Lattices can be classified by the structure of a single lattice cell. The possible cell shapes are parallelogram, rectangular, square, rhombic, and hexagonal (<a href="matrix-section-symmetry.html#matrix-figure-lattice-types" class="xref" data-knowl="./knowl/xref/matrix-figure-lattice-types.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.21">Figure 12.21</a>). The wallpaper groups can now be classified according to the types of reflections that occur in each group: these are ordinarily reflections, glide reflections, both, or none.<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="matrix-figure-lattice-types"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/matrix-lattices-r2.svg" role="img" class="contained" alt="There are two rows of figures.  The left top figure is a lattice of squares, the middle top figure is a lattice of rectangles that are not squares, the right top figure is  a lattice of rhombuses slanted to the left. The bottom left figure is a lattice of parallelograms that are not rhombuses slanted to the left.  The bottom right figure is a lattice of equilateral triangles, six of which make up a regular hexagon."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.21<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Types of lattices in  <span class="process-math">\(\mathbb R^2\)</span><div class="autopermalink" data-description="Figure 12.21"><a href="#matrix-figure-lattice-types" title="Copy heading and permalink for Figure 12.21" aria-label="Copy heading and permalink for Figure 12.21">🔗</a></div></figcaption></figure><figure class="table table-like" id="matrix-table-wallpaper"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The 17 wallpaper groups<div class="autopermalink" data-description="Table 12.22: The 17 wallpaper groups"><a href="#matrix-table-wallpaper" title="Copy heading and permalink for Table 12.22: The 17 wallpaper groups" aria-label="Copy heading and permalink for Table 12.22: The 17 wallpaper groups">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b0 r0 l0 t2 lines">Notation and</td>
+<td class="c m b0 r0 l0 t2 lines"></td>
+<td class="c m b0 r0 l0 t2 lines"></td>
+<td class="c m b0 r0 l0 t2 lines">Reflections or</td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines">Space Groups</td>
+<td class="c m b2 r0 l0 t0 lines">Point Group</td>
+<td class="c m b2 r0 l0 t0 lines">Lattice Type</td>
+<td class="c m b2 r0 l0 t0 lines">Glide Reflections?</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">p1</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\({\mathbb Z}_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">parallelogram</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">p2</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\({\mathbb Z}_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">parallelogram</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">p3</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\({\mathbb Z}_3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">hexagonal</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">p4</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\({\mathbb Z}_4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">square</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">p6</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\({\mathbb Z}_6\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">hexagonal</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">pm</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">rectangular</td>
+<td class="c m b0 r0 l0 t0 lines">reflections</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">pg</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">rectangular</td>
+<td class="c m b0 r0 l0 t0 lines">glide reflections</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">cm</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_1\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">rhombic</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">pmm</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">rectangular</td>
+<td class="c m b0 r0 l0 t0 lines">reflections</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">pmg</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">rectangular</td>
+<td class="c m b0 r0 l0 t0 lines">glide reflections</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">pgg</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">rectangular</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">c2mm</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_2\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">rhombic</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">p3m1, p31m</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_3\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">hexagonal</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">p4m, p4g</td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(D_4\)</span></td>
+<td class="c m b0 r0 l0 t0 lines">square</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
+</tr>
+<tr>
+<td class="c m b2 r0 l0 t0 lines">p6m</td>
+<td class="c m b2 r0 l0 t0 lines"><span class="process-math">\(D_6\)</span></td>
+<td class="c m b2 r0 l0 t0 lines">hexagonal</td>
+<td class="c m b2 r0 l0 t0 lines">both</td>
+</tr>
+</table></div></figure><article class="theorem theorem-like" id="matrix-subsection-wallpaper-16"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="matrix-subsection-wallpaper-16-1-1">There are exactly 17 wallpaper groups.<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 12.23"><a href="#matrix-subsection-wallpaper-16" title="Copy heading and permalink for Theorem 12.23" aria-label="Copy heading and permalink for Theorem 12.23">🔗</a></div></article><figure class="figure figure-like" id="matrix-figure-p4m"><div class="sidebyside"><div class="sbsrow" style="margin-left:5%;margin-right:5%;grid-template-columns:44.4444444444444% 44.4444444444444%;column-gap:10%;">
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/matrix-p4m-p4g-a.svg" role="img" class="contained" alt="A square on set of axes with the left edge a vector from the origin to (0,1) and bottom edge a vector from the origin to (1,0)."></div></div>
+<div class="sbspanel sbspanel--middle middle" style=""><div class="image-box"><img src="generated/latex-image/matrix-p4m-p4g-b.svg" role="img" class="contained" alt="A parallelogram on set of axes with the left edge a vector from the origin to (1,1) and bottom edge a vector from the origin to (1,0)."></div></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The wallpaper groups p4m and p4g<div class="autopermalink" data-description="Figure 12.24"><a href="#matrix-figure-p4m" title="Copy heading and permalink for Figure 12.24" aria-label="Copy heading and permalink for Figure 12.24">🔗</a></div></figcaption></figure><div class="para" id="matrix-subsection-wallpaper-18">The 17 wallpaper groups are listed in <a href="matrix-section-symmetry.html#matrix-table-wallpaper" class="xref" data-knowl="./knowl/xref/matrix-table-wallpaper.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 12.22: The 17 wallpaper groups">Table 12.22</a>. The groups p3m1 and p31m can be distinguished by whether or not all of their threefold centers lie on the reflection axes: those of p3m1 must, whereas those of p31m may not. Similarly, the fourfold centers of p4m must lie on the reflection axes whereas those of p4g need not (<a href="matrix-section-symmetry.html#matrix-figure-p4m" class="xref" data-knowl="./knowl/xref/matrix-figure-p4m.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.24">Figure 12.24</a>). The complete proof of this theorem can be found in several of the references at the end of this chapter, including [5], [6], [10], and [11].<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<section class="paragraphs" id="matrix-subsection-wallpaper-19"><h4 class="heading"><span class="title">Sage.</span></h4>
+<div class="para" id="matrix-subsection-wallpaper-19-2">We have not seen how to use Sage profitably with the material in this chapter.<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-wallpaper-19-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Paragraphs: Sage"><a href="#matrix-subsection-wallpaper-19" title="Copy heading and permalink for Paragraphs: Sage" aria-label="Copy heading and permalink for Paragraphs: Sage">🔗</a></div></section><div class="autopermalink" data-description="Subsection: The Wallpaper Groups"><a href="#matrix-subsection-wallpaper" title="Copy heading and permalink for Subsection: The Wallpaper Groups" aria-label="Copy heading and permalink for Subsection: The Wallpaper Groups">🔗</a></div></section><section class="subsection" id="matrix-subsection-historical-note"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Historical Note</span>
+</h3>
+<div class="para" id="matrix-subsection-historical-note-2">Symmetry groups have intrigued mathematicians for a long time. Leonardo da Vinci was probably the first person to know all of the point groups. At the International Congress of Mathematicians in 1900, David Hilbert gave a now-famous address outlining 23 problems to guide mathematics in the twentieth century. Hilbert’s eighteenth problem asked whether or not crystallographic groups in <span class="process-math">\(n\)</span> dimensions were always finite. In 1910, L. Bieberbach proved that crystallographic groups are finite in every dimension. Finding out how many of these groups there are in each dimension is another matter. In <span class="process-math">\({\mathbb R}^3\)</span> there are 230 different space groups; in <span class="process-math">\({\mathbb R}^4\)</span> there are 4894; in <span class="process-math">\({\mathbb R}^5\)</span> there are 222097. No one has been able to compute the number of space groups for <span class="process-math">\({\mathbb R}^6\)</span> and beyond (<a class="external" href="https://oeis.org/A006227" target="_blank"><code class="code-inline tex2jax_ignore">oeis.org/A006227</code></a>). It is interesting to note that the crystallographic groups were found mathematically for <span class="process-math">\({\mathbb R}^3\)</span> before the 230 different types of crystals were actually discovered in nature.<div class="autopermalink" data-description="Paragraph"><a href="#matrix-subsection-historical-note-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Historical Note"><a href="#matrix-subsection-historical-note" title="Copy heading and permalink for Subsection: Historical Note" aria-label="Copy heading and permalink for Subsection: Historical Note">🔗</a></div></section><div class="autopermalink" data-description="Section 12.2: Symmetry"><a href="#matrix-section-symmetry" title="Copy heading and permalink for Section 12.2: Symmetry" aria-label="Copy heading and permalink for Section 12.2: Symmetry">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="matrix-section-groups.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="matrix-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
+var sc_project=10568106;
+var sc_invisible=1;
+var sc_security="510ba080";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "https://www.");
+document.write("<sc"+"ript src='" + scJsHost+ "statcounter.com/counter/counter.js'></"+"script>");
+</script><noscript><div class="statcounter"><a title="web analytics" href="https://statcounter.com/" target="_blank"><img class="statcounter" src="https://c.statcounter.com/10568106/0/510ba080/1/" alt="web analytics"></a></div></noscript>
+<!--End: StatCounter code-->
+</body>
+</html>
