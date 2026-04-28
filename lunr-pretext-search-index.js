@@ -15553,22 +15553,31 @@ var ptx_lunr_docs = [
   "body": "   "
 },
 {
+  "id": "submissions-progress",
+  "level": "1",
+  "url": "submissions-progress.html",
+  "type": "Section",
+  "number": "D.1",
+  "title": "Progress overview",
+  "body": " Progress overview  <style> .progress-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 1rem 0; } .progress-card { background: var(--color-background-primary, #fff); border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 1rem 1.25rem; } .progress-card-title { font-size: 13px; color: #888; margin-bottom: 4px; } .progress-card-chapter { font-size: 15px; font-weight: 500; margin-bottom: 12px; } .progress-bar-bg { background: #f0f0f0; border-radius: 99px; height: 8px; margin-bottom: 8px; overflow: hidden; } .progress-bar-fill { height: 100%; border-radius: 99px; } .progress-label { display: flex; justify-content: space-between; font-size: 12px; color: #888; } .progress-pct { font-weight: 500; color: #111; } <\/style> <div class=\"progress-grid\"> <div class=\"progress-card\"> <div class=\"progress-card-title\">Chapter 1<\/div> <div class=\"progress-card-chapter\">Preliminaries<\/div> <div class=\"progress-bar-bg\"><div class=\"progress-bar-fill\" style=\"width:73%; background:#1D9E75;\"><\/div><\/div> <div class=\"progress-label\"><span>22 \/ 30<\/span><span class=\"progress-pct\">73%<\/span><\/div> <\/div> <div class=\"progress-card\"> <div class=\"progress-card-title\">Chapter 2<\/div> <div class=\"progress-card-chapter\">Integers<\/div> <div class=\"progress-bar-bg\"><div class=\"progress-bar-fill\" style=\"width:33%; background:#378ADD;\"><\/div><\/div> <div class=\"progress-label\"><span>13 \/ 40<\/span><span class=\"progress-pct\">33%<\/span><\/div> <\/div> <div class=\"progress-card\"> <div class=\"progress-card-title\">Chapter 3<\/div> <div class=\"progress-card-chapter\">Groups<\/div> <div class=\"progress-bar-bg\"><div class=\"progress-bar-fill\" style=\"width:50%; background:#378ADD;\"><\/div><\/div> <div class=\"progress-label\"><span>27 \/ 54<\/span><span class=\"progress-pct\">50%<\/span><\/div> <\/div> <\/div>  "
+},
+{
   "id": "submissions-by-chapter",
   "level": "1",
   "url": "submissions-by-chapter.html",
   "type": "Section",
-  "number": "D.1",
+  "number": "D.2",
   "title": "By chapter",
-  "body": " By chapter  Most recent submissions for each chapter. Links open the corresponding PDF.   Chapter 1 — Preliminaries    Exercises 1-22:      Chapter 2 — Integers    Exercises 1-17 (except 7,8,13,14):      Chapter 3 — Groups    Exercises 1-4:     "
+  "body": " By chapter  Most recent submissions for each chapter. Links open the corresponding PDF.   Chapter 1 — Preliminaries    Exercises 1-22:      Chapter 2 — Integers    Exercises 1-17 (except 7,8,13,14):      Chapter 3 — Groups    Exercises 1-27:     "
 },
 {
   "id": "submissions-chronological",
   "level": "1",
   "url": "submissions-chronological.html",
   "type": "Section",
-  "number": "D.2",
+  "number": "D.3",
   "title": "Chronological log",
-  "body": " Chronological log  All submissions in reverse chronological order, including all versions.    2026-04-16 — — Ch. 2, adjustments to gcd approach in Exercise 15, and additional solutions to exercises  2026-04-16 — — Ch. 1, minor update to Exercise 21 solution  2026-04-07 — — Ch. 3, exercises 1-4, first attempt  2026-04-07 — — Ch. 2, exercises 1-7, 9, 10, 15, first attempt  2026-04-07 — — Ch. 1, exercises 1-22, first attempt    "
+  "body": " Chronological log  All submissions in reverse chronological order, including all versions.    2026-04-27 — — Ch. 3, exercises 1-27  2026-04-16 — — Ch. 2, adjustments to gcd approach in Exercise 15, and additional solutions to exercises  2026-04-16 — — Ch. 1, minor update to Exercise 21 solution  2026-04-07 — — Ch. 3, exercises 1-4, first attempt  2026-04-07 — — Ch. 2, exercises 1-7, 9, 10, 15, first attempt  2026-04-07 — — Ch. 1, exercises 1-22, first attempt    "
 },
 {
   "id": "backmatter-7",
